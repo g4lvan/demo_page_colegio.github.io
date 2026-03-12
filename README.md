@@ -30,7 +30,7 @@ https://g4lvan.github.io/demo_page_colegio.github.io/
 
 ### Versión Desktop
 
-![Desktop Preview](preview/Despues-Desktop.png.png)
+![Desktop Preview](preview/Despues-Desktop.png)
 
 ### Versión Mobile
 
@@ -153,3 +153,4 @@ Proyecto desarrollado como iniciativa personal para mejorar la presencia digital
 # 📜 Licencia
 
 Este proyecto se distribuye bajo licencia **MIT**.
+
