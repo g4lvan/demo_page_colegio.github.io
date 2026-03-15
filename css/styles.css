@@ -1,0 +1,1084 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/*Se definen las variables de color de la pagina para aplicar en los demás estilos */
+:root {
+  --primary-color: #029642;
+  --primary-hover: #05bd55;
+  --primary-dark: #18583d;
+  --primary-light: #5c9d76;
+  --background: #ffffff;
+  --background-dark: #f5f6f7;
+  --background-secondary: #f1f5f9;
+  --complementary-color: #e2e8f0;
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
+  --text-muted: #798290;
+  --font-primary: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+/* Estilos para el header y la Navbar
+    -Se posiciona el logo y los botones de navegación
+*/
+
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 2rem;
+  border-bottom: 1px solid var(--text-secondary);
+}
+
+header .izquierda {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: center;
+}
+
+header .links_navegacion {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+header .links_navegacion ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+header .links_navegacion a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+header .links_navegacion a:hover {
+  color: var(--primary-hover);
+}
+
+h1 {
+  font-size: 2rem;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.titulo {
+  display: flex;
+  color: var(--primary-color);
+}
+
+.logo {
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  margin-right: 0.5rem;
+  margin-left: 2rem;
+}
+
+/*Se estilizan los botones de acción
+  -Se estiliza el formulario de busqueda
+  -Se estiliza el boton de iniciar sesión
+*/
+
+.botones_acción {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.busqueda {
+  font-family: var(--font-primary);
+  background-color: var(--background-secondary);
+  display: flex;
+  border-radius: 100px;
+  position: relative;
+  align-items: center;
+  margin-right: 2rem;
+  overflow: hidden;
+}
+
+input[type="search"] {
+  font-family: var(--font-primary);
+  justify-content: center;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  background-color: var(--background-dark);
+  color: var(--text-muted);
+  box-shadow: 0 0 10px var(--background-secondary);
+}
+
+.buscar:focus {
+  border: none;
+  outline: none;
+}
+
+.icon-search {
+  stroke: var(--text-muted);
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+/*Se estiliza el menú de inicio de la pagina
+  -Se define el estilo de la card de la sección de inicio
+  -Se definen los estilos de los textos de bienvenida
+*/
+
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5rem 2rem;
+  padding-top: 0;
+  min-height: 100vh;
+  background-color: var(--background-dark);
+}
+
+.card_inicio {
+  background:
+    linear-gradient(to right, #000000, transparent),
+    url("../assets/images/2000_5d893aa11d670.webp") no-repeat center center;
+  background-size: cover;
+  max-width: 1300px;
+  width: 100%;
+  border-radius: 30px;
+  text-align: center;
+  padding: 50px;
+  margin-top: 25px;
+  text-align: start;
+}
+
+.calificacion {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding: 0.2rem;
+  border: 1px solid #edc216;
+  background-color: #847c44a6;
+  text-align: center;
+  max-width: 20%;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: #edc216;
+}
+
+.card_inicio h2 {
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-size: 5rem;
+  line-height: 70px;
+  font-weight: 900;
+  margin: 0;
+  margin-top: 15px;
+  max-width: 700px;
+}
+
+.card_inicio span {
+  color: var(--primary-color);
+}
+
+.descripcion {
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  max-width: 500px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.botones {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.boton-primario {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bolder;
+  justify-content: center;
+  font-family: var(--font-primary);
+  background-color: var(--primary-color);
+  color: var(--text-secondary);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+
+.boton-primario:hover {
+  background-color: var(--primary-hover);
+}
+
+.boton-secundario {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 0.5rem;
+  justify-content: center;
+  font-family: var(--font-primary);
+  background-color: #4d8247aa;
+  color: var(--text-secondary);
+  border: 1px solid #5a9f51aa;
+  padding: 15px 30px;
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+}
+
+.boton-secundario:hover {
+  background-color: #5a9f51aa;
+  border: 2px solid #5a9f51aa;
+}
+
+/* Accesos Rápidos
+ -se estilizan los artículos que contienen los enlaces a los accesos rápidos para padres y estudiantes 
+ */
+
+.texto_acc_rapido {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  padding-left: 0;
+}
+
+.titulo_acc_rapido h2 {
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.titulo_acc_rapido p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+  padding: 0;
+}
+
+.linea-final {
+  width: 100px;
+  height: 5px;
+  background-color: var(--primary-color);
+  margin-top: 50px;
+  border-radius: 2px;
+}
+
+.accesos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
+}
+
+.card_rapido {
+  background-color: var(--background);
+  padding: 3rem;
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 0 4px var(--text-muted);
+}
+
+.card_rapido h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: -10px;
+  padding: 0;
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.card_rapido p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  max-height: 100px;
+}
+
+.card_rapido a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-family: var(--font-primary);
+  color: var(--primary-color);
+  border: none;
+  text-decoration: none;
+  margin-top: 0;
+}
+
+.card_rapido a:hover {
+  color: var(--primary-hover);
+}
+
+.icon_acc_rapido {
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+  background-color: #02964288;
+  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  border-radius: 20%;
+}
+
+.chev_acc_rapido {
+  display: flex;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  color: var(--primary-color);
+  justify-content: center;
+}
+
+.chev-acc-rapido:hover {
+  color: var(--primary-hover);
+}
+
+/*Sección de Noticias
+  - Se muestran las noticias más recientes del colegio, con una imagen, un título, un breve resumen y un enlace
+*/
+
+.noticias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+
+.ult_noticias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+}
+
+.card_noticias {
+  background-color: var(--background);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 2px var(--text-muted);
+  max-width: 400px;
+  min-height: 500px;
+  max-height: 500px;
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+  background-color: var(--background-dark);
+}
+
+.card_img {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+
+.card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card_noticias h3 {
+  font-size: 1.5rem;
+  margin: 15px;
+  padding: 2px;
+  margin-top: 10px;
+  color: var(--text-primary);
+}
+.card_noticias p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 15px;
+  padding: 2px;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 15px;
+  padding-left: 17px;
+}
+
+.info time {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.time_noti_icon {
+  width: 0.9rem;
+  height: 16px;
+  color: var(--text-muted);
+  margin: 0;
+  padding: 0;
+}
+
+.card_content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  border: 2px solid var(--complementary-color);
+  text-decoration: none;
+  margin: 15px;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.type_noti {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 15px;
+  font-weight: 900;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  background: var(--primary-color);
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.textos_noti h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin: 5px;
+  padding: 0;
+}
+
+.textos_noti a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-primary);
+  color: var(--primary-color);
+  border: none;
+  text-decoration: none;
+  margin: 15px;
+  margin-top: 25px;
+  padding: 8px;
+}
+
+.textos_noti a:hover {
+  color: var(--primary-hover);
+}
+
+.info_col_basic {
+  background-color: var(--background-dark);
+  width: 100%;
+}
+
+/*Estilos para la sección de historia básica de la institución
+  -Se muestra una breve historia de la institución, con una imagen representativa y un enlace para conocer más detalles
+  -Se define el estilo de la card de la sección de historia básica
+  -Se definen los estilos de las secciones de misión y visión de la página
+*/
+
+/*Imagen de la sección de historia
+-Estilos de la imagen
+-Estilos de la card de años de experiencia que se muestra sobre la imagen
+*/
+
+.info_col_basic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 5rem;
+}
+
+.info_col_img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  height: 500px;
+}
+
+.info_col_basic .img_info_col {
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.años_exp_info_basic {
+  position: absolute;
+  bottom: -35px;
+  right: -35px;
+  text-align: center;
+  background: #f3c231;
+  padding: 30px;
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0 0 10px var(--text-muted);
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.resaltado_info_basic {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 900;
+}
+
+/*Información de la sección de historia*/
+
+.head_info_col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  border: none;
+  padding: 0;
+}
+
+.head_info_col h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+}
+
+.head_info_col span {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+.info_col_basic_ptext {
+  font-size: 1rem;
+  max-width: 800px;
+  color: var(--text-primary);
+  margin: 10px 0;
+  padding: 0;
+}
+
+.mis_vis_basic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.mis_vis_basic h3 {
+  font-size: 1rem;
+  display: flex;
+  color: var(--text-primary);
+  font-weight: 900;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mis_vis_basic p {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.info_col_basic svg {
+  width: 30px;
+  height: 30px;
+  color: var(--primary-color);
+}
+
+.boton_info_col_basic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-family: var(--font-primary);
+  color: var(--background-secondary);
+  padding: 50px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.boton_info_col_basic:hover {
+  background-color: var(--primary-hover);
+}
+
+/*Se estiliza el footer de la pagina
+-Se define el estilo del footer, para proporcionar información de contacto, enlaces a redes sociales y otros detalles relevantes sobre la institución
+*/
+
+footer {
+  padding: 50px 100px;
+}
+
+footer .principal_footer {
+  background-color: var(--background);
+  align-items: start;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  gap: 100px;
+}
+
+.principal_footer header {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  max-width: 250px;
+  justify-content: center;
+}
+
+.info_footer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap: 10px;
+}
+
+.info_footer h2 {
+  font-size: 1.2rem;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  font-weight: 900;
+}
+
+.info_footer p {
+  margin-left: 50px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 400px;
+}
+
+.info_footer img {
+  display: flex;
+  max-width: 30px;
+  margin: 0;
+  margin-left: 50px;
+  padding: 0;
+}
+
+/*Links de acceso rapido*/
+
+.botones_footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.botones_footer h3 {
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.botones_footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.botones_footer li {
+  margin-bottom: 5px;
+}
+
+.botones_footer li a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.botones_footer li a:hover {
+  color: var(--primary-hover);
+}
+
+/*Redes de la institución*/
+
+.redes_footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redes_footer h3 {
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.red_icon_footer {
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: #000000;
+  background-color: #5c9d768f;
+  padding: 5px;
+  border-radius: 100%;
+}
+
+.red_icon_footer:hover {
+  background-color: var(--primary-hover);
+}
+
+/*Linea del footer con los derechos de la institución*/
+
+.line_footer hr {
+  max-width: 90%;
+  color: var(--text-muted);
+}
+
+.line_footer p {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 40px;
+}
+
+/* Estilos Responsive de la pagina
+-Se adapta el diseño para tablets y celulares
+-Se corrigen tamaños de texto, grids y elementos
+-Se mantiene la navbar con el mismo diseño
+*/
+
+/*Responsive para Tablets
+-Se ajustan grids y tamaños para pantallas medianas
+*/
+
+@media (max-width: 1024px) {
+  /*Se reduce el padding de la sección de inicio*/
+  .inicio {
+    padding: 3rem;
+  }
+
+  /*Se reduce el tamaño del texto del hero*/
+  .card_inicio h2 {
+    font-size: 3.5rem;
+    line-height: 55px;
+    color: var(--background);
+  }
+
+  /*Los accesos rápidos pasan de 4 columnas a 2*/
+  .accesos {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 40px;
+  }
+
+  /*Las noticias pasan de 3 columnas a 2*/
+  .ult_noticias {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+  }
+
+  /*La sección de historia pasa a una sola columna*/
+  .info_col_basic {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /*El footer reduce sus columnas*/
+  footer .principal_footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  header nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  header .links_navegación ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/*Responsive para Celulares
+-Se reorganiza el layout a una sola columna
+-Se ajustan tamaños de textos e imágenes
+*/
+
+@media (max-width: 768px) {
+  /*Se ajusta el padding del header*/
+  header {
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /*Se reduce el espacio entre el logo y los links*/
+  header .izquierda {
+    gap: 1rem;
+  }
+
+  /*Se reduce el tamaño del título de la institución*/
+  header h1 {
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  /*Se reduce el tamaño del logo*/
+  .logo {
+    height: 40px;
+    margin-left: 0;
+  }
+
+  /*Se ajusta el espacio entre los links de navegación*/
+  .links_navegacion ul {
+    font-size: 0.9rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /*Se ajusta el tamaño del buscador*/
+  .botones_accion {
+    width: auto;
+  }
+
+  .busqueda {
+    margin-right: 0;
+  }
+
+  input[type="search"] {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+
+  /*Se reduce el padding de la sección de inicio*/
+  .inicio {
+    padding: 2rem 1rem;
+  }
+
+  /*Se ajusta el padding del hero*/
+  /*contenedor del hero*/
+  .card_inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 25px;
+  }
+
+  /*Etiqueta excelencia*/
+  .calificacion {
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  /*titulo principal*/
+  .card_inicio h2 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
+
+  /*descripcion*/
+  .card_inicio p {
+    text-align: center;
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+
+  /*contenedor de botones*/
+  .botones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /*botones*/
+  .botones button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /*Se reorganiza el texto de accesos rápidos*/
+  .texto_acc_rapido {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 3rem;
+  }
+
+  /*Los accesos rápidos pasan a una sola columna*/
+  .accesos {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  /*Las cards de accesos ocupan todo el ancho*/
+  .card_rapido {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  /*Se ajusta el padding de la sección de noticias*/
+  .noticias {
+    padding: 2rem 1rem 4rem 1rem;
+  }
+
+  /*Las noticias pasan a una sola columna*/
+  .ult_noticias {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /*Las cards de noticias ocupan todo el ancho*/
+  .card_noticias {
+    max-width: 100%;
+  }
+
+  /*Se centra el título de la sección*/
+  .textos_noti {
+    text-align: center;
+  }
+
+  /*La sección de historia pasa a una sola columna*/
+  .info_col_basic {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  /*Se ajusta el tamaño de la imagen*/
+  .info_col_img {
+    height: auto;
+  }
+
+  .info_col_basic .img_info_col {
+    height: 300px;
+  }
+
+  /*La card de años de experiencia se deja en la imagen*/
+  .años_exp_info_basic {
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    padding: 20px;
+    width: 160px;
+  }
+
+  /*Misión y visión pasan a una sola columna*/
+  .mis_vis_basic {
+    grid-template-columns: 1fr;
+  }
+
+  /*Se ajusta el botón de información*/
+  .boton_info_col_basic {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /*Se ajusta el padding del footer*/
+  footer {
+    padding: 40px 20px;
+  }
+
+  /*El footer pasa a una sola columna*/
+  footer .principal_footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /*Se corrige el margen del texto del footer*/
+  .info_footer p {
+    margin-left: 0;
+  }
+
+  .info_footer img {
+    margin-left: 0;
+  }
+
+  /*Los botones del footer pasan a una columna*/
+  .botones_footer {
+    grid-template-columns: 1fr;
+  }
+
+  /*Se alinean las redes a la izquierda*/
+  .redes_footer {
+    align-items: flex-start;
+  }
+}
+
