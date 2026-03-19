@@ -68,7 +68,7 @@ header .links_navegacion {
   list-style: none;
 }
 
-header .links_navegacion ul {
+header .links_navegacion {
   display: flex;
   gap: 2.5rem;
   list-style: none;
@@ -874,7 +874,7 @@ footer .principal_footer {
     justify-content: center;
   }
 
-  header .links_navegación ul {
+  header .links_navegación {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
