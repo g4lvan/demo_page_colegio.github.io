@@ -6,10 +6,11 @@
 ![CSS](https://img.shields.io/badge/CSS3-styling-blue)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-Proyecto de **rediseño moderno del sitio web institucional** de la  
+Proyecto enfocado en el **rediseño y mejora de la experiencia digital** del sitio web institucional de la  
 **Institución Educativa Municipal Emilio Cifuentes**.
 
-El objetivo del proyecto es mejorar la **experiencia de usuario**, modernizar el diseño visual y crear una versión **responsive y optimizada** del sitio institucional.
+Este rediseño surge a partir de un análisis del sitio actual, donde se identificaron problemas de **usabilidad, rendimiento y adaptación a dispositivos móviles**.  
+El objetivo es proponer una solución **moderna, responsive y centrada en el usuario**, aplicando buenas prácticas de desarrollo web.
 
 Actualmente el proyecto se encuentra en fase **MVP (Minimum Viable Product)**.
 
@@ -24,11 +25,42 @@ https://g4lvan.github.io/demo_page_colegio.github.io/
 
 ---
 
-# 📸 Preview del diseño
+# 🆚 Comparación: Antes vs Después
+
+### 🔴 Antes (sitio original)
+
+El sitio actual presenta varios problemas de experiencia de usuario:
+
+- Diseño basado en plantillas tradicionales
+- Baja jerarquía visual (difícil de escanear)
+- Exceso de texto sin estructura clara
+- Navegación poco intuitiva
+- Experiencia limitada en dispositivos móviles
+
+![Antes](preview/antes.png)
+
+---
+
+### 🟢 Después (rediseño propuesto)
+
+El rediseño propone una mejora integral enfocada en el usuario:
+
+- Interfaz moderna y limpia
+- Diseño responsive (mobile-first)
+- Mejor organización del contenido
+- Jerarquía visual clara
+- Navegación más intuitiva y accesible
+
+![Después](preview/desktop.png)
+
+---
+
+# 📸 Detalles del diseño
 
 ### Versión Desktop
 
-![Desktop Preview](preview/Despues-Desktop.png)
+![Desktop Preview](preview/desktop.png)
+![](preview/desktop-1.png)
 
 ### Versión Mobile
 
@@ -36,7 +68,7 @@ https://g4lvan.github.io/demo_page_colegio.github.io/
 
 ### Versión Tablet
 
-![Mobile Preview](preview/tablet.png)
+![Tablet Preview](preview/tablet.png)
 
 ---
 
@@ -48,26 +80,38 @@ https://g4lvan.github.io/demo_page_colegio.github.io/
 
 # 🎯 Objetivos del proyecto
 
-- Modernizar el diseño visual del sitio web
+- Modernizar la interfaz del sitio web
 - Mejorar la experiencia de usuario (UX)
-- Crear un diseño **totalmente responsive**
-- Organizar mejor la información institucional
-- Mejorar el rendimiento y tiempos de carga
+- Implementar un diseño completamente responsive
+- Reorganizar la estructura de la información
+- Optimizar rendimiento y tiempos de carga
 
 ---
 
 # 🔍 Problemas detectados en el sitio actual
 
-Durante el análisis del sitio web actual se identificaron varios problemas:
+Durante el análisis del sitio web original se identificaron:
 
 - Diseño visual desactualizado
-- Problemas de adaptación en dispositivos móviles
+- Falta de adaptabilidad en dispositivos móviles
+- Estructura de información poco clara
 - Secciones incompletas
-- Mala organización de la información
 - Animaciones poco optimizadas
-- Rendimiento lento
+- Bajo rendimiento general
 
-Este proyecto busca proponer una solución moderna a estos problemas.
+Este proyecto plantea una solución enfocada en resolver estos puntos de forma integral.
+
+---
+
+# 🧩 Enfoque del rediseño
+
+El desarrollo del proyecto se basa en:
+
+- Análisis del sitio existente
+- Identificación de problemas de UX/UI
+- Priorización de mejoras
+- Implementación bajo enfoque **mobile-first**
+- Uso de buenas prácticas en HTML y CSS
 
 ---
 
@@ -77,8 +121,8 @@ Este proyecto busca proponer una solución moderna a estos problemas.
 - Navegación clara e intuitiva
 - Layout responsive (mobile-first)
 - Mejor jerarquía visual
-- Optimización de estructura HTML
-- Base preparada para futuras mejoras
+- Estructura HTML optimizada
+- Base escalable para futuras mejoras
 
 ---
 
@@ -107,7 +151,7 @@ El sitio está optimizado para distintos tamaños de pantalla:
 - 💻 Laptops
 - 🖥 Escritorio
 
-Se implementan técnicas modernas de **Flexbox, Grid y Mobile-first design**.
+Se implementan técnicas modernas como **Flexbox, Grid y Mobile-first design**.
 
 ---
 
@@ -123,7 +167,7 @@ Se implementan técnicas modernas de **Flexbox, Grid y Mobile-first design**.
 
 - Optimización de rendimiento
 - Mejoras visuales
-- Animaciones suaves
+- Animaciones más fluidas
 
 ## v2.0
 
@@ -141,12 +185,13 @@ Se implementan técnicas modernas de **Flexbox, Grid y Mobile-first design**.
 
 # 🧠 Aprendizajes del proyecto
 
-Este proyecto permite practicar:
+Este proyecto permitió reforzar:
 
 - Diseño web moderno
-- Arquitectura de páginas institucionales
+- Arquitectura de sitios institucionales
 - Responsive design
-- Mejores prácticas de HTML y CSS
+- Buenas prácticas en HTML y CSS
+- Pensamiento orientado a UX
 
 ---
 
@@ -157,6 +202,7 @@ Proyecto desarrollado como iniciativa personal para mejorar la presencia digital
 **Juan Andres Gallego Vanegas**
 
 [![GitHub](https://img.shields.io/badge/GitHub-g4lvan-181717?style=for-the-badge&logo=github)](https://github.com/g4lvan)
+
 [![Instagram](https://img.shields.io/badge/Instagram-@g4lvan__-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/g4lvan_)
 
 ---
