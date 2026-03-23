@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Fuentes de la pagina-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!--Titulo, estilos e icono de la pagina-->
+    <title>Institución Educativa Municipal Emilio Cifuentes</title>
+    <link rel="stylesheet" href="../css/noticias.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/logos/EMILIO.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!--Header con: 
+    - Logo de la institución 
+    - Nombre de la institución 
+    - Barra de navegación con enlaces a las secciones principales de la página (Inicio,
+    Nosotros, Formación, Contacto)-->
+    <header class="header_principal">
+      <!--Nombre y logo de la institución -->
+      <div class="izquierda">
+        <h1>
+          <img
+            src="../assets/logos/EMILIO.png"
+            alt="Logo de la institución"
+            class="logo"
+          />
+          I.E.M. Emilio <span class="titulo">Cifuentes</span>
+        </h1>
+        <!--Barra de navegación con enlaces a las secciones principales de la página (Inicio, Nosotros, Noticias, Contacto)-->
+        <nav>
+          <ul class="links_navegacion">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="#">Recursos</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!--Formulario de búsqueda-->
+      <div class="botones_accion">
+        <form class="busqueda">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="12"
+            height="12"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-search"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+          <input
+            type="search"
+            placeholder="Buscar recursos..."
+            class="buscar"
+          />
+        </form>
+      </div>
+    </header>
+
+    <!--Main con el contenido principal de la pagina
+    -Header con buscador y categorías
+    -Sección con las cards de las noticias
+    -Próximos eventos
+    -Card de inscripción a notificaciones 
+    -->
+
+    <main>
+      <!--Header con el titulo y la opción de busqueda con sus categorías-->
+      <section class="header_main">
+        <div class="text_header">
+          <h2>Recursos Académicos</h2>
+          <p>
+            Centro principal para que estudiantes y padres accedan a
+            herramientas educativas, apoyo y documentación.
+          </p>
+        </div>
+      </section>
+    </main>
+    <!--Footer de la pagina
+      -Pequeña descripción
+      -Links de acceso
+      -Redes sociales
+    -->
+    <footer>
+      <div class="principal_footer">
+        <!--Información del colegio en el footer-->
+        <div class="info_footer">
+          <header class="img_footer">
+            <img
+              src="../assets/logos/EMILIO.png"
+              alt="Logo de la institución"
+              class="logo_footer"
+            />
+            <h2>Emilio Cifuentes</h2>
+          </header>
+          <p>
+            La Institución Educativa Municipal Emilio Cifuentes forma
+            estudiantes con excelencia académica, valores y preparándolos para
+            construir un proyecto.
+          </p>
+        </div>
+        <!--Botones de acceso en el footer-->
+        <nav class="botones_footer">
+          <div class="recursos_footer">
+            <h3>Recursos</h3>
+            <ul>
+              <li><a href="#">Manual del estudiante</a></li>
+              <li><a href="#">Calendario Académico</a></li>
+              <li><a href="#">Horarios de clase</a></li>
+            </ul>
+          </div>
+          <div class="rapidos_footer">
+            <h3>Accesos Rápidos</h3>
+            <ul>
+              <li><a href="#">Noticias</a></li>
+              <li><a href="#">Formación</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!--Redes del colegio-->
+        <div class="redes_footer">
+          <h3>Conectar</h3>
+          <a
+            href="https://www.facebook.com/profile.php?id=100063540460666"
+            target="_blank"
+            class="boton_red_footer"
+            aria-label="facebook"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="red_icon_footer"
+              fill="currentColor"
+            >
+              <path
+                d="M13.5 9H16V6h-2.5C11.57 6 10 7.57 10 9.5V12H8v3h2v7h3v-7h2.11L16 12h-3V9.5c0-.28.22-.5.5-.5z"
+              /></svg
+          ></a>
+        </div>
+      </div>
+      <div class="line_footer">
+        <hr />
+        <p>
+          © 2026 I.E.M. Emilio Cifuentes — SURSUM: Siempre arriba, siempre
+          adelante.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
