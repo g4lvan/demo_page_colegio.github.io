@@ -745,6 +745,26 @@ footer .principal_footer {
 
 /* Tablets */
 @media (max-width: 1024px) {
+  header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  header nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  header .links_navegación {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
   main {
     padding: 2rem;
   }
@@ -953,7 +973,7 @@ footer .principal_footer {
   .cont_event p {
     font-size: 0.8rem;
   }
-  
+
   .mas_noticias {
     gap: 6px;
   }
