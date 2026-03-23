@@ -383,7 +383,7 @@ input[type="search"] {
   justify-content: center;
 }
 
-.chev-acc-rapido:hover {
+.chev_acc_rapido:hover {
   color: var(--primary-hover);
 }
 
