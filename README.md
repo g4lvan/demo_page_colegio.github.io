@@ -135,9 +135,9 @@ El desarrollo del proyecto se basa en:
 
 # 🧰 Tecnologías utilizadas
 
-- **HTML5**
-- **CSS3**
-- **Responsive Design**
+![HTML](https://img.shields.io/badge/Structure-gray?style=for-the-badge&logo=HTML5&logoColor=white&label=HTML5&labelColor=orange&color=gray)
+![CSS](https://img.shields.io/badge/Styling-blue?style=for-the-badge&logo=CSS&logoColor=white&label=CSS3&labelColor=blue&color=gray)
+![Responsive](https://img.shields.io/badge/Responsive-green?style=for-the-badge)
 
 Posibles tecnologías futuras:
 
