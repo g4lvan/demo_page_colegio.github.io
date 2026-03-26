@@ -134,6 +134,10 @@ h1 {
   overflow: hidden;
 }
 
+.busqueda:focus-within{
+  outline: 2px solid var(--primary-alt);
+}
+
 .busqueda input[type="search"] {
   font-family: var(--font-primary);
   justify-content: center;
