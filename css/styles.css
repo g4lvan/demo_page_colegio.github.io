@@ -134,7 +134,12 @@ h1 {
   overflow: hidden;
 }
 
+.busqueda:focus-within{
+  outline: 2px solid var(--primary-alt);
+}
+
 input[type="search"] {
+  flex: 1;
   font-family: var(--font-primary);
   justify-content: center;
   padding: 0.5rem;
