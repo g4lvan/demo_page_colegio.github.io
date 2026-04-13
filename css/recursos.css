@@ -240,7 +240,6 @@ main {
 }
 
 /*'Se estiliza la sección de la derecha*/
-/*Se estiliza la sección de próximos eventos*/
 
 .recursos_derecha {
   display: flex;
@@ -342,7 +341,7 @@ main {
   color: var(--primary-color);
 }
 
-.noticias_derecha a {
+.recursos_derecha a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -357,7 +356,7 @@ main {
   border-radius: 15px;
 }
 
-.noticias_derecha a:hover {
+.recursos_derecha a:hover {
   background-color: var(--background-dark);
 }
 
