@@ -237,6 +237,188 @@ main {
   height: 12px;
 }
 
+/*'Se estiliza la sección de la derecha*/
+/*Se estiliza la sección de próximos eventos*/
+
+.recursos_derecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.events {
+  padding: 2rem;
+  background-color: var(--background);
+  max-height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px var(--complementary-color);
+}
+
+.events_prox {
+  display: flex;
+  align-items: center;
+  max-height: 70px;
+  margin-bottom: 20px;
+}
+
+.events_prox time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-soft-bg);
+  font-family: var(--font-primary);
+  border: 2px solid;
+  border-color: var(--primary-soft-border);
+  border-radius: 10px;
+  min-height: 55px;
+  min-width: 55px;
+  text-align: center;
+  margin-right: 10px;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.text_span {
+  margin-top: 5px;
+}
+
+.number_span {
+  display: flex;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  margin-top: -5px;
+}
+
+.cont_event p {
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.cont_event h4 {
+  margin: 0;
+  padding: 0;
+  margin-top: -1px;
+  font-weight: 700;
+}
+
+/*Titulo de la sección*/
+
+.derecha_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.derecha_header h4 {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+}
+
+.prox_noti_icon {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  margin-top: -2px;
+  color: var(--primary-color);
+}
+
+.noticias_derecha a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  border: 2px solid var(--complementary-color);
+  text-decoration: none;
+  margin: 15px;
+  margin-top: 35px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.noticias_derecha a:hover {
+  background-color: var(--background-dark);
+}
+
+/*Card para registrar el correo y recibir notificaciones*/
+
+.help_recursos {
+  color: var(--background);
+  background-color: var(--primary-color);
+  margin-top: 4rem;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 5px var(--complementary-color);
+}
+
+.help_recursos h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.help_recursos p {
+  color: var(--complementary-color);
+  font-size: 0.9rem;
+}
+
+.help_recursos form input {
+  border: none;
+  margin-bottom: 10px;
+  width: 100%;
+  min-height: 30px;
+  padding: 10px;
+  background-color: var(--primary-alt);
+  border-radius: 10px;
+}
+
+.help_recursos form input:focus {
+  outline: none;
+  border: none;
+}
+
+.email_notif::placeholder {
+  color: var(--placeholder);
+}
+
+.but_notif {
+  border: none;
+  width: 100%;
+  min-height: 40px;
+  padding: 10px;
+  background-color: var(--background);
+  border-radius: 10px;
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.but_notif:hover {
+  background-color: var(--placeholder);
+}
+
+
 /*Se estiliza el footer de la pagina
 -Se define el estilo del footer, para proporcionar información de contacto, enlaces a redes sociales y otros detalles relevantes sobre la institución
 */
