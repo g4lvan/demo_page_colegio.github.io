@@ -217,26 +217,64 @@ main {
 .cards_sections{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  gap: 30px;
 }
 
 .card_info{
-  max-width: 300px;
-  max-height: 350px;
-  padding: 15px;
+  position: relative;
+  max-width: 500px;
+  max-height: 550px;
+  padding: 35px;
   margin-top: 10px;
   margin-left: 10px;
   background-color: var(--background);
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--complementary-color);
+}
+
+.card_info h2{
+  margin-top: 50px;
+  font-weight: 900;
+}
+
+.card_info p {
+  color: var(--text-secondary-dark);
+  margin-top: -10px;
+  padding: 0;
 }
 
 .info_icon{
+  position: absolute;
+  top: 30px;
+  margin: 5px;
+  margin-left: 0;
   width: 34px;
   height: 34px;
+  color: var(--primary-alt);
+  filter: drop-shadow(0 0 2px var(--complementary-color));
 }
 
 .link_icon{
+  display: flex;
   width: 12px;
   height: 12px;
+  color: var(--primary-color);
+}
+
+
+.card_info a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.card_info:hover a,
+.card_info:hover .link_icon {
+  color: var(--primary-hover);
 }
 
 /*'Se estiliza la sección de la derecha*/
