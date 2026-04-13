@@ -201,6 +201,13 @@ main {
   color: var(--text-secondary-dark);
 }
 
+/*!Layout del contenido*/
+.content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
 /**Se estilizan las cards con contenido*/ 
 /**-Estilos de SVG*/
 /**-Estilos generales*/
@@ -208,7 +215,7 @@ main {
 
 .cards_sections{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .card_info{
