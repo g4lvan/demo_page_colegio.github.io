@@ -204,7 +204,8 @@ main {
 /*!Layout del contenido*/
 .content{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
+  gap: 70px;
 }
 
 
@@ -216,6 +217,7 @@ main {
 .cards_sections{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
 }
 
 .card_info{
