@@ -492,13 +492,17 @@ main {
 .card_pruebas a{
   background-color: var(--primary-color);
   padding: 15px;
-  color: var(--complementary-color);
+  color: var(--background);
   font-size: 1rem;
   border-radius: 10px;
   width: 75%;
   text-align: center;
   text-decoration: none;
   font-weight: 700;
+}
+
+.card_pruebas a:hover{
+  background-color: var(--primary-hover);
 }
 
 /*Se estiliza el footer de la pagina
