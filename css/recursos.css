@@ -134,7 +134,7 @@ h1 {
   overflow: hidden;
 }
 
-.busqueda:focus-within{
+.busqueda:focus-within {
   outline: 2px solid var(--primary-alt);
 }
 
@@ -172,10 +172,8 @@ main {
   padding-top: 0;
 }
 
-/*Estilos de la sección del titulo y la busqueda
--Se estiliza el titulo y subtitulo
--Se estiliza formulario de busqueda
--Se estilizan las categorías de busqueda
+/*Estilos de la sección del titulo
+-Se estiliza el titulo 
 */
 
 /*Titulo y subtitulo*/
@@ -202,25 +200,24 @@ main {
 }
 
 /*!Layout del contenido*/
-.content{
+.content {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 70px;
 }
 
-
-/**Se estilizan las cards con contenido*/ 
+/**Se estilizan las cards con contenido*/
 /**-Estilos de SVG*/
 /**-Estilos generales*/
 /**-Estilos Titulo e información*/
 
-.cards_sections{
+.cards_sections {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
-.card_info{
+.card_info {
   position: relative;
   max-width: 500px;
   max-height: 550px;
@@ -232,7 +229,7 @@ main {
   box-shadow: 0 0 10px var(--complementary-color);
 }
 
-.card_info h2{
+.card_info h2 {
   margin-top: 50px;
   font-weight: 900;
 }
@@ -243,7 +240,7 @@ main {
   padding: 0;
 }
 
-.info_icon{
+.info_icon {
   position: absolute;
   top: 30px;
   margin: 5px;
@@ -254,13 +251,12 @@ main {
   filter: drop-shadow(0 0 2px var(--complementary-color));
 }
 
-.link_icon{
+.link_icon {
   display: flex;
   width: 12px;
   height: 12px;
   color: var(--primary-color);
 }
-
 
 .card_info a {
   text-decoration: none;
@@ -457,6 +453,53 @@ main {
   background-color: var(--placeholder);
 }
 
+/*!Estilos de la sección con más información*/
+/**-Card con la info de las pruebas estandarizadas*/
+/**-Card con descargas de contenido(Circulares, etc...)*/
+
+.info_mas {
+  grid-column: 1 / 2;
+  gap: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_pruebas {
+  background-color: var(--background);
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--complementary-color);
+}
+
+.card_pruebas svg {
+  width: 50px;
+  height: 50px;
+  color: var(--primary-alt);
+}
+
+.card_pruebas h2{
+  font-weight: 900;
+}
+
+.card_pruebas p{
+  color: var(--text-secondary-dark);
+  max-width: 92%;
+}
+
+.card_pruebas a{
+  background-color: var(--primary-color);
+  padding: 15px;
+  color: var(--complementary-color);
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 75%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+}
 
 /*Se estiliza el footer de la pagina
 -Se define el estilo del footer, para proporcionar información de contacto, enlaces a redes sociales y otros detalles relevantes sobre la institución
