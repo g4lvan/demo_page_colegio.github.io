@@ -600,7 +600,7 @@ footer .principal_footer {
    TABLET — hasta 1024px
    ============================================================ */
 @media (max-width: 1024px) {
- /* ── CONTENIDO ÚNICO — recursos.css ── */
+  /* ── CONTENIDO ÚNICO — recursos.css ── */
   .content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -634,6 +634,13 @@ footer .principal_footer {
     text-align: center;
   }
   /* ── /CONTENIDO ÚNICO — recursos.css ── */
+
+  /* FOOTER PRINCIPAL */
+  footer .principal_footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  /* /FOOTER PRINCIPAL */
 }
 
 /* ============================================================
@@ -706,13 +713,36 @@ footer .principal_footer {
     width: 70%;
   }
   /* ── /CONTENIDO ÚNICO — recursos.css ── */
+
+  /* FOOTER PRINCIPAL */
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  footer .principal_footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .info_footer p,
+  .info_footer img {
+    margin-left: 0;
+  }
+
+  .botones_footer {
+    grid-template-columns: 1fr;
+  }
+
+  .redes_footer {
+    align-items: flex-start;
+  }
+  /* /FOOTER PRINCIPAL */
 }
 
 /* ============================================================
    MOBILE PEQUEÑO — hasta 480px
    ============================================================ */
 @media (max-width: 480px) {
-
   /* ── CONTENIDO ÚNICO — recursos.css ── */
   .header_main h2 {
     font-size: 1.5rem;
