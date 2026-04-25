@@ -118,7 +118,7 @@ h1 {
   -Se estiliza el boton de iniciar sesión
 */
 
-.botones_acción {
+.botones_accion {
   display: flex;
   gap: 0.2rem;
 }
@@ -763,7 +763,7 @@ footer .principal_footer {
     justify-content: center;
   }
 
-  header .links_navegación {
+  header .links_navegacion {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;

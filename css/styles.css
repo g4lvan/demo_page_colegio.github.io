@@ -118,7 +118,7 @@ h1 {
   -Se estiliza el boton de iniciar sesión
 */
 
-.botones_acción {
+.botones_accion {
   display: flex;
   gap: 0.2rem;
 }
@@ -134,7 +134,7 @@ h1 {
   overflow: hidden;
 }
 
-.busqueda:focus-within{
+.busqueda:focus-within {
   outline: 2px solid var(--primary-alt);
 }
 
@@ -829,7 +829,6 @@ footer .principal_footer {
    TABLET — hasta 1024px
    ============================================================ */
 @media (max-width: 1024px) {
-
   /* ── HEADER PRINCIPAL (componente reutilizable) ── */
   header {
     flex-wrap: wrap;
@@ -841,7 +840,7 @@ footer .principal_footer {
     justify-content: center;
   }
 
-  header .links_navegación {
+  header .links_navegacion {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
@@ -894,7 +893,6 @@ footer .principal_footer {
    MOBILE — hasta 768px
    ============================================================ */
 @media (max-width: 768px) {
-
   /* ── HEADER PRINCIPAL (componente reutilizable) ── */
   header {
     padding: 1rem;
