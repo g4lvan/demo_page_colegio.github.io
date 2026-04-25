@@ -381,7 +381,7 @@ main {
   background-color: var(--background-dark);
 }
 
-/*Card para registrar el correo y recibir notificaciones*/
+/*Card para el buzón de ayuda*/
 
 .help_recursos {
   color: var(--background);
@@ -402,28 +402,11 @@ main {
 .help_recursos p {
   color: var(--complementary-color);
   font-size: 0.9rem;
+  max-width: 80%;
 }
 
-.help_recursos form input {
-  border: none;
-  margin-bottom: 10px;
-  width: 100%;
-  min-height: 30px;
-  padding: 10px;
-  background-color: var(--primary-alt);
-  border-radius: 10px;
-}
 
-.help_recursos form input:focus {
-  outline: none;
-  border: none;
-}
-
-.email_notif::placeholder {
-  color: var(--placeholder);
-}
-
-.but_notif {
+.but_help {
   border: none;
   width: 100%;
   min-height: 40px;
@@ -436,7 +419,7 @@ main {
   font-weight: 800;
 }
 
-.but_notif:hover {
+.but_help:hover {
   background-color: var(--placeholder);
 }
 
