@@ -73,7 +73,7 @@ header .links_navegacion {
   align-items: center;
 }
 
-header .links_navegacion ul {
+header .links_navegacion {
   display: flex;
   list-style: none;
   gap: 2.5rem;
