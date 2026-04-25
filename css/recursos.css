@@ -327,7 +327,7 @@ main {
   font-weight: 600;
 }
 
-.personal_der .email_icon{
+.personal_der .email_icon {
   height: 16px;
   width: 16px;
   margin-right: 5px;
@@ -406,7 +406,6 @@ main {
   font-size: 0.9rem;
   max-width: 80%;
 }
-
 
 .but_help {
   border: none;
@@ -727,6 +726,8 @@ footer .principal_footer {
 -Se mantiene la navbar con el mismo diseño
 */
 
+
+/*!Responsive de la barra de navegación y el footer*/
 @media (max-width: 1024px) {
   header {
     flex-wrap: wrap;
@@ -836,25 +837,148 @@ footer .principal_footer {
   .redes_footer {
     align-items: flex-start;
   }
+}
 
-  .mas_noticias {
-    gap: 10px;
-    margin-top: 3rem;
+/* ============================================================
+   RESPONSIVE ADICIONAL — MOBILE & TABLET
+   Complementa los breakpoints ya existentes sin modificarlos
+   ============================================================ */
+
+/* ---- Tablet: 768px – 1024px -------------------------------- */
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cards_sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recursos_derecha {
+    gap: 40px;
+  }
+
+  .help_recursos {
+    flex: 1 1 45%;
+    margin-top: 0;
+  }
+
+  .info_mas {
+    grid-column: 1 / -1;
+  }
+
+  .card_pruebas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .card_pruebas a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---- Mobile: hasta 768px ----------------------------------- */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cards_sections {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card_info {
+    max-width: 100%;
+    max-height: none;
+    margin: 0;
+  }
+
+  .info_mas {
+    grid-column: 1 / -1;
+    gap: 30px;
+  }
+
+  .card_pruebas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .card_pruebas a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content_pruebas {
+    width: 100%;
+  }
+
+  .descargas .archivos {
+    grid-template-columns: 1fr;
+  }
+
+  .descargas a {
+    min-width: 100%;
+    min-height: auto;
+  }
+
+  .mas_archivos {
+    width: 70%;
+  }
+}
+
+/* ---- Mobile pequeño: hasta 480px -------------------------- */
+@media (max-width: 480px) {
+  header .izquierda {
     flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
-  .svg_more {
-    padding: 6px;
-    border-radius: 8px;
-  }
-
-  .chev_more {
-    width: 16px;
-    height: 16px;
-  }
-
-  .more_notis {
-    padding: 6px 10px;
+  .links_navegacion {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
     font-size: 0.85rem;
+  }
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .header_main h2 {
+    font-size: 1.5rem;
+  }
+
+  .card_info h2 {
+    font-size: 1.2rem;
+  }
+
+  .card_info p {
+    font-size: 1rem;
+  }
+
+  .but_help {
+    font-size: 0.9rem;
+  }
+
+  .mas_archivos {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .card_pruebas h2 {
+    font-size: 1.2rem;
+  }
+
+  .card_pruebas p {
+    font-size: 0.95rem;
   }
 }
