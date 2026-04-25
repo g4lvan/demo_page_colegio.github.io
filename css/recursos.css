@@ -726,9 +726,12 @@ footer .principal_footer {
 -Se mantiene la navbar con el mismo diseño
 */
 
-
-/*!Responsive de la barra de navegación y el footer*/
+/* ============================================================
+   TABLET — hasta 1024px
+   ============================================================ */
 @media (max-width: 1024px) {
+
+  /* ── HEADER PRINCIPAL (componente reutilizable) ── */
   header {
     flex-wrap: wrap;
     gap: 1rem;
@@ -748,104 +751,16 @@ footer .principal_footer {
   header h1 {
     font-size: 1.4rem;
   }
-  /* Footer más compacto */
+  /* ── /HEADER PRINCIPAL ── */
+
+  /* ── FOOTER PRINCIPAL (componente reutilizable) ── */
   footer .principal_footer {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-}
+  /* ── /FOOTER PRINCIPAL ── */
 
-@media (max-width: 768px) {
-  /* HEADER limpio tipo app */
-  header {
-    padding: 1rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  /*Se reduce el espacio entre el logo y los links*/
-  header .izquierda {
-    gap: 1rem;
-  }
-
-  /*Se reduce el tamaño del título de la institución*/
-  header h1 {
-    font-size: 1.2rem;
-    flex-wrap: wrap;
-  }
-
-  /*Se reduce el tamaño del logo*/
-  .logo {
-    height: 40px;
-    margin-left: 0;
-  }
-
-  /*Se ajusta el espacio entre los links de navegación*/
-  .links_navegacion {
-    font-size: 0.9rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  /*Se ajusta el tamaño del buscador*/
-  .botones_accion {
-    width: auto;
-  }
-
-  .busqueda {
-    margin-right: 0;
-  }
-
-  .busqueda input[type="search"] {
-    width: 120px;
-    font-size: 0.9rem;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  .header_main {
-    padding: 1rem 0;
-  }
-
-  .header_main h2 {
-    font-size: 1.8rem;
-  }
-
-  .header_main p {
-    font-size: 1rem;
-  }
-  footer {
-    padding: 2rem 1rem;
-  }
-
-  footer .principal_footer {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .info_footer p,
-  .info_footer img {
-    margin-left: 0;
-  }
-
-  .botones_footer {
-    grid-template-columns: 1fr;
-  }
-
-  .redes_footer {
-    align-items: flex-start;
-  }
-}
-
-/* ============================================================
-   RESPONSIVE ADICIONAL — MOBILE & TABLET
-   Complementa los breakpoints ya existentes sin modificarlos
-   ============================================================ */
-
-/* ---- Tablet: 768px – 1024px -------------------------------- */
-@media (max-width: 1024px) {
+  /* ── CONTENIDO ÚNICO — recursos.css ── */
   .content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -878,10 +793,96 @@ footer .principal_footer {
     width: 100%;
     text-align: center;
   }
+  /* ── /CONTENIDO ÚNICO — recursos.css ── */
 }
 
-/* ---- Mobile: hasta 768px ----------------------------------- */
+/* ============================================================
+   MOBILE — hasta 768px
+   ============================================================ */
 @media (max-width: 768px) {
+
+  /* ── HEADER PRINCIPAL (componente reutilizable) ── */
+  header {
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  header .izquierda {
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    height: 40px;
+    margin-left: 0;
+  }
+
+  .links_navegacion {
+    font-size: 0.9rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .botones_accion {
+    width: auto;
+  }
+
+  .busqueda {
+    margin-right: 0;
+  }
+
+  .busqueda input[type="search"] {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+  /* ── /HEADER PRINCIPAL ── */
+
+  /* ── FOOTER PRINCIPAL (componente reutilizable) ── */
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  footer .principal_footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .info_footer p,
+  .info_footer img {
+    margin-left: 0;
+  }
+
+  .botones_footer {
+    grid-template-columns: 1fr;
+  }
+
+  .redes_footer {
+    align-items: flex-start;
+  }
+  /* ── /FOOTER PRINCIPAL ── */
+
+  /* ── CONTENIDO ÚNICO — recursos.css ── */
+  main {
+    padding: 1rem;
+  }
+
+  .header_main {
+    padding: 1rem 0;
+  }
+
+  .header_main h2 {
+    font-size: 1.8rem;
+  }
+
+  .header_main p {
+    font-size: 1rem;
+  }
+
   .content {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -930,10 +931,15 @@ footer .principal_footer {
   .mas_archivos {
     width: 70%;
   }
+  /* ── /CONTENIDO ÚNICO — recursos.css ── */
 }
 
-/* ---- Mobile pequeño: hasta 480px -------------------------- */
+/* ============================================================
+   MOBILE PEQUEÑO — hasta 480px
+   ============================================================ */
 @media (max-width: 480px) {
+
+  /* ── HEADER PRINCIPAL (componente reutilizable) ── */
   header .izquierda {
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -952,7 +958,9 @@ footer .principal_footer {
   .logo {
     height: 32px;
   }
+  /* ── /HEADER PRINCIPAL ── */
 
+  /* ── CONTENIDO ÚNICO — recursos.css ── */
   .header_main h2 {
     font-size: 1.5rem;
   }
@@ -981,4 +989,143 @@ footer .principal_footer {
   .card_pruebas p {
     font-size: 0.95rem;
   }
+  /* ── /CONTENIDO ÚNICO — recursos.css ── */
 }
+
+
+/* ================================================================
+   SECCIÓN MAESTRA — RESPONSIVE COMPONENTES REUTILIZABLES
+   Header Principal + Footer Principal
+   Copia y pega este bloque completo en cualquier nueva página.
+   ================================================================ */
+
+/* ── Tablet: hasta 1024px ── */
+@media (max-width: 1024px) {
+
+  /* HEADER PRINCIPAL */
+  header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  header nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  header .links_navegación {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+  /* /HEADER PRINCIPAL */
+
+  /* FOOTER PRINCIPAL */
+  footer .principal_footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  /* /FOOTER PRINCIPAL */
+}
+
+/* ── Mobile: hasta 768px ── */
+@media (max-width: 768px) {
+
+  /* HEADER PRINCIPAL */
+  header {
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  header .izquierda {
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    height: 40px;
+    margin-left: 0;
+  }
+
+  .links_navegacion {
+    font-size: 0.9rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .botones_accion {
+    width: auto;
+  }
+
+  .busqueda {
+    margin-right: 0;
+  }
+
+  .busqueda input[type="search"] {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+  /* /HEADER PRINCIPAL */
+
+  /* FOOTER PRINCIPAL */
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  footer .principal_footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .info_footer p,
+  .info_footer img {
+    margin-left: 0;
+  }
+
+  .botones_footer {
+    grid-template-columns: 1fr;
+  }
+
+  .redes_footer {
+    align-items: flex-start;
+  }
+  /* /FOOTER PRINCIPAL */
+}
+
+/* ── Mobile pequeño: hasta 480px ── */
+@media (max-width: 480px) {
+
+  /* HEADER PRINCIPAL */
+  header .izquierda {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .links_navegacion {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 32px;
+  }
+  /* /HEADER PRINCIPAL */
+}
+
+/* ================================================================
+   /SECCIÓN MAESTRA — FIN
+   ================================================================ */

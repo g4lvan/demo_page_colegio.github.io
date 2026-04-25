@@ -825,50 +825,12 @@ footer .principal_footer {
 -Se mantiene la navbar con el mismo diseño
 */
 
-/*Responsive para Tablets
--Se ajustan grids y tamaños para pantallas medianas
-*/
-
+/* ============================================================
+   TABLET — hasta 1024px
+   ============================================================ */
 @media (max-width: 1024px) {
-  /*Se reduce el padding de la sección de inicio*/
-  .inicio {
-    padding: 3rem;
-  }
 
-  /*Se reduce el tamaño del texto del hero*/
-  .card_inicio h2 {
-    font-size: 3.5rem;
-    line-height: 55px;
-    color: var(--background);
-  }
-
-  /*Los accesos rápidos pasan de 4 columnas a 2*/
-  .accesos {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 40px;
-  }
-
-  /*Las noticias pasan de 3 columnas a 2*/
-  .ult_noticias {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 2rem;
-  }
-
-  /*La sección de historia pasa a una sola columna*/
-  .info_col_basic {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  /*El footer reduce sus columnas*/
-  footer .principal_footer {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
+  /* ── HEADER PRINCIPAL (componente reutilizable) ── */
   header {
     flex-wrap: wrap;
     gap: 1rem;
@@ -888,46 +850,78 @@ footer .principal_footer {
   header h1 {
     font-size: 1.4rem;
   }
+  /* ── /HEADER PRINCIPAL ── */
+
+  /* ── FOOTER PRINCIPAL (componente reutilizable) ── */
+  footer .principal_footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  /* ── /FOOTER PRINCIPAL ── */
+
+  /* ── CONTENIDO ÚNICO — styles.css (Inicio) ── */
+  .inicio {
+    padding: 3rem;
+  }
+
+  .card_inicio h2 {
+    font-size: 3.5rem;
+    line-height: 55px;
+    color: var(--background);
+  }
+
+  .accesos {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 40px;
+  }
+
+  .ult_noticias {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+  }
+
+  .info_col_basic {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  /* ── /CONTENIDO ÚNICO — styles.css (Inicio) ── */
 }
 
-/*Responsive para Celulares
--Se reorganiza el layout a una sola columna
--Se ajustan tamaños de textos e imágenes
-*/
-
+/* ============================================================
+   MOBILE — hasta 768px
+   ============================================================ */
 @media (max-width: 768px) {
-  /*Se ajusta el padding del header*/
+
+  /* ── HEADER PRINCIPAL (componente reutilizable) ── */
   header {
     padding: 1rem;
     gap: 1rem;
     flex-wrap: wrap;
   }
 
-  /*Se reduce el espacio entre el logo y los links*/
   header .izquierda {
     gap: 1rem;
   }
 
-  /*Se reduce el tamaño del título de la institución*/
   header h1 {
     font-size: 1.2rem;
     flex-wrap: wrap;
   }
 
-  /*Se reduce el tamaño del logo*/
   .logo {
     height: 40px;
     margin-left: 0;
   }
 
-  /*Se ajusta el espacio entre los links de navegación*/
   .links_navegacion {
     font-size: 0.9rem;
     gap: 1rem;
     flex-wrap: wrap;
   }
 
-  /*Se ajusta el tamaño del buscador*/
   .botones_accion {
     width: auto;
   }
@@ -940,14 +934,40 @@ footer .principal_footer {
     width: 120px;
     font-size: 0.9rem;
   }
+  /* ── /HEADER PRINCIPAL ── */
 
-  /*Se reduce el padding de la sección de inicio*/
+  /* ── FOOTER PRINCIPAL (componente reutilizable) ── */
+  footer {
+    padding: 40px 20px;
+  }
+
+  footer .principal_footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .info_footer p {
+    margin-left: 0;
+  }
+
+  .info_footer img {
+    margin-left: 0;
+  }
+
+  .botones_footer {
+    grid-template-columns: 1fr;
+  }
+
+  .redes_footer {
+    align-items: flex-start;
+  }
+  /* ── /FOOTER PRINCIPAL ── */
+
+  /* ── CONTENIDO ÚNICO — styles.css (Inicio) ── */
   .inicio {
     padding: 2rem 1rem;
   }
 
-  /*Se ajusta el padding del hero*/
-  /*contenedor del hero*/
   .card_inicio {
     display: flex;
     flex-direction: column;
@@ -957,7 +977,6 @@ footer .principal_footer {
     padding: 40px 25px;
   }
 
-  /*Etiqueta excelencia*/
   .calificacion {
     display: flex;
     width: 100%;
@@ -967,20 +986,17 @@ footer .principal_footer {
     margin-bottom: 15px;
   }
 
-  /*titulo principal*/
   .card_inicio h2 {
     font-size: 2.3rem;
     line-height: 1.2;
   }
 
-  /*descripcion*/
   .card_inicio p {
     text-align: center;
     font-size: 0.95rem;
     max-width: 90%;
   }
 
-  /*contenedor de botones*/
   .botones {
     display: flex;
     flex-direction: column;
@@ -989,13 +1005,11 @@ footer .principal_footer {
     margin-top: 20px;
   }
 
-  /*botones*/
   .botones button {
     width: 100%;
     text-align: center;
   }
 
-  /*Se reorganiza el texto de accesos rápidos*/
   .texto_acc_rapido {
     flex-direction: column;
     align-items: flex-start;
@@ -1003,47 +1017,39 @@ footer .principal_footer {
     padding-top: 3rem;
   }
 
-  /*Los accesos rápidos pasan a una sola columna*/
   .accesos {
     grid-template-columns: 1fr;
     gap: 25px;
   }
 
-  /*Las cards de accesos ocupan todo el ancho*/
   .card_rapido {
     width: 100%;
     height: auto;
     padding: 2rem;
   }
 
-  /*Se ajusta el padding de la sección de noticias*/
   .noticias {
     padding: 2rem 1rem 4rem 1rem;
   }
 
-  /*Las noticias pasan a una sola columna*/
   .ult_noticias {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  /*Las cards de noticias ocupan todo el ancho*/
   .card_noticias {
     max-width: 100%;
   }
 
-  /*Se centra el título de la sección*/
   .textos_noti {
     text-align: center;
   }
 
-  /*La sección de historia pasa a una sola columna*/
   .info_col_basic {
     grid-template-columns: 1fr;
     padding: 2rem 1rem;
   }
 
-  /*Se ajusta el tamaño de la imagen*/
   .info_col_img {
     height: auto;
   }
@@ -1052,7 +1058,6 @@ footer .principal_footer {
     height: 300px;
   }
 
-  /*La card de años de experiencia se deja en la imagen*/
   .años_exp_info_basic {
     position: absolute;
     bottom: -20px;
@@ -1061,44 +1066,13 @@ footer .principal_footer {
     width: 160px;
   }
 
-  /*Misión y visión pasan a una sola columna*/
   .mis_vis_basic {
     grid-template-columns: 1fr;
   }
 
-  /*Se ajusta el botón de información*/
   .boton_info_col_basic {
     margin-left: 0;
     width: 100%;
   }
-
-  /*Se ajusta el padding del footer*/
-  footer {
-    padding: 40px 20px;
-  }
-
-  /*El footer pasa a una sola columna*/
-  footer .principal_footer {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  /*Se corrige el margen del texto del footer*/
-  .info_footer p {
-    margin-left: 0;
-  }
-
-  .info_footer img {
-    margin-left: 0;
-  }
-
-  /*Los botones del footer pasan a una columna*/
-  .botones_footer {
-    grid-template-columns: 1fr;
-  }
-
-  /*Se alinean las redes a la izquierda*/
-  .redes_footer {
-    align-items: flex-start;
-  }
+  /* ── /CONTENIDO ÚNICO — styles.css (Inicio) ── */
 }
