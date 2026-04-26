@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/*Se definen las variables de color de la pagina para aplicar en los demás estilos */
+:root {
+  --primary-color: #029642;
+  --primary-alt: #1ba055;
+  --primary-soft-bg: #e5f4ec;
+  --primary-soft-border: #b8e2ca;
+  --primary-hover: #05bd55;
+  --primary-dark: #18583d;
+  --primary-light: #5c9d76;
+  --primary-light-transparent: #5c9d768f;
+  --placeholder: #a3d9bb;
+  --background: #ffffff;
+  --background-dark: #f5f6f7;
+  --background-secondary: #f1f5f9;
+  --complementary-color: #e2e8f0;
+  --text-primary: #000000;
+  /**Texto del formulario*/
+  --text-form: #747c74;
+  --text-secondary-light:#B8E0C4;
+  /***/
+  --text-secondary: #ffffff;
+  --text-secondary-dark: #3d4147;
+  --text-muted: #798290;
+  --font-primary: "Nunito", sans-serif;
+}
+
+/**Estilos generales*/
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+main {
+  padding: 7rem;
+  padding-top: 0;
+  background-color: var(--background-dark);
+}
+
+/*!Estilos de la sección del titulo y la busqueda
+-Se estiliza el titulo y subtitulo
+-Se estiliza formulario de contacto
+-Se estiliza el mapa de referencia
+-Se estiliza el directorio del colegio
+*/
+
+/**Titulo y subtitulo*/
+
+.header_main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.header_main h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.header_main p {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 2rem;
+  color: var(--text-secondary-dark);
+  max-width: 60%;
+}
+
+.title_header {
+  color: var(--primary-color);
+}
+
+.principal_cont {
+  padding: 2rem;
+}
+
+/*'Formulario de Contacto*/
+
+.form_contact {
+  background-color: var(--background);
+  max-width: 50%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--complementary-color);
+  padding: 1rem;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_contact h2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form_icon {
+  width: 30px;
+  height: 30px;
+  color: var(--primary-color);
+}
+
+.contact input::placeholder {
+  color: var(--primary-light);
+  font-weight: 700;
+}
+
+.contact input:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+.contact input,
+select {
+  font-family: var(--font-primary);
+  margin-top: 10px;
+  padding: 15px;
+  border: none;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--complementary-color);
+}
+
+.contact select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6l6 -6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 36px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.contact select:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+.contact option {
+  background-color: var(--primary-light-transparent);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 15px;
+}
+
+.contact textarea {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--background-dark);
+  resize: none;
+  padding: 15px;
+  box-shadow: 0 0 5px var(--complementary-color);
+}
+
+.contact textarea:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+.info_basica {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.input_basic {
+  display: flex;
+  flex-direction: column;
+}
+
+.info_basica,
+.asunto,
+.mensaje {
+  margin-top: 30px;
+}
+
+.info_basica,
+.asunto,
+.mensaje label {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--text-form);
+}
+
+.bot_enviar {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  border: none;
+  padding: 15px;
+  background-color: var(--primary-alt);
+  border-radius: 10px;
+  color: var(--background-secondary);
+  box-shadow: 0 0 10px var(--complementary-color);
+}
+
+.bot_enviar:hover {
+  background-color: var(--primary-dark);
+}
+
+/*!Card con la información de:*/
+/*!-Dirección*/
+/*!-Teléfono*/
+
+.info_contact {
+  background-color: var(--primary-alt);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px var(--complementary-color);
+  margin-top: 20px;
+  width: 650px;
+  position: relative;
+  overflow: hidden;
+}
+
+.info_contact article {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--background);
+}
+
+.info_contact article p {
+  margin: 0;
+  padding: 0;
+  color: var(--text-secondary-light);
+}
+
+.info_contact article:last-child {
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.info_contact h3 {
+  color: var(--background);
+  font-size: 1.5rem;
+}
+
+.info_head_icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 350px;
+  height: 350px;
+  transform: translate(25%, -25%);
+  color: #1a934d;
+}
+
+.location_icon,
+.tel_icon {
+  width: 50px;
+  height: 50px;
+  color: var(--background);
+}
