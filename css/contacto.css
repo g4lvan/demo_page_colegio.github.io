@@ -359,7 +359,7 @@ select {
   font-weight: 700;
 }
 
-.map figcaption a:hover{
+.map figcaption a:hover {
   color: var(--primary-alt);
 }
 
@@ -369,4 +369,215 @@ select {
   z-index: 10;
   background: rgba(0, 0, 0, 0.1);
   pointer-events: none;
+}
+
+/* * ============================================================
+  RESPONSIVE — CONTACTO (main + mapa)
+  Media queries para pantallas <= 768px.
+  Layout general: columna única, cards apiladas.
+  Márgenes laterales reducidos para móvil.
+  ============================================================ */
+
+@media (max-width: 768px) {
+  /* * — Main */
+  main {
+    padding: 1.5rem;
+    padding-top: 0;
+  }
+
+  /* * — Encabezado del main */
+  .header_main {
+    padding: 1.5rem 0 0 0;
+  }
+
+  .header_main h2 {
+    font-size: 1.8rem;
+  }
+
+  .header_main p {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* * — Contenedor principal: pasa a columna única */
+
+  /* ? grid-template-columns pasa de 1fr 1fr a 1fr.
+     En móvil ambas secciones (formulario e info) se apilan
+     verticalmente; el gap se reduce para no desperdiciar espacio. */
+  .principal_cont {
+    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* * — Formulario de contacto */
+  .form_contact {
+    padding: 1rem;
+  }
+
+  .form_contact h2 {
+    font-size: 1.2rem;
+  }
+
+  /* ? info_basica pasa a columna única.
+     En pantallas angostas los dos inputs lado a lado
+     quedan demasiado estrechos para ser usables. */
+  .info_basica {
+    grid-template-columns: 1fr;
+  }
+
+  .info_basica,
+  .asunto,
+  .mensaje {
+    margin-top: 18px;
+  }
+
+  .contact input,
+  .contact select,
+  .contact textarea {
+    width: 100%;
+  }
+
+  .bot_enviar {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  /* * — Card de información de contacto */
+  .info_contact {
+    padding: 1.2rem;
+  }
+
+  .info_contact h3 {
+    font-size: 1.2rem;
+  }
+
+  /* ! info_head_icon se escala hacia abajo en móvil.
+     Si se ajusta el tamaño del card hay que revisar
+     que el icono decorativo no tape el texto. */
+  .info_head_icon {
+    width: 220px;
+    height: 220px;
+  }
+
+  .info_contact article p {
+    max-width: 75%;
+    font-size: 0.9rem;
+  }
+
+  .location_icon,
+  .tel_icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .info_contact article:last-child {
+    margin-top: 20px;
+  }
+
+  /* * — Directorio escolar */
+  .der_directorio {
+    padding: 1rem;
+  }
+
+  .der_directorio h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  /* ' CARD DE PERSONAL (personal_der)
+     Estructura: h5 + p + a (icono + correo).
+     Cada tarjeta incluye nombre, cargo y enlace de correo.
+     Solo documentar esta primera instancia. */
+  .personal_der {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--complementary-color);
+  }
+
+  .personal_der:last-child {
+    border-bottom: none;
+  }
+
+  .personal_der h5 {
+    margin: 0 0 2px 0;
+    font-size: 0.95rem;
+  }
+
+  .personal_der p {
+    margin: 0 0 4px 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .personal_der a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .email_icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  /* * ============================================================
+    MAPA
+    En móvil la figcaption sale del overlay y se coloca
+    debajo del iframe como bloque normal.
+    ============================================================ */
+
+  /* ? El iframe mantiene height fija de 260px.
+     Un valor relativo (vh) causaría saltos al hacer scroll
+     en navegadores móviles con barra de dirección dinámica. */
+  .map iframe {
+    height: 260px;
+  }
+
+  /* ? figcaption pasa de position:absolute a static.
+     En móvil la tarjeta superpuesta taparía demasiado
+     el mapa; colocarla debajo mejora legibilidad de ambos. */
+  .map figcaption {
+    position: static;
+    transform: none;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+    border-left: none;
+    border-top: 6px solid var(--primary-color);
+    padding: 1.2rem 1.5rem;
+    box-shadow: none;
+  }
+
+  .map figcaption h4 {
+    font-size: 1.2rem;
+    margin-top: 12px;
+  }
+
+  .map figcaption p {
+    font-size: 0.9rem;
+  }
+
+  .map figcaption a {
+    font-size: 0.9rem;
+  }
+
+  /* ! .dark se oculta en móvil — el overlay no aporta
+     profundidad cuando el mapa es pequeño y oscurece
+     innecesariamente. Si figcaption vuelve a ser absolute,
+     reactivar con height: 260px y revisar z-index. */
+  .dark {
+    display: none;
+  }
+
+  /* * — Separador entre mapa y footer */
+  .map {
+    border-bottom: 1px solid var(--complementary-color);
+  }
 }
