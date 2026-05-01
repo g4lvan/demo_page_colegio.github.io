@@ -165,7 +165,7 @@ select {
   font-family: var(--font-primary);
   font-weight: 700;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   border-radius: 10px;
   border: none;
   background-color: var(--background-dark);
@@ -287,7 +287,7 @@ select {
 
 .der_directorio {
   background-color: var(--background);
-  margin-top: 10px;
+  margin-top: 25px;
   padding: 0.8rem;
   border-radius: 15px;
   box-shadow: 0 0 10px var(--complementary-color);
