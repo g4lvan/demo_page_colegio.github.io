@@ -25,7 +25,7 @@ body {
   --text-primary: #000000;
   /**Texto del formulario*/
   --text-form: #747c74;
-  --text-secondary-light:#B8E0C4;
+  --text-secondary-light: #b8e0c4;
   /***/
   --text-secondary: #ffffff;
   --text-secondary-dark: #3d4147;
@@ -82,15 +82,22 @@ main {
   color: var(--primary-color);
 }
 
+/**Organización del contenido de la sección*/
+
 .principal_cont {
   padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  justify-content: center;
 }
 
 /*'Formulario de Contacto*/
 
 .form_contact {
   background-color: var(--background);
-  max-width: 50%;
+  min-width: 0;
   border-radius: 15px;
   box-shadow: 0 0 10px var(--complementary-color);
   padding: 1rem;
@@ -222,9 +229,9 @@ select {
   flex-direction: column;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 15px var(--complementary-color);
-  margin-top: 20px;
-  width: 650px;
+  box-shadow: 0 0 10px var(--complementary-color);
+  min-width: 0;
+  align-self: flex-start;
   position: relative;
   overflow: hidden;
 }
@@ -239,7 +246,13 @@ select {
 .info_contact article p {
   margin: 0;
   padding: 0;
+  max-width: 55%;
   color: var(--text-secondary-light);
+}
+
+.info_contact article h4 {
+  margin-bottom: 10px;
+  padding: 0;
 }
 
 .info_contact article:last-child {
@@ -268,4 +281,92 @@ select {
   width: 50px;
   height: 50px;
   color: var(--background);
+}
+
+/*!Card con el directorio escolar*/
+
+.der_directorio {
+  background-color: var(--background);
+  margin-top: 10px;
+  padding: 0.8rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--complementary-color);
+}
+
+.der_directorio h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+}
+
+/*!Estilos mapa*/
+
+.map_icon {
+  width: 16px;
+  height: 16px;
+}
+
+.map {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.map figcaption {
+  max-width: 30%;
+  padding: 2rem;
+  background-color: var(--background);
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--complementary-color);
+  border-left: 6px solid var(--primary-color);
+  position: absolute;
+  z-index: 10;
+  top: 45%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.map figcaption span {
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 5px;
+  background-color: var(--primary-soft-border);
+  border-radius: 10px;
+  color: var(--primary-dark);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.map figcaption h4 {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.map figcaption p {
+  color: var(--text-secondary-dark);
+}
+
+.map figcaption a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.map figcaption a:hover{
+  color: var(--primary-alt);
+}
+
+.dark {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
 }
