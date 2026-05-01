@@ -203,6 +203,10 @@ main {
   margin-right: 5px;
 }
 
+.personal article:last-of-type {
+  border-bottom: none;
+}
+
 /*Titulo de la sección*/
 
 .derecha_header {

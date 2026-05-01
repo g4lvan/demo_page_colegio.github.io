@@ -300,6 +300,10 @@ select {
   padding: 0;
 }
 
+.contact_derecha article:last-of-type {
+  border: none;
+}
+
 /*!Estilos mapa*/
 
 .map_icon {
