@@ -7,7 +7,10 @@ body {
   overflow-x: hidden;
 }
 
-/*Se definen las variables de color de la pagina para aplicar en los demás estilos */
+/* * ============================================================
+   TOKENS GLOBALES
+   Variables compartidas de color y tipografía para mantener consistencia visual.
+   ============================================================ */
 :root {
   --primary-color: #029642;
   --primary-alt: #1ba055;
@@ -23,17 +26,20 @@ body {
   --background-secondary: #f1f5f9;
   --complementary-color: #e2e8f0;
   --text-primary: #000000;
-  /**Texto del formulario*/
+  /* * — Tokens de formulario */
   --text-form: #747c74;
   --text-secondary-light: #b8e0c4;
-  /***/
+  /* * — Tipografía base */
   --text-secondary: #ffffff;
   --text-secondary-dark: #3d4147;
   --text-muted: #798290;
   --font-primary: "Nunito", sans-serif;
 }
 
-/**Estilos generales*/
+/* * ============================================================
+   BASE
+   Reset mínimo y tipografía general de la página.
+   ============================================================ */
 
 body {
   margin: 0;
@@ -46,12 +52,10 @@ main {
   background-color: var(--background-dark);
 }
 
-/*!Estilos de la sección del titulo y la busqueda
--Se estiliza el titulo y subtitulo
--Se estiliza formulario de contacto
--Se estiliza el mapa de referencia
--Se estiliza el directorio del colegio
-*/
+/* * ============================================================
+   ENCABEZADO Y BÚSQUEDA
+   Título de página y controles visuales de búsqueda o filtro.
+   ============================================================ */
 
 /**Titulo y subtitulo*/
 
@@ -82,7 +86,7 @@ main {
   color: var(--primary-color);
 }
 
-/**Organización del contenido de la sección*/
+/* ? Grid principal separa formulario y datos de contacto. En mobile se apila para preservar legibilidad. */
 
 .principal_cont {
   padding: 2rem;
@@ -93,7 +97,7 @@ main {
   justify-content: center;
 }
 
-/*'Formulario de Contacto*/
+/* ' FORMULARIO DE CONTACTO Patrón agrupado por datos básicos, asunto, mensaje y acción principal. */
 
 .form_contact {
   background-color: var(--background);
@@ -219,9 +223,7 @@ select {
   background-color: var(--primary-dark);
 }
 
-/*!Card con la información de:*/
-/*!-Dirección*/
-/*!-Teléfono*/
+/* * — Datos de contacto */
 
 .info_contact {
   background-color: var(--primary-alt);
@@ -283,7 +285,7 @@ select {
   color: var(--background);
 }
 
-/*!Card con el directorio escolar*/
+/* ' CARD DE PERSONAL Patrón repetido para rectoría y coordinaciones con enlace mailto. */
 
 .der_directorio {
   background-color: var(--background);
@@ -304,7 +306,7 @@ select {
   border: none;
 }
 
-/*!Estilos mapa*/
+/* ? El figcaption se superpone al mapa en desktop para compactar ubicación y CTA. En mobile pasa a flujo normal para evitar tap targets cubiertos. */
 
 .map_icon {
   width: 16px;
@@ -407,9 +409,7 @@ select {
 
   /* * — Contenedor principal: pasa a columna única */
 
-  /* ? grid-template-columns pasa de 1fr 1fr a 1fr.
-     En móvil ambas secciones (formulario e info) se apilan
-     verticalmente; el gap se reduce para no desperdiciar espacio. */
+  /* ? grid-template-columns pasa de 1fr 1fr a 1fr. En móvil ambas secciones (formulario e info) se apilan verticalmente; el gap se reduce para no desperdiciar espacio. */
   .principal_cont {
     padding: 0;
     grid-template-columns: 1fr;
@@ -425,9 +425,7 @@ select {
     font-size: 1.2rem;
   }
 
-  /* ? info_basica pasa a columna única.
-     En pantallas angostas los dos inputs lado a lado
-     quedan demasiado estrechos para ser usables. */
+  /* ? info_basica pasa a columna única. En pantallas angostas los dos inputs lado a lado quedan demasiado estrechos para ser usables. */
   .info_basica {
     grid-template-columns: 1fr;
   }
@@ -458,9 +456,7 @@ select {
     font-size: 1.2rem;
   }
 
-  /* ! info_head_icon se escala hacia abajo en móvil.
-     Si se ajusta el tamaño del card hay que revisar
-     que el icono decorativo no tape el texto. */
+  /* ! info_head_icon se escala hacia abajo en móvil. Si se ajusta el tamaño del card hay que revisar que el icono decorativo no tape el texto. */
   .info_head_icon {
     width: 220px;
     height: 220px;
@@ -492,10 +488,7 @@ select {
     margin-bottom: 8px;
   }
 
-  /* ' CARD DE PERSONAL (personal_der)
-     Estructura: h5 + p + a (icono + correo).
-     Cada tarjeta incluye nombre, cargo y enlace de correo.
-     Solo documentar esta primera instancia. */
+  /* ' CARD DE PERSONAL (personal_der) Estructura: h5 + p + a (icono + correo). Cada tarjeta incluye nombre, cargo y enlace de correo. Solo documentar esta primera instancia. */
   .personal_der {
     padding: 10px 0;
     border-bottom: 1px solid var(--complementary-color);
@@ -538,16 +531,12 @@ select {
     debajo del iframe como bloque normal.
     ============================================================ */
 
-  /* ? El iframe mantiene height fija de 260px.
-     Un valor relativo (vh) causaría saltos al hacer scroll
-     en navegadores móviles con barra de dirección dinámica. */
+  /* ? El iframe mantiene height fija de 260px. Un valor relativo (vh) causaría saltos al hacer scroll en navegadores móviles con barra de dirección dinámica. */
   .map iframe {
     height: 260px;
   }
 
-  /* ? figcaption pasa de position:absolute a static.
-     En móvil la tarjeta superpuesta taparía demasiado
-     el mapa; colocarla debajo mejora legibilidad de ambos. */
+  /* ? figcaption pasa de position:absolute a static. En móvil la tarjeta superpuesta taparía demasiado el mapa; colocarla debajo mejora legibilidad de ambos. */
   .map figcaption {
     position: static;
     transform: none;
@@ -573,10 +562,7 @@ select {
     font-size: 0.9rem;
   }
 
-  /* ! .dark se oculta en móvil — el overlay no aporta
-     profundidad cuando el mapa es pequeño y oscurece
-     innecesariamente. Si figcaption vuelve a ser absolute,
-     reactivar con height: 260px y revisar z-index. */
+  /* ! .dark se oculta en móvil — el overlay no aporta profundidad cuando el mapa es pequeño y oscurece innecesariamente. Si figcaption vuelve a ser absolute, reactivar con height: 260px y revisar z-index. */
   .dark {
     display: none;
   }

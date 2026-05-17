@@ -7,7 +7,10 @@ body {
   overflow-x: hidden;
 }
 
-/*Se definen las variables de color de la pagina para aplicar en los demás estilos */
+/* * ============================================================
+   TOKENS GLOBALES
+   Variables compartidas de color y tipografía para mantener consistencia visual.
+   ============================================================ */
 :root {
   --primary-color: #029642;
   --primary-alt: #1ba055;
@@ -23,17 +26,20 @@ body {
   --background-secondary: #f1f5f9;
   --complementary-color: #e2e8f0;
   --text-primary: #000000;
-  /**Texto del formulario*/
+  /* * — Tokens de formulario */
   --text-form: #747c74;
   --text-secondary-light: #b8e0c4;
-  /***/
+  /* * — Tipografía base */
   --text-secondary: #ffffff;
   --text-secondary-dark: #3d4147;
   --text-muted: #798290;
   --font-primary: "Nunito", sans-serif;
 }
 
-/**Estilos generales*/
+/* * ============================================================
+   BASE
+   Reset mínimo y tipografía general de la página.
+   ============================================================ */
 
 body {
   margin: 0;
@@ -45,7 +51,10 @@ main {
   padding-top: 0;
 }
 
-/**Sección del titulo*/
+/* * ============================================================
+   TÍTULO DE PÁGINA
+   Hero textual independiente del main para ocupar todo el ancho.
+   ============================================================ */
 .title {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -78,7 +87,10 @@ main {
   max-width: 35%;
 }
 
-/**Sección introductoria*/
+/* * ============================================================
+   INTRODUCCIÓN
+   Presenta valores institucionales y cards de fortalezas.
+   ============================================================ */
 
 .introduction {
   background-color: var(--background-dark);
@@ -123,7 +135,7 @@ main {
   color: var(--text-secondary-dark);
 }
 
-/**Cards introducción*/
+/* ' CARD DE FORTALEZA Patrón repetido: icono circular, título y texto breve con hover destacado. */
 
 .card_intr_izq {
   display: flex;
@@ -176,7 +188,10 @@ main {
   background-color: var(--primary-hover);
 }
 
-/**Sección de historia*/
+/* * ============================================================
+   HISTORIA
+   Video institucional acompañado de texto y lista de hitos.
+   ============================================================ */
 
 .history {
   display: grid;
@@ -254,7 +269,10 @@ main {
   background-repeat: no-repeat;
 }
 
-/**Sección del personal*/
+/* * ============================================================
+   EQUIPO
+   Cards de directivos visibles como bloque institucional de confianza.
+   ============================================================ */
 
 .team {
   display: flex;
@@ -384,8 +402,7 @@ p {
     max-width: 55%;
   }
  
-  /* ? gap reducido — a 1024px el grid de 2 columnas se mantiene
-     pero el gap de 100px genera desbordamiento visual. */
+  /* ? gap reducido — a 1024px el grid de 2 columnas se mantiene pero el gap de 100px genera desbordamiento visual. */
   .introduction {
     gap: 40px;
     padding: 3rem 2.5rem;
@@ -437,8 +454,7 @@ p {
  
   /* * — Introduction */
  
-  /* ? grid pasa a 1 columna — en mobile la columna derecha (cards)
-     baja debajo del texto introductorio, siguiendo el diseño de referencia. */
+  /* ? grid pasa a 1 columna — en mobile la columna derecha (cards) baja debajo del texto introductorio, siguiendo el diseño de referencia. */
   .introduction {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -451,10 +467,7 @@ p {
     margin-top: 20px;
   }
  
-  /* ' CARDS DE INTRODUCCIÓN — LAYOUT MOBILE
-     Dejan de ser grid 2x2 y pasan a lista vertical:
-     icono a la izquierda + texto a la derecha (flex-row).
-     Solo documentar esta primera instancia. */
+  /* ' CARDS DE INTRODUCCIÓN — LAYOUT MOBILE Dejan de ser grid 2x2 y pasan a lista vertical: icono a la izquierda + texto a la derecha (flex-row). Solo documentar esta primera instancia. */
   .intr_izq {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -474,8 +487,7 @@ p {
     max-width: 100%;
   }
  
-  /* ? flex-shrink: 0 obligatorio — sin él el icono circular
-     se aplasta cuando el texto adyacente es largo. */
+  /* ? flex-shrink: 0 obligatorio — sin él el icono circular se aplasta cuando el texto adyacente es largo. */
   .introduction svg {
     flex-shrink: 0;
     width: 44px;
@@ -484,8 +496,7 @@ p {
  
   /* * — History */
  
-  /* ? grid pasa a 1 columna — video arriba, texto abajo,
-     siguiendo el orden del diseño de referencia mobile. */
+  /* ? grid pasa a 1 columna — video arriba, texto abajo, siguiendo el orden del diseño de referencia mobile. */
   .history {
     grid-template-columns: 1fr;
     padding: 2.5rem 1.5rem;
@@ -502,8 +513,7 @@ p {
     max-width: 100%;
   }
  
-  /* ! his_list hereda padding-left que causa scroll lateral en < 375px.
-     Se neutraliza aquí; el espacio visual lo maneja padding-left del li. */
+  /* ! his_list hereda padding-left que causa scroll lateral en < 375px. Se neutraliza aquí; el espacio visual lo maneja padding-left del li. */
   .his_list {
     padding-left: 0;
   }
@@ -574,8 +584,7 @@ p {
     font-size: 1.6rem;
   }
  
-  /* ? font-size reducido — evita overflow en pantallas < 375px
-     (iPhone SE, Galaxy A series antiguos). */
+  /* ? font-size reducido — evita overflow en pantallas < 375px (iPhone SE, Galaxy A series antiguos). */
   .his_info h3,
   .his_info h3 span {
     font-size: 1.4rem;

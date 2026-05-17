@@ -7,7 +7,10 @@ body {
   overflow-x: hidden;
 }
 
-/*Se definen las variables de color de la pagina para aplicar en los demás estilos */
+/* * ============================================================
+   TOKENS GLOBALES
+   Variables compartidas de color y tipografía para mantener consistencia visual.
+   ============================================================ */
 :root {
   --primary-color: #029642;
   --primary-alt: #1ba055;
@@ -26,11 +29,12 @@ body {
   --text-secondary: #ffffff;
   --text-secondary-dark: #3d4147;
   --text-muted: #798290;
-  /*'Colores para los tipos de archivos*/
+  /* ' TOKENS DE ARCHIVO
+  Variables de color para distinguir visualmente PDF, DOCX y formularios. */
   --pdf-color: #dc2626;
   --docx-color: #2563eb;
   --form-color: #7e4ca5;
-  /***/
+  /* * — Tipografía base */
   --font-primary: "Nunito", sans-serif;
 }
 
@@ -39,7 +43,10 @@ body {
   font-family: var(--font-primary);
 }
 
-/*Estilos Main*/
+/* * ============================================================
+   MAIN
+   Contenedor principal de la página y fondo base.
+   ============================================================ */
 
 main {
   background-color: var(--background-dark);
@@ -47,11 +54,12 @@ main {
   padding-top: 0;
 }
 
-/*Estilos de la sección del titulo
--Se estiliza el titulo 
-*/
+/* * ============================================================
+   ENCABEZADO DE PÁGINA
+   Título y subtítulo de entrada para orientar cada subpágina.
+   ============================================================ */
 
-/*Titulo y subtitulo*/
+/* * — Título y subtítulo */
 
 .header_main {
   display: flex;
@@ -74,17 +82,14 @@ main {
   color: var(--text-secondary-dark);
 }
 
-/*!Layout del contenido*/
+/* ? Grid 2fr/1fr prioriza el contenido principal sobre la columna de apoyo. En responsive cambia a una columna para evitar lectura comprimida. */
 .content {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 70px;
 }
 
-/**Se estilizan las cards con contenido*/
-/**-Estilos de SVG*/
-/**-Estilos generales*/
-/**-Estilos Titulo e información*/
+/* ' CARD DE RECURSO Patrón repetido: icono absoluto, contenido textual y enlace de salida. */
 
 .cards_sections {
   display: grid;
@@ -150,7 +155,7 @@ main {
   color: var(--primary-hover);
 }
 
-/*'Se estiliza la sección de la derecha*/
+/* * — Columna derecha de apoyo */
 
 .recursos_derecha {
   display: flex;
@@ -207,7 +212,7 @@ main {
   border-bottom: none;
 }
 
-/*Titulo de la sección*/
+/* * — Título de bloque lateral */
 
 .derecha_header {
   display: flex;
@@ -257,7 +262,7 @@ main {
   background-color: var(--background-dark);
 }
 
-/*Card para el buzón de ayuda*/
+/* ! Buzón visual sin flujo conectado. Mantener separado para reemplazarlo por formulario o ruta real. */
 
 .help_recursos {
   color: var(--background);
@@ -298,9 +303,10 @@ main {
   background-color: var(--placeholder);
 }
 
-/*!Estilos de la sección con más información*/
-/**-Card con la info de las pruebas estandarizadas*/
-/**-Card con descargas de contenido(Circulares, etc...)*/
+/* * ============================================================
+   PRUEBAS Y DESCARGAS
+   Bloques de información académica y documentos descargables.
+   ============================================================ */
 
 .info_mas {
   grid-column: 1 / 2;
@@ -350,7 +356,7 @@ main {
   background-color: var(--primary-hover);
 }
 
-/*'Estilos de la sección de descargas*/
+/* ' ARCHIVO DE DESCARGA Patrón repetido: icono de tipo, nombre del documento y acción de descarga. */
 
 .descargas {
   display: flex;
@@ -466,9 +472,10 @@ button:hover .mas_descargas {
   color: var(--background);
 }
 
-/*Se estiliza el footer de la pagina
--Se define el estilo del footer, para proporcionar información de contacto, enlaces a redes sociales y otros detalles relevantes sobre la institución
-*/
+/* * ============================================================
+   FOOTER
+   Componente común con identidad, accesos internos y redes sociales.
+   ============================================================ */
 footer {
   padding: 50px 100px;
 }
@@ -520,7 +527,7 @@ footer .principal_footer {
   padding: 0;
 }
 
-/*Links de acceso rapido*/
+/* * — Links rápidos del footer */
 
 .botones_footer {
   display: grid;
@@ -552,7 +559,7 @@ footer .principal_footer {
   color: var(--primary-hover);
 }
 
-/*Redes de la institución*/
+/* * — Redes institucionales */
 
 .redes_footer {
   display: flex;
@@ -581,7 +588,7 @@ footer .principal_footer {
   background-color: var(--primary-hover);
 }
 
-/*Linea del footer con los derechos de la institución*/
+/* * — Línea legal del footer */
 
 .line_footer hr {
   max-width: 90%;
@@ -594,17 +601,16 @@ footer .principal_footer {
   margin-top: 40px;
 }
 
-/* Estilos Responsive de la pagina
--Se adapta el diseño para tablets y celulares
--Se corrigen tamaños de texto, grids y elementos
--Se mantiene la navbar con el mismo diseño
-*/
+/* * ============================================================
+   RESPONSIVE
+   Ajustes por breakpoint para mantener lectura y evitar desbordamientos.
+   ============================================================ */
 
-/* ============================================================
+/* * ============================================================
    TABLET — hasta 1024px
    ============================================================ */
 @media (max-width: 1024px) {
-  /* ── CONTENIDO ÚNICO — recursos.css ── */
+  /* * — CONTENIDO ÚNICO — recursos.css */
   .content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -637,21 +643,21 @@ footer .principal_footer {
     width: 100%;
     text-align: center;
   }
-  /* ── /CONTENIDO ÚNICO — recursos.css ── */
+  /* * — /CONTENIDO ÚNICO — recursos.css */
 
-  /* FOOTER PRINCIPAL */
+  /* * — Footer principal */
   footer .principal_footer {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-  /* /FOOTER PRINCIPAL */
+  /* * — Fin footer principal */
 }
 
-/* ============================================================
+/* * ============================================================
    MOBILE — hasta 768px
    ============================================================ */
 @media (max-width: 768px) {
-  /* ── CONTENIDO ÚNICO — recursos.css ── */
+  /* * — CONTENIDO ÚNICO — recursos.css */
   main {
     padding: 1rem;
   }
@@ -716,9 +722,9 @@ footer .principal_footer {
   .mas_archivos {
     width: 70%;
   }
-  /* ── /CONTENIDO ÚNICO — recursos.css ── */
+  /* * — /CONTENIDO ÚNICO — recursos.css */
 
-  /* FOOTER PRINCIPAL */
+  /* * — Footer principal */
   footer {
     padding: 2rem 1rem;
   }
@@ -740,14 +746,14 @@ footer .principal_footer {
   .redes_footer {
     align-items: flex-start;
   }
-  /* /FOOTER PRINCIPAL */
+  /* * — Fin footer principal */
 }
 
-/* ============================================================
+/* * ============================================================
    MOBILE PEQUEÑO — hasta 480px
    ============================================================ */
 @media (max-width: 480px) {
-  /* ── CONTENIDO ÚNICO — recursos.css ── */
+  /* * — CONTENIDO ÚNICO — recursos.css */
   .header_main h2 {
     font-size: 1.5rem;
   }
@@ -776,5 +782,5 @@ footer .principal_footer {
   .card_pruebas p {
     font-size: 0.95rem;
   }
-  /* ── /CONTENIDO ÚNICO — recursos.css ── */
+  /* * — /CONTENIDO ÚNICO — recursos.css */
 }

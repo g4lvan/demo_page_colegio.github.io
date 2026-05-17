@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Descripcion en los metadatos-->
+    <!-- * — Metadatos SEO -->
     <meta
       name="description"
       content="Sitio web oficial de la Institución Educativa Municipal Emilio Cifuentes. Encuentra información académica, noticias, documentos y más."
     />
 
-    <!--Metadatos de previsualización por link-->
+    <!-- * — Open Graph para compartir enlaces -->
     <meta
       property="og:title"
       content="IEM Emilio Cifuentes"
@@ -37,7 +37,7 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="IEM Emilio Cifuentes" />
 
-    <!--Twitter/X Card-->
+    <!-- * — Twitter/X Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="IEM Emilio Cifuentes" />
     <meta
@@ -58,14 +58,15 @@
     />
     <meta name="twitter:creator" content="@g4lvan_" />
 
-    <!--Fuentes de la pagina-->
+    <!-- ? preconnect declarado antes del stylesheet de Google Fonts.
+         Reduce el handshake con el servidor de fuentes antes de descargar el CSS. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <!--Titulo, estilos e icono de la pagina-->
+    <!-- * — Configuración visual base -->
     <title>Institución Educativa Municipal Emilio Cifuentes</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link
@@ -75,13 +76,13 @@
     />
   </head>
   <body>
-    <!--Header con: 
-    - Logo de la institución 
-    - Nombre de la institución 
-    - Barra de navegación con enlaces a las secciones principales de la página (Inicio,
-    Nosotros, Formación, Contacto)-->
+    <!-- * ============================================================
+  HEADER
+  Barra superior compartida: logo + navegación principal + buscador visual.
+  ============================================================ -->
     <header>
-      <!--Nombre y logo de la institución -->
+      <!-- ? Logo y navegación comparten .izquierda para sostener el agrupamiento visual del header.
+         Si se separan, el flex reparte cada bloque como elementos independientes. -->
       <div class="izquierda">
         <h1>
           <img
@@ -91,7 +92,6 @@
           />
           I.E.M. Emilio <span class="titulo">Cifuentes</span>
         </h1>
-        <!--Barra de navegación con enlaces a las secciones principales de la página (Inicio, Nosotros, Noticias , Contacto)-->
         <nav>
           <ul class="links_navegacion">
             <li><a href="#">Inicio</a></li>
@@ -102,7 +102,8 @@
           </ul>
         </nav>
       </div>
-      <!--Formulario de búsqueda-->
+      <!-- ! Buscador visual sin lógica JS conectada.
+           Mantener el formulario hasta integrar búsqueda real en v2.0. -->
       <div class="botones_accion">
         <form class="busqueda">
           <svg
@@ -129,12 +130,10 @@
         </form>
       </div>
     </header>
-    <!--Sección de inicio con el contenido fundamental de la página
-    -Mensaje de bienvenida
-    -Descripción de la institución 
-    -Botones de acción para ver noticias y realizar inscripciones
-    -Acceso rápido a secciones importantes como noticias, calendario, recursos y contacto
-    -->
+    <!-- * ============================================================
+  MAIN / INICIO
+  Hero institucional, llamadas principales y accesos rápidos para comunidad educativa.
+  ============================================================ -->
     <main>
       <section class="inicio">
         <article class="card_inicio">
@@ -171,11 +170,7 @@
             <button class="boton-secundario">Inscripciones 2026</button>
           </div>
         </article>
-        <!--Sección de acceso rápido para cosas fundamentales para padres y estudiantes:
-        -Noticias
-        -Calendario
-        -Recursos
-        -Contacto-->
+        <!-- * — Acceso rápido -->
         <section class="acceso_rapido">
           <header class="texto_acc_rapido">
             <div class="titulo_acc_rapido">
@@ -189,7 +184,9 @@
           </header>
 
           <div class="accesos">
-            <!-- CARD 1 -->
+            <!-- ' CARD DE ACCESO RÁPIDO
+               Estructura: .card_rapido > icono SVG + h3 + p + enlace con chevron.
+               Solo documentar esta primera instancia — las demás repiten el patrón. -->
             <article class="card_rapido">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -226,8 +223,6 @@
                 </svg>
               </a>
             </article>
-
-            <!-- CARD 2 -->
             <article class="card_rapido">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -257,6 +252,8 @@
               <h3>Calendario</h3>
               <p>Fechas importantes, festivos y horarios del periodo.</p>
 
+              <!-- ! href vacío — calendario académico pendiente.
+                   Reemplazar con la ruta real cuando exista la página. -->
               <a href="">
                 Ver Fechas
                 <svg
@@ -271,8 +268,6 @@
                 </svg>
               </a>
             </article>
-
-            <!-- CARD 3 -->
             <article class="card_rapido">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -294,6 +289,8 @@
               <h3>Recursos</h3>
               <p>Acceda a los materiales de aprendizaje.</p>
 
+              <!-- ! href vacío — portal pendiente de definición.
+                   No cambiar el texto hasta decidir si apunta a recursos o contacto. -->
               <a href="">
                 Abrir Portal
                 <svg
@@ -308,8 +305,6 @@
                 </svg>
               </a>
             </article>
-
-            <!-- CARD 4 -->
             <article class="card_rapido">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -331,6 +326,8 @@
                 ¿Necesita ayuda? Póngase en contacto con nuestra administración.
               </p>
 
+              <!-- ! href vacío — portal pendiente de definición.
+                   No cambiar el texto hasta decidir si apunta a recursos o contacto. -->
               <a href="">
                 Abrir Portal
                 <svg
@@ -348,10 +345,10 @@
           </div>
         </section>
       </section>
-      <!--Sección donde se van a mostrar las ultimas noticias de la institución.
-        -Cards con las noticias más recientes, incluyendo títulos, resúmenes y enlaces para leer más.
-        -Enlace para ver todas las noticias y actualizaciones de la institución.
-      -->
+      <!-- * ============================================================
+  NOTICIAS RECIENTES
+  Tres noticias destacadas hardcodeadas; el patrón anticipa una fuente dinámica futura.
+  ============================================================ -->
       <section class="noticias">
         <header class="textos_noti">
           <h2>Últimos Acontecimientos</h2>
@@ -361,7 +358,9 @@
         </header>
 
         <div class="ult_noticias">
-          <!-- Card 1 -->
+          <!-- ' CARD DE NOTICIA
+             Estructura: .card_noticias > .card_img (badge + img) > .card_content.
+             Badge posicionado sobre la imagen; solo documentar esta primera instancia. -->
           <article class="card_noticias">
             <div class="card_img">
               <span class="type_noti">Logro Emilista</span>
@@ -396,11 +395,11 @@
                 países.
               </p>
 
+              <!-- ! href vacío — detalle de noticia pendiente.
+                 Mantener el CTA visible hasta crear páginas individuales. -->
               <a class="btn_card" href="">Leer Artículo</a>
             </div>
           </article>
-
-          <!-- Card 2 -->
           <article class="card_noticias">
             <div class="card_img">
               <span class="type_noti">Evento Institucional</span>
@@ -434,11 +433,11 @@
                 nuestros bachilleres.
               </p>
 
+              <!-- ! href vacío — detalle de noticia pendiente.
+                 Mantener el CTA visible hasta crear páginas individuales. -->
               <a class="btn_card" href="">Leer Artículo</a>
             </div>
           </article>
-
-          <!-- Card 3 -->
           <article class="card_noticias">
             <div class="card_img">
               <span class="type_noti">Comunidad Emilista</span>
@@ -472,16 +471,17 @@
                 colegio.
               </p>
 
+              <!-- ! href vacío — detalle de noticia pendiente.
+                 Mantener el CTA visible hasta crear páginas individuales. -->
               <a class="btn_card" href="">Leer Artículo</a>
             </div>
           </article>
         </div>
       </section>
-      <!--En esta sección se va a mostrar un resumen de:
-      -Breve historia de la institución
-      -Visión y misión
-      Además va a estar acompañada de una imagen representativa de la institución y un enlace para leer más sobre la historia y los valores de la institución.
-      -->
+      <!-- * ============================================================
+  RESUMEN INSTITUCIONAL
+  Bloque de confianza: imagen, antigüedad, misión/visión y acceso a la historia completa.
+  ============================================================ -->
       <section class="info_col_basic">
         <div class="info_col_img">
           <img
@@ -562,20 +562,19 @@
               </p>
             </article>
           </div>
+          <!-- ! href vacío — enlace a historia institucional pendiente.
+             Conectar con pages/nosotros.html o sección específica cuando se defina. -->
           <a href="" class="boton_info_col_basic">Aprende más sobre nosotros</a>
         </div>
       </section>
     </main>
 
-    <!--Footer de la pagina
-      -Pequeña descripción
-      -Links de acceso
-      -Redes sociales
-    -->
-
+    <!-- * ============================================================
+  FOOTER
+  Cierre común del sitio con identidad institucional, accesos internos y redes sociales.
+  ============================================================ -->
     <footer>
       <div class="principal_footer">
-        <!--Información del colegio en el footer-->
         <div class="info_footer">
           <header class="img_footer">
             <img
@@ -591,7 +590,6 @@
             construir un proyecto.
           </p>
         </div>
-        <!--Botones de acceso en el footer-->
         <nav class="botones_footer">
           <div class="recursos_footer">
             <h3>Recursos</h3>
@@ -610,8 +608,6 @@
             </ul>
           </div>
         </nav>
-
-        <!--Redes del colegio-->
         <div class="redes_footer">
           <h3>Conectar</h3>
           <a

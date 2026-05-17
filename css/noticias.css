@@ -7,7 +7,10 @@ body {
   overflow-x: hidden;
 }
 
-/*Se definen las variables de color de la pagina para aplicar en los demás estilos */
+/* * ============================================================
+   TOKENS GLOBALES
+   Variables compartidas de color y tipografía para mantener consistencia visual.
+   ============================================================ */
 :root {
   --primary-color: #029642;
   --primary-alt: #1ba055;
@@ -34,9 +37,10 @@ body {
   font-family: var(--font-primary);
 }
 
-/* Estilos para el header y la Navbar
-    -Se posiciona el logo y los botones de navegación
-*/
+/* * ============================================================
+   HEADER
+   Layout reutilizable de logo, navegación y buscador en páginas principales.
+   ============================================================ */
 
 header {
   display: flex;
@@ -113,10 +117,7 @@ h1 {
   margin-left: 2rem;
 }
 
-/*Se estilizan los botones de acción
-  -Se estiliza el formulario de busqueda
-  -Se estiliza el boton de iniciar sesión
-*/
+/* ! El buscador es un componente visual sin comportamiento JS. Mantener estilos aislados para conectarlo después sin rehacer el header. */
 
 .botones_accion {
   display: flex;
@@ -164,7 +165,10 @@ h1 {
   margin-right: 10px;
 }
 
-/*Estilos Main*/
+/* * ============================================================
+   MAIN
+   Contenedor principal de la página y fondo base.
+   ============================================================ */
 
 main {
   background-color: var(--background-dark);
@@ -172,13 +176,12 @@ main {
   padding-top: 0;
 }
 
-/*Estilos de la sección del titulo y la busqueda
--Se estiliza el titulo y subtitulo
--Se estiliza formulario de busqueda
--Se estilizan las categorías de busqueda
-*/
+/* * ============================================================
+   ENCABEZADO DE PÁGINA
+   Título y subtítulo de entrada para orientar cada subpágina.
+   ============================================================ */
 
-/*Titulo y subtitulo*/
+/* * — Título y subtítulo */
 
 .header_main {
   display: flex;
@@ -201,7 +204,7 @@ main {
   color: var(--text-secondary-dark);
 }
 
-/*Formulario de busqueda*/
+/* ! Buscador visual sin filtrado JS conectado. Mantener estructura para integrar búsqueda real posteriormente. */
 
 .busqueda_notis {
   display: flex;
@@ -240,7 +243,7 @@ main {
   height: 16px;
 }
 
-/*Categorías de busqueda*/
+/* ! Categorías visuales sin estado activo ni filtrado conectado. Conectar con JS antes de tratarlas como filtros reales. */
 
 .categorias_busqueda {
   display: flex;
@@ -266,7 +269,7 @@ main {
   color: var(--background);
 }
 
-/*Organization de el contenido de las noticias y de los eventos usando grid*/
+/* ? Grid 2fr/1fr prioriza listado de noticias y deja eventos como soporte lateral. */
 
 .contenido_noticias {
   display: grid;
@@ -274,11 +277,7 @@ main {
   padding: 2rem;
 }
 
-/*Cards con las noticias: 
--imagen 
--un título 
--un breve resumen  
--un enlace*/
+/* ' CARD DE NOTICIA Patrón repetido: imagen con badge, fecha, título, resumen y CTA. */
 
 .card_noticias {
   display: flex;
@@ -386,7 +385,7 @@ main {
   margin-right: 0.5rem;
 }
 
-/*Se estiliza el menú para desplazarse por el resto de noticias*/
+/* ! Paginación visual sin lógica de navegación conectada. Reemplazar por paginación real cuando exista fuente dinámica. */
 
 .mas_noticias {
   display: flex;
@@ -432,7 +431,7 @@ main {
   background-color: var(--primary-color);
 }
 
-/*Se estiliza la sección de próximos eventos*/
+/* ' EVENTO PRÓXIMO Patrón repetido: fecha compacta, título y ubicación del evento. */
 
 .noticias_derecha {
   display: flex;
@@ -503,7 +502,7 @@ main {
   font-weight: 700;
 }
 
-/*Titulo de la sección*/
+/* * — Título de bloque lateral */
 
 .derecha_header {
   display: flex;
@@ -553,7 +552,7 @@ main {
   background-color: var(--background-dark);
 }
 
-/*Card para registrar el correo y recibir notificaciones*/
+/* ! Suscripción visual sin backend conectado. Requiere proveedor de email o endpoint antes de producción. */
 
 .notif {
   color: var(--background);
@@ -612,9 +611,10 @@ main {
   background-color: var(--placeholder);
 }
 
-/*Se estiliza el footer de la pagina
--Se define el estilo del footer, para proporcionar información de contacto, enlaces a redes sociales y otros detalles relevantes sobre la institución
-*/
+/* * ============================================================
+   FOOTER
+   Componente común con identidad, accesos internos y redes sociales.
+   ============================================================ */
 
 footer {
   padding: 50px 100px;
@@ -667,7 +667,7 @@ footer .principal_footer {
   padding: 0;
 }
 
-/*Links de acceso rapido*/
+/* * — Links rápidos del footer */
 
 .botones_footer {
   display: grid;
@@ -699,7 +699,7 @@ footer .principal_footer {
   color: var(--primary-hover);
 }
 
-/*Redes de la institución*/
+/* * — Redes institucionales */
 
 .redes_footer {
   display: flex;
@@ -728,7 +728,7 @@ footer .principal_footer {
   background-color: var(--primary-hover);
 }
 
-/*Linea del footer con los derechos de la institución*/
+/* * — Línea legal del footer */
 
 .line_footer hr {
   max-width: 90%;
@@ -741,18 +741,17 @@ footer .principal_footer {
   margin-top: 40px;
 }
 
-/* Estilos Responsive de la pagina
--Se adapta el diseño para tablets y celulares
--Se corrigen tamaños de texto, grids y elementos
--Se mantiene la navbar con el mismo diseño
-*/
+/* * ============================================================
+   RESPONSIVE
+   Ajustes por breakpoint para mantener lectura y evitar desbordamientos.
+   ============================================================ */
 
-/* ============================================================
+/* * ============================================================
    TABLET — hasta 1024px
    ============================================================ */
 @media (max-width: 1024px) {
 
-  /* ── HEADER PRINCIPAL (componente reutilizable) ── */
+  /* * — HEADER PRINCIPAL (componente reutilizable) */
   header {
     flex-wrap: wrap;
     gap: 1rem;
@@ -772,16 +771,16 @@ footer .principal_footer {
   header h1 {
     font-size: 1.4rem;
   }
-  /* ── /HEADER PRINCIPAL ── */
+  /* * — /HEADER PRINCIPAL */
 
-  /* ── FOOTER PRINCIPAL (componente reutilizable) ── */
+  /* * — FOOTER PRINCIPAL (componente reutilizable) */
   footer .principal_footer {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-  /* ── /FOOTER PRINCIPAL ── */
+  /* * — /FOOTER PRINCIPAL */
 
-  /* ── CONTENIDO ÚNICO — noticias.css ── */
+  /* * — CONTENIDO ÚNICO — noticias.css */
   main {
     padding: 2rem;
   }
@@ -803,15 +802,15 @@ footer .principal_footer {
   .card_noticias {
     max-width: 100%;
   }
-  /* ── /CONTENIDO ÚNICO — noticias.css ── */
+  /* * — /CONTENIDO ÚNICO — noticias.css */
 }
 
-/* ============================================================
+/* * ============================================================
    MOBILE — hasta 768px
    ============================================================ */
 @media (max-width: 768px) {
 
-  /* ── HEADER PRINCIPAL (componente reutilizable) ── */
+  /* * — HEADER PRINCIPAL (componente reutilizable) */
   header {
     padding: 1rem;
     gap: 1rem;
@@ -850,9 +849,9 @@ footer .principal_footer {
     width: 120px;
     font-size: 0.9rem;
   }
-  /* ── /HEADER PRINCIPAL ── */
+  /* * — /HEADER PRINCIPAL */
 
-  /* ── FOOTER PRINCIPAL (componente reutilizable) ── */
+  /* * — FOOTER PRINCIPAL (componente reutilizable) */
   footer {
     padding: 2rem 1rem;
   }
@@ -874,9 +873,9 @@ footer .principal_footer {
   .redes_footer {
     align-items: flex-start;
   }
-  /* ── /FOOTER PRINCIPAL ── */
+  /* * — /FOOTER PRINCIPAL */
 
-  /* ── CONTENIDO ÚNICO — noticias.css ── */
+  /* * — CONTENIDO ÚNICO — noticias.css */
   main {
     padding: 1rem;
   }
@@ -960,15 +959,15 @@ footer .principal_footer {
     padding: 6px 10px;
     font-size: 0.85rem;
   }
-  /* ── /CONTENIDO ÚNICO — noticias.css ── */
+  /* * — /CONTENIDO ÚNICO — noticias.css */
 }
 
-/* ============================================================
+/* * ============================================================
    MOBILE PEQUEÑO — hasta 480px
    ============================================================ */
 @media (max-width: 480px) {
 
-  /* ── CONTENIDO ÚNICO — noticias.css ── */
+  /* * — CONTENIDO ÚNICO — noticias.css */
   .header_main h2 {
     font-size: 1.5rem;
   }
@@ -1006,5 +1005,5 @@ footer .principal_footer {
     width: 14px;
     height: 14px;
   }
-  /* ── /CONTENIDO ÚNICO — noticias.css ── */
+  /* * — /CONTENIDO ÚNICO — noticias.css */
 }

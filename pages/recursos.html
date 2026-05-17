@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Fuentes de la pagina-->
+    <!-- ? preconnect declarado antes del stylesheet de Google Fonts.
+         Reduce el handshake con el servidor de fuentes antes de descargar el CSS. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <!--Titulo, estilos e icono de la pagina-->
+    <!-- * — Configuración visual base -->
     <title>Institución Educativa Municipal Emilio Cifuentes</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/recursos.css" />
@@ -21,13 +22,12 @@
     />
   </head>
   <body>
-    <!--Header con: 
-    - Logo de la institución 
-    - Nombre de la institución 
-    - Barra de navegación con enlaces a las secciones principales de la página (Inicio,
-    Nosotros, Formación, Contacto)-->
+    <!-- * ============================================================
+  HEADER
+  Barra superior compartida: logo + navegación principal + buscador visual.
+  ============================================================ -->
     <header class="header_principal">
-      <!--Nombre y logo de la institución -->
+      <!-- ? Logo y navegación comparten .izquierda para sostener el agrupamiento visual del header. -->
       <div class="izquierda">
         <h1>
           <img
@@ -37,7 +37,6 @@
           />
           I.E.M. Emilio <span class="titulo">Cifuentes</span>
         </h1>
-        <!--Barra de navegación con enlaces a las secciones principales de la página (Inicio, Nosotros, Noticias, Contacto)-->
         <nav>
           <ul class="links_navegacion">
             <li><a href="../index.html">Inicio</a></li>
@@ -48,7 +47,8 @@
           </ul>
         </nav>
       </div>
-      <!--Formulario de búsqueda-->
+      <!-- ! Buscador visual sin lógica JS conectada.
+           Mantener el formulario hasta integrar búsqueda real en v2.0. -->
       <div class="botones_accion">
         <form class="busqueda">
           <svg
@@ -76,13 +76,12 @@
       </div>
     </header>
 
-    <!--Main con el contenido principal de la pagina
-    -Header con titulo
-    -Sección con las cards 
-    -->
-
+    <!-- * ============================================================
+  MAIN / RECURSOS
+  Accesos académicos, directorio administrativo, ayuda y descargas institucionales.
+  ============================================================ -->
     <main>
-      <!--Header con el titulo -->
+      <!-- * — Encabezado de página -->
       <section class="header_main">
         <div class="text_header">
           <h2>Recursos Académicos</h2>
@@ -92,14 +91,12 @@
           </p>
         </div>
       </section>
-      <!--*sección con las cards informativas y la información de contacto-->
-      <!--*-Plan de estudio-->
-      <!--*-Asociación de padres-->
-      <!--*-Biblioteca-->
-      <!--*-Atención a padres-->
+      <!-- * — Recursos principales y directorio -->
       <section class="content">
         <section class="cards_sections">
-          <!--Card 1-->
+          <!-- ' CARD DE RECURSO
+            Estructura: .card_info > icono SVG + h2 + p + enlace.
+            Solo documentar esta primera instancia — las demás mantienen el patrón. -->
           <article class="card_info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +137,6 @@
                 <path d="M15 8l4 4" /></svg
             ></a>
           </article>
-          <!--Card 2-->
           <article class="card_info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +180,6 @@
                 <path d="M15 8l4 4" /></svg
             ></a>
           </article>
-          <!--Card 3-->
           <article class="card_info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +228,6 @@
                 <path d="M15 8l4 4" /></svg
             ></a>
           </article>
-          <!--Card 4-->
           <article class="card_info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +271,7 @@
         </section>
         <section class="recursos_derecha">
           <div class="personal">
-            <!--'Titulo he icono de la sección-->
+            <!-- * — Directorio administrativo -->
             <header class="derecha_header">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -389,7 +383,8 @@
               >Directorio Completo del Personal</a
             >
           </div>
-          <!--Buzón de ayuda-->
+          <!-- ! Buzón visual sin flujo de atención conectado.
+             Definir ruta o formulario antes de producción. -->
           <section class="help_recursos">
             <h4>¿Necesita Ayuda?</h4>
             <p>
@@ -399,7 +394,7 @@
             <button class="but_help">Contactar Soporte</button>
           </section>
         </section>
-        <!--!Sección con las pruebas y las descargas-->
+        <!-- * — Pruebas y descargas -->
         <section class="info_mas">
           <article class="card_pruebas">
             <div class="content_pruebas">
@@ -432,7 +427,7 @@
             </div>
             <a href="#">Calendario de Pruebas</a>
           </article>
-          <!--!Sección de descarga de contenido-->
+          <!-- * — Descargas institucionales -->
           <article class="descargas">
             <header>
               <svg
@@ -458,9 +453,10 @@
               <h2>Descargas Rápidas</h2>
             </header>
             <div class="archivos">
-              <!--'Archivo de descarga-->
+              <!-- ' ARCHIVO DE DESCARGA
+                Estructura: enlace > icono tipo + metadatos + icono descarga.
+                Solo documentar esta primera instancia; los siguientes cambian contenido. -->
               <a href="../assets/downloads/MANUAL-DE-CONVIVENCIA.pdf" download>
-                <!--*Icono del tipo de archivo-->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -478,7 +474,6 @@
                   <path d="M20 15h-3v6" />
                   <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1" />
                 </svg>
-                <!--!Información del Archivo-->
 
                 <div class="info_des">
                   <h3>Manual De Convivencia 2023-2025</h3>
@@ -498,9 +493,7 @@
                   <path d="M7 11l5 5l5 -5" />
                   <path d="M12 4v12" /></svg
               ></a>
-              <!--'Archivo de descarga-->
               <a href="../assets/downloads/FORMATO-DE-EXCUSA-2026.pdf" download>
-                <!--*Icono del tipo de archivo-->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -518,7 +511,6 @@
                   <path d="M20 15h-3v6" />
                   <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1" />
                 </svg>
-                <!--!Información del Archivo-->
 
                 <div class="info_des">
                   <h3>Formato de Excusa 2026</h3>
@@ -538,12 +530,10 @@
                   <path d="M7 11l5 5l5 -5" />
                   <path d="M12 4v12" /></svg
               ></a>
-              <!--'Archivo de descarga-->
               <a
                 href="../assets/downloads/CIRCULAR-A-PADRES-20250210.pdf"
                 download
               >
-                <!--*Icono del tipo de archivo-->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -558,7 +548,6 @@
                   <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
                   <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
                   <path d="M17 18h2" />
-                  <!--!Información del Archivo-->
                   <path d="M20 15h-3v6" />
                   <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1" />
                 </svg>
@@ -581,9 +570,7 @@
                   <path d="M7 11l5 5l5 -5" />
                   <path d="M12 4v12" /></svg
               ></a>
-              <!--'Archivo de descarga-->
               <a href="../assets/downloads/Circular-interna-01.pdf" download>
-                <!--*Icono del tipo de archivo-->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -601,7 +588,6 @@
                   <path d="M20 15h-3v6" />
                   <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1" />
                 </svg>
-                <!--!Información del Archivo-->
 
                 <div class="info_des">
                   <h3>Circular Interna 01/2025</h3>
@@ -643,14 +629,12 @@
         </section>
       </section>
     </main>
-    <!--Footer de la pagina
-      -Pequeña descripción
-      -Links de acceso
-      -Redes sociales
-    -->
+    <!-- * ============================================================
+  FOOTER
+  Cierre común del sitio con identidad institucional, accesos internos y redes sociales.
+  ============================================================ -->
     <footer>
       <div class="principal_footer">
-        <!--Información del colegio en el footer-->
         <div class="info_footer">
           <header class="img_footer">
             <img
@@ -666,7 +650,6 @@
             construir un proyecto.
           </p>
         </div>
-        <!--Botones de acceso en el footer-->
         <nav class="botones_footer">
           <div class="recursos_footer">
             <h3>Recursos</h3>
@@ -685,8 +668,6 @@
             </ul>
           </div>
         </nav>
-
-        <!--Redes del colegio-->
         <div class="redes_footer">
           <h3>Conectar</h3>
           <a

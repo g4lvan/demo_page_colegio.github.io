@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Fuentes de la pagina-->
+    <!-- ? preconnect declarado antes del stylesheet de Google Fonts.
+         Reduce el handshake con el servidor de fuentes antes de descargar el CSS. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <!--Titulo, estilos e icono de la pagina-->
+    <!-- * — Configuración visual base -->
     <title>Institución Educativa Municipal Emilio Cifuentes</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/contacto.css" />
@@ -22,13 +23,12 @@
     />
   </head>
   <body>
-    <!--Header con: 
-    - Logo de la institución 
-    - Nombre de la institución 
-    - Barra de navegación con enlaces a las secciones principales de la página (Inicio,
-    Nosotros, Formación, Contacto)-->
+    <!-- * ============================================================
+  HEADER
+  Barra superior compartida: logo + navegación principal + buscador visual.
+  ============================================================ -->
     <header class="header_principal">
-      <!--Nombre y logo de la institución -->
+      <!-- ? Logo y navegación comparten .izquierda para sostener el agrupamiento visual del header. -->
       <div class="izquierda">
         <h1>
           <img
@@ -38,7 +38,6 @@
           />
           I.E.M. Emilio <span class="titulo">Cifuentes</span>
         </h1>
-        <!--Barra de navegación con enlaces a las secciones principales de la página (Inicio, Nosotros, Noticias, Contacto)-->
         <nav>
           <ul class="links_navegacion">
             <li><a href="../index.html">Inicio</a></li>
@@ -49,7 +48,8 @@
           </ul>
         </nav>
       </div>
-      <!--Formulario de búsqueda-->
+      <!-- ! Buscador visual sin lógica JS conectada.
+           Mantener el formulario hasta integrar búsqueda real en v2.0. -->
       <div class="botones_accion">
         <form class="busqueda">
           <svg
@@ -77,13 +77,12 @@
       </div>
     </header>
 
-    <!--Main con el contenido principal de la pagina
-    -Header con titulo
-    -Sección con las cards 
-    -->
-
+    <!-- * ============================================================
+  MAIN / CONTACTO
+  Formulario, datos institucionales, directorio básico y mapa de ubicación.
+  ============================================================ -->
     <main>
-      <!--Header con el titulo -->
+      <!-- * — Encabezado de página -->
       <section class="header_main">
         <h2>Estamos para <span class="title_header">escucharte</span>.</h2>
         <p>
@@ -92,7 +91,9 @@
           técnico, estamos listos para atenderte.
         </p>
       </section>
-      <!--'Formulario de contacto'-->
+      <!-- ' FORMULARIO DE CONTACTO
+          Estructura: .contact > datos básicos + asunto + mensaje + botón.
+          El formulario conserva action local hasta conectar envío real. -->
       <section class="principal_cont">
         <section class="form_contact">
           <form action="#" method="post" class="contact">
@@ -143,7 +144,8 @@
             <div class="asunto">
               <div class="input_basic">
                 <label for="asuntos">Asunto</label>
-                <!--'Select tipo de mensaje'-->
+                <!-- ? Select explícito para clasificar el mensaje antes de tener backend.
+             Facilita mapear el campo cuando se conecte el formulario. -->
                 <select name="asunto" id="asuntos" required>
                   <option value="">Selecciona un asunto</option>
                   <option value="ref1">Consultas de Admisión</option>
@@ -170,9 +172,7 @@
             <button type="button" class="bot_enviar">Enviar Mensaje</button>
           </form>
         </section>
-        <!--!Card info:-->
-        <!--!Dirección-->
-        <!--!Teléfono-->
+      <!-- * — Información de contacto -->
         <section class="contact_derecha">
           <article class="info_contact">
             <h3>Información de contacto</h3>
@@ -189,7 +189,7 @@
                 d="M21 10.476l-8.629 3.452a1 1 0 0 1 -.742 0l-10 -4c-.839 -.335 -.839 -1.521 0 -1.856l10 -4a1 1 0 0 1 .245 -.064l.126 -.008l.126 .008a1 1 0 0 1 .245 .064l10.032 4.013l.108 .055l.099 .068l.088 .076l.075 .082l.035 .044l.073 .115l.052 .115l.034 .102l.025 .135l.006 .058l.002 6.065a1 1 0 0 1 -2 0z"
               />
             </svg>
-            <!--*Dirección-->
+            <!-- * — Dirección -->
             <article class="location">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +214,7 @@
                 <p>253051, Cl. 2 # 11- 02, Facatativá, Cundinamarca</p>
               </div>
             </article>
-            <!--*Número de contacto-->
+            <!-- * — Número de contacto -->
             <article class="telefono">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +239,9 @@
             </article>
           </article>
 
-          <!--*Directorio Principal-->
+          <!-- ' CARD DE PERSONAL
+          Estructura: .personal_der > h5 + rol + enlace mailto.
+          Solo documentar esta primera instancia — las demás repiten el patrón. -->
           <article class="der_directorio">
             <h3>Directorio Escolar</h3>
             <article class="personal_der">
@@ -308,7 +310,7 @@
         </section>
       </section>
     </main>
-    <!--'Mapa de la institución'-->
+    <!-- * — Mapa institucional -->
     <figure class="map">
       <div class="dark"></div>
       <iframe
@@ -347,14 +349,12 @@
       </figcaption>
     </figure>
 
-    <!--Footer de la pagina
-      -Pequeña descripción
-      -Links de acceso
-      -Redes sociales
-    -->
+    <!-- * ============================================================
+  FOOTER
+  Cierre común del sitio con identidad institucional, accesos internos y redes sociales.
+  ============================================================ -->
     <footer>
       <div class="principal_footer">
-        <!--Información del colegio en el footer-->
         <div class="info_footer">
           <header class="img_footer">
             <img
@@ -370,7 +370,6 @@
             construir un proyecto.
           </p>
         </div>
-        <!--Botones de acceso en el footer-->
         <nav class="botones_footer">
           <div class="recursos_footer">
             <h3>Recursos</h3>
@@ -389,8 +388,6 @@
             </ul>
           </div>
         </nav>
-
-        <!--Redes del colegio-->
         <div class="redes_footer">
           <h3>Conectar</h3>
           <a

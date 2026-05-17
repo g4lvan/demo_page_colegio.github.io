@@ -7,7 +7,10 @@ body {
   overflow-x: hidden;
 }
 
-/*Se definen las variables de color de la pagina para aplicar en los demás estilos */
+/* * ============================================================
+   TOKENS GLOBALES
+   Variables compartidas de color y tipografía para mantener consistencia visual.
+   ============================================================ */
 :root {
   --primary-color: #029642;
   --primary-alt: #1ba055;
@@ -34,9 +37,10 @@ body {
   font-family: var(--font-primary);
 }
 
-/* Estilos para el header y la Navbar
-    -Se posiciona el logo y los botones de navegación
-*/
+/* * ============================================================
+   HEADER
+   Layout reutilizable de logo, navegación y buscador en páginas principales.
+   ============================================================ */
 
 header {
   display: flex;
@@ -113,10 +117,7 @@ h1 {
   margin-left: 2rem;
 }
 
-/*Se estilizan los botones de acción
-  -Se estiliza el formulario de busqueda
-  -Se estiliza el boton de iniciar sesión
-*/
+/* ! El buscador es un componente visual sin comportamiento JS. Mantener estilos aislados para conectarlo después sin rehacer el header. */
 
 .botones_accion {
   display: flex;
@@ -165,10 +166,10 @@ input[type="search"] {
   margin-right: 10px;
 }
 
-/*Se estiliza el menú de inicio de la pagina
-  -Se define el estilo de la card de la sección de inicio
-  -Se definen los estilos de los textos de bienvenida
-*/
+/* * ============================================================
+   HERO INSTITUCIONAL
+   Presentación inicial con CTA principal y apoyo visual de la página de inicio.
+   ============================================================ */
 
 .inicio {
   display: flex;
@@ -279,9 +280,7 @@ input[type="search"] {
   background-color: var(--primary-light);
 }
 
-/* Accesos Rápidos
- -se estilizan los artículos que contienen los enlaces a los accesos rápidos para padres y estudiantes 
- */
+/* ' CARD DE ACCESO RÁPIDO Patrón repetido en index: icono, título, descripción y enlace con chevron. */
 
 .texto_acc_rapido {
   display: flex;
@@ -392,9 +391,7 @@ input[type="search"] {
   color: var(--primary-hover);
 }
 
-/*Sección de Noticias
-  - Se muestran las noticias más recientes del colegio, con una imagen, un título, un breve resumen y un enlace
-*/
+/* ' CARD DE NOTICIA Patrón repetido: imagen con badge, metadatos, resumen y CTA. */
 
 .noticias {
   display: flex;
@@ -550,16 +547,12 @@ input[type="search"] {
   width: 100%;
 }
 
-/*Estilos para la sección de historia básica de la institución
-  -Se muestra una breve historia de la institución, con una imagen representativa y un enlace para conocer más detalles
-  -Se define el estilo de la card de la sección de historia básica
-  -Se definen los estilos de las secciones de misión y visión de la página
-*/
+/* * ============================================================
+   RESUMEN INSTITUCIONAL
+   Bloque de confianza con imagen, dato destacado y misión/visión.
+   ============================================================ */
 
-/*Imagen de la sección de historia
--Estilos de la imagen
--Estilos de la card de años de experiencia que se muestra sobre la imagen
-*/
+/* * — Imagen y dato destacado */
 
 .info_col_basic {
   display: grid;
@@ -604,7 +597,7 @@ input[type="search"] {
   font-weight: 900;
 }
 
-/*Información de la sección de historia*/
+/* * — Texto institucional */
 
 .head_info_col {
   display: flex;
@@ -690,9 +683,10 @@ input[type="search"] {
   background-color: var(--primary-hover);
 }
 
-/*Se estiliza el footer de la pagina
--Se define el estilo del footer, para proporcionar información de contacto, enlaces a redes sociales y otros detalles relevantes sobre la institución
-*/
+/* * ============================================================
+   FOOTER
+   Componente común con identidad, accesos internos y redes sociales.
+   ============================================================ */
 
 footer {
   padding: 50px 100px;
@@ -745,7 +739,7 @@ footer .principal_footer {
   padding: 0;
 }
 
-/*Links de acceso rapido*/
+/* * — Links rápidos del footer */
 
 .botones_footer {
   display: grid;
@@ -777,7 +771,7 @@ footer .principal_footer {
   color: var(--primary-hover);
 }
 
-/*Redes de la institución*/
+/* * — Redes institucionales */
 
 .redes_footer {
   display: flex;
@@ -806,7 +800,7 @@ footer .principal_footer {
   background-color: var(--primary-hover);
 }
 
-/*Linea del footer con los derechos de la institución*/
+/* * — Línea legal del footer */
 
 .line_footer hr {
   max-width: 90%;
@@ -819,17 +813,16 @@ footer .principal_footer {
   margin-top: 40px;
 }
 
-/* Estilos Responsive de la pagina
--Se adapta el diseño para tablets y celulares
--Se corrigen tamaños de texto, grids y elementos
--Se mantiene la navbar con el mismo diseño
-*/
+/* * ============================================================
+   RESPONSIVE
+   Ajustes por breakpoint para mantener lectura y evitar desbordamientos.
+   ============================================================ */
 
-/* ============================================================
+/* * ============================================================
    TABLET — hasta 1024px
    ============================================================ */
 @media (max-width: 1024px) {
-  /* ── HEADER PRINCIPAL (componente reutilizable) ── */
+  /* * — HEADER PRINCIPAL (componente reutilizable) */
   header {
     flex-wrap: wrap;
     gap: 1rem;
@@ -849,16 +842,16 @@ footer .principal_footer {
   header h1 {
     font-size: 1.4rem;
   }
-  /* ── /HEADER PRINCIPAL ── */
+  /* * — /HEADER PRINCIPAL */
 
-  /* ── FOOTER PRINCIPAL (componente reutilizable) ── */
+  /* * — FOOTER PRINCIPAL (componente reutilizable) */
   footer .principal_footer {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-  /* ── /FOOTER PRINCIPAL ── */
+  /* * — /FOOTER PRINCIPAL */
 
-  /* ── CONTENIDO ÚNICO — styles.css (Inicio) ── */
+  /* * — CONTENIDO ÚNICO — styles.css (Inicio) */
   .inicio {
     padding: 3rem;
   }
@@ -886,14 +879,14 @@ footer .principal_footer {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  /* ── /CONTENIDO ÚNICO — styles.css (Inicio) ── */
+  /* * — /CONTENIDO ÚNICO — styles.css (Inicio) */
 }
 
-/* ============================================================
+/* * ============================================================
    MOBILE — hasta 768px
    ============================================================ */
 @media (max-width: 768px) {
-  /* ── HEADER PRINCIPAL (componente reutilizable) ── */
+  /* * — HEADER PRINCIPAL (componente reutilizable) */
   header {
     padding: 1rem;
     gap: 1rem;
@@ -932,9 +925,9 @@ footer .principal_footer {
     width: 120px;
     font-size: 0.9rem;
   }
-  /* ── /HEADER PRINCIPAL ── */
+  /* * — /HEADER PRINCIPAL */
 
-  /* ── FOOTER PRINCIPAL (componente reutilizable) ── */
+  /* * — FOOTER PRINCIPAL (componente reutilizable) */
   footer {
     padding: 40px 20px;
   }
@@ -959,9 +952,9 @@ footer .principal_footer {
   .redes_footer {
     align-items: flex-start;
   }
-  /* ── /FOOTER PRINCIPAL ── */
+  /* * — /FOOTER PRINCIPAL */
 
-  /* ── CONTENIDO ÚNICO — styles.css (Inicio) ── */
+  /* * — CONTENIDO ÚNICO — styles.css (Inicio) */
   .inicio {
     padding: 2rem 1rem;
   }
@@ -1072,5 +1065,5 @@ footer .principal_footer {
     margin-left: 0;
     width: 100%;
   }
-  /* ── /CONTENIDO ÚNICO — styles.css (Inicio) ── */
+  /* * — /CONTENIDO ÚNICO — styles.css (Inicio) */
 }

@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Fuentes de la pagina-->
+    <!-- ? preconnect declarado antes del stylesheet de Google Fonts.
+         Reduce el handshake con el servidor de fuentes antes de descargar el CSS. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <!--Titulo, estilos e icono de la pagina-->
+    <!-- * — Configuración visual base -->
     <title>Institución Educativa Municipal Emilio Cifuentes</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/nosotros.css" />
@@ -28,7 +29,7 @@
     .botones_accion contiene el buscador al extremo derecho.
     ============================================================ -->
     <header class="header_principal">
-      <!--Nombre y logo de la institución -->
+      <!-- ? Logo y navegación comparten .izquierda para sostener el agrupamiento visual del header. -->
       <div class="izquierda">
         <h1>
           <img
@@ -48,7 +49,8 @@
           </ul>
         </nav>
       </div>
-      <!--*Formulario de búsqueda-->
+      <!-- ! Buscador visual sin lógica JS conectada.
+           Mantener el formulario hasta integrar búsqueda real en v2.0. -->
       <div class="botones_accion">
         <form class="busqueda">
           <svg
@@ -82,7 +84,8 @@
     Titulo, Introducción, Historia, Lideres.
     ============================================================ -->
 
-    <!--?Section title fuera del main para tener el ancho completo de la pagina-->
+    <!-- ? .title vive fuera de main para conservar ancho completo.
+       Meterlo en main heredaría el padding lateral y cambiaría el impacto visual. -->
     <section class="title">
       <h2>Sobre Nosotros</h2>
       <p>
@@ -301,7 +304,7 @@
     ============================================================ -->
     <footer>
       <div class="principal_footer">
-        <!--*Información del colegio en el footer-->
+
         <div class="info_footer">
           <header class="img_footer">
             <img
@@ -317,7 +320,6 @@
             construir un proyecto.
           </p>
         </div>
-        <!--Botones de acceso en el footer-->
         <nav class="botones_footer">
           <div class="recursos_footer">
             <h3>Recursos</h3>
@@ -336,8 +338,6 @@
             </ul>
           </div>
         </nav>
-
-        <!--Redes del colegio-->
         <div class="redes_footer">
           <h3>Conectar</h3>
           <a

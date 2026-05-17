@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Fuentes de la pagina-->
+    <!-- ? preconnect declarado antes del stylesheet de Google Fonts.
+         Reduce el handshake con el servidor de fuentes antes de descargar el CSS. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <!--Titulo, estilos e icono de la pagina-->
+    <!-- * — Configuración visual base -->
     <title>Institución Educativa Municipal Emilio Cifuentes</title>
     <link rel="stylesheet" href="../css/noticias.css" />
     <link
@@ -20,13 +21,12 @@
     />
   </head>
   <body>
-    <!--Header con: 
-    - Logo de la institución 
-    - Nombre de la institución 
-    - Barra de navegación con enlaces a las secciones principales de la página (Inicio,
-    Nosotros, Formación, Contacto)-->
+    <!-- * ============================================================
+  HEADER
+  Barra superior compartida: logo + navegación principal + buscador visual.
+  ============================================================ -->
     <header class="header_principal">
-      <!--Nombre y logo de la institución -->
+      <!-- ? Logo y navegación comparten .izquierda para sostener el agrupamiento visual del header. -->
       <div class="izquierda">
         <h1>
           <img
@@ -36,7 +36,6 @@
           />
           I.E.M. Emilio <span class="titulo">Cifuentes</span>
         </h1>
-        <!--Barra de navegación con enlaces a las secciones principales de la página (Inicio, Nosotros, Noticias, Contacto)-->
         <nav>
           <ul class="links_navegacion">
             <li><a href="../index.html">Inicio</a></li>
@@ -47,7 +46,8 @@
           </ul>
         </nav>
       </div>
-      <!--Formulario de búsqueda-->
+      <!-- ! Buscador visual sin lógica JS conectada.
+           Mantener el formulario hasta integrar búsqueda real en v2.0. -->
       <div class="botones_accion">
         <form class="busqueda">
           <svg
@@ -75,15 +75,12 @@
       </div>
     </header>
 
-    <!--Main con el contenido principal de la pagina
-    -Header con buscador y categorías
-    -Sección con las cards de las noticias
-    -Próximos eventos
-    -Card de inscripción a notificaciones 
-    -->
-
+    <!-- * ============================================================
+  MAIN / NOTICIAS
+  Listado estático de noticias, filtros visuales, eventos próximos y suscripción futura.
+  ============================================================ -->
     <main>
-      <!--Header con el titulo y la opción de busqueda con sus categorías-->
+      <!-- * — Encabezado y filtros visuales -->
       <section class="header_main">
         <div class="text_header">
           <h2>Noticias y Anuncios</h2>
@@ -125,14 +122,12 @@
           </div>
         </div>
       </section>
-      <!--Contenido de la sección de noticias
-                -Cards de las noticias
-                -Card con los próximos eventos
-                -Card para recibir notificaciones
-            -->
+      <!-- * — Contenido de noticias -->
       <section class="contenido_noticias">
         <section class="noticias_izquierda">
-          <!-- Card 1 -->
+          <!-- ' CARD DE NOTICIA
+            Estructura: .card_noticias > .card_img (badge + img) > .card_content.
+            El mismo patrón se repite en el listado principal. -->
           <article class="card_noticias">
             <div class="card_img">
               <img
@@ -169,8 +164,6 @@
               <a class="btn_card" href="#">Leer Artículo</a>
             </div>
           </article>
-
-          <!-- Card 2 -->
           <article class="card_noticias">
             <div class="card_img">
               <img
@@ -204,11 +197,11 @@
                 nuestros bachilleres.
               </p>
 
+              <!-- ! href vacío — detalle de noticia pendiente.
+                Mantener el CTA visible hasta crear páginas individuales. -->
               <a class="btn_card" href="">Leer Artículo</a>
             </div>
           </article>
-
-          <!-- Card 3 -->
           <article class="card_noticias">
             <div class="card_img">
               <img
@@ -242,6 +235,8 @@
                 colegio.
               </p>
 
+              <!-- ! href vacío — detalle de noticia pendiente.
+                Mantener el CTA visible hasta crear páginas individuales. -->
               <a class="btn_card" href="">Leer Artículo</a>
             </div>
           </article>
@@ -280,8 +275,10 @@
             </div>
           </nav>
         </section>
-        <!--Section con los próximos eventos y la suscripción a las notificaciones-->
-        <!--Próximos eventos-->
+        <!-- * — Eventos y suscripción -->
+        <!-- ' EVENTO PRÓXIMO
+          Estructura: .events_prox > fecha compacta + título + ubicación.
+          Solo documentar esta primera instancia — las demás son homogéneas. -->
         <section class="noticias_derecha">
           <div class="events">
             <header class="derecha_header">
@@ -344,7 +341,8 @@
 
             <a href="#">Ver Calendario Completo</a>
           </div>
-          <!--Suscripción a las notificaciones-->
+          <!-- ! Suscripción visual sin backend conectado.
+           Conectar almacenamiento o proveedor de email antes de producción. -->
           <section class="notif">
             <h4>Actualización Semanal</h4>
             <p>
@@ -363,14 +361,12 @@
         </section>
       </section>
     </main>
-    <!--Footer de la pagina
-      -Pequeña descripción
-      -Links de acceso
-      -Redes sociales
-    -->
+    <!-- * ============================================================
+  FOOTER
+  Cierre común del sitio con identidad institucional, accesos internos y redes sociales.
+  ============================================================ -->
     <footer>
       <div class="principal_footer">
-        <!--Información del colegio en el footer-->
         <div class="info_footer">
           <header class="img_footer">
             <img
@@ -386,7 +382,6 @@
             construir un proyecto.
           </p>
         </div>
-        <!--Botones de acceso en el footer-->
         <nav class="botones_footer">
           <div class="recursos_footer">
             <h3>Recursos</h3>
@@ -405,8 +400,6 @@
             </ul>
           </div>
         </nav>
-
-        <!--Redes del colegio-->
         <div class="redes_footer">
           <h3>Conectar</h3>
           <a
