@@ -368,3 +368,226 @@ p {
 .team button:hover {
   background-color: var(--primary-hover);
 }
+
+/* * ============================================================
+  RESPONSIVE — NOSOTROS (solo contenido)
+  Media queries exclusivas para las secciones de contenido:
+  .title, .introduction, .history, .team.
+  Header y footer manejados en styles.css.
+  Breakpoints: tablet (1024px), mobile-lg (768px), mobile-sm (480px).
+  ============================================================ */
+ 
+/* * — Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+ 
+  .title p {
+    max-width: 55%;
+  }
+ 
+  /* ? gap reducido — a 1024px el grid de 2 columnas se mantiene
+     pero el gap de 100px genera desbordamiento visual. */
+  .introduction {
+    gap: 40px;
+    padding: 3rem 2.5rem;
+  }
+ 
+  .intr_der h3,
+  .intr_der h3 span {
+    font-size: 2.2rem;
+  }
+ 
+  .history {
+    gap: 30px;
+    padding: 3rem 2.5rem;
+  }
+ 
+  .his_info h3,
+  .his_info h3 span {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+ 
+  .team_head h3,
+  .team_head h3 span {
+    font-size: 2.2rem;
+    max-width: 80%;
+  }
+ 
+  .team_head p {
+    max-width: 70%;
+  }
+}
+ 
+/* * — Mobile (≤ 768px) */
+@media (max-width: 768px) {
+ 
+  /* * — Section title */
+  .title {
+    height: 280px;
+  }
+ 
+  .title h2 {
+    font-size: 2.5rem;
+  }
+ 
+  .title p {
+    max-width: 75%;
+    font-size: 1rem;
+  }
+ 
+  /* * — Introduction */
+ 
+  /* ? grid pasa a 1 columna — en mobile la columna derecha (cards)
+     baja debajo del texto introductorio, siguiendo el diseño de referencia. */
+  .introduction {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 2.5rem 1.5rem;
+  }
+ 
+  .intr_der h3,
+  .intr_der h3 span {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+ 
+  /* ' CARDS DE INTRODUCCIÓN — LAYOUT MOBILE
+     Dejan de ser grid 2x2 y pasan a lista vertical:
+     icono a la izquierda + texto a la derecha (flex-row).
+     Solo documentar esta primera instancia. */
+  .intr_izq {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+ 
+  .card_intr_izq {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 16px;
+    text-align: left;
+  }
+ 
+  .card_intr_izq p {
+    text-align: left;
+    max-width: 100%;
+  }
+ 
+  /* ? flex-shrink: 0 obligatorio — sin él el icono circular
+     se aplasta cuando el texto adyacente es largo. */
+  .introduction svg {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+  }
+ 
+  /* * — History */
+ 
+  /* ? grid pasa a 1 columna — video arriba, texto abajo,
+     siguiendo el orden del diseño de referencia mobile. */
+  .history {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem;
+    gap: 24px;
+  }
+ 
+  .history video {
+    width: 100%;
+  }
+ 
+  .his_info h3,
+  .his_info h3 span {
+    font-size: 1.8rem;
+    max-width: 100%;
+  }
+ 
+  /* ! his_list hereda padding-left que causa scroll lateral en < 375px.
+     Se neutraliza aquí; el espacio visual lo maneja padding-left del li. */
+  .his_list {
+    padding-left: 0;
+  }
+ 
+  /* * — Team */
+  .team {
+    padding: 2.5rem 1.5rem;
+    gap: 30px;
+  }
+ 
+  .team_head h3,
+  .team_head h3 span {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+ 
+  .team_head p {
+    max-width: 90%;
+  }
+ 
+  /* ? grid pasa a 1 columna — las 3 personas se apilan verticalmente. */
+  .persons_team {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+  }
+ 
+  .person {
+    width: 100%;
+    max-width: 320px;
+  }
+ 
+  .persons_team svg {
+    width: 140px;
+    height: 140px;
+  }
+ 
+  .team_info {
+    min-width: 160px;
+  }
+ 
+  .team button {
+    padding: 12px 40px;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+ 
+/* * — Mobile pequeño (≤ 480px) */
+@media (max-width: 480px) {
+ 
+  .title {
+    height: 220px;
+  }
+ 
+  .title h2 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+ 
+  .title p {
+    max-width: 90%;
+    font-size: 0.9rem;
+  }
+ 
+  .intr_der h3,
+  .intr_der h3 span {
+    font-size: 1.6rem;
+  }
+ 
+  /* ? font-size reducido — evita overflow en pantallas < 375px
+     (iPhone SE, Galaxy A series antiguos). */
+  .his_info h3,
+  .his_info h3 span {
+    font-size: 1.4rem;
+  }
+ 
+  .team_head h3,
+  .team_head h3 span {
+    font-size: 1.6rem;
+  }
+ 
+  .team button {
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
+}
