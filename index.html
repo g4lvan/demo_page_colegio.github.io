@@ -78,66 +78,38 @@
   Barra superior compartida: logo + navegación principal + buscador visual.
   ============================================================ -->
     <header>
-      <!-- ? Logo y navegación comparten .izquierda para sostener el agrupamiento visual del header.
-         Si se separan, el flex reparte cada bloque como elementos independientes. -->
       <div class="izquierda">
-        <h1>
-          <img
-            src="assets/logos/EMILIO.png"
-            alt="Logo de la institución"
-            class="logo"
-          />
-          I.E.M. Emilio <span class="titulo">Cifuentes</span>
-        </h1>
-        <nav>
-          <ul class="links_navegacion">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="pages/nosotros.html">Nosotros</a></li>
-            <li><a href="pages/noticias.html">Noticias</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-            <li><a href="pages/recursos.html">Recursos</a></li>
-          </ul>
-        </nav>
+        <img src="assets/logos/EMILIO.png" alt="emilio_logo" class="logo" />
+        <h1>I.E.M. Emilio <span class="titulo">Cifuentes</span></h1>
       </div>
-      <!-- ! Buscador visual sin lógica JS conectada.
-           Mantener el formulario hasta integrar búsqueda real en v2.0. -->
-      <div class="botones_accion">
-        <form class="busqueda">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="12"
-            height="12"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon-search"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-            <path d="M21 21l-6 -6" />
-          </svg>
-          <input
-            type="search"
-            placeholder="Buscar recursos..."
-            class="buscar"
-          />
-        </form>
-      </div>
-      <button class="menu">
+      <nav>
+        <ul class="links_navegacion">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="pages/nosotros.html">Nosotros</a></li>
+          <li><a href="pages/noticias.html">Noticias</a></li>
+          <li><a href="pages/contacto.html">Contacto</a></li>
+          <li><a href="pages/recursos.html">Recursos</a></li>
+        </ul>
+      </nav>
+      <form class="busqueda">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          fill="currentColor"
-          class="menu-hb"
+          width="12"
+          height="12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon-search"
         >
-          <path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" />
-          <path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" />
-          <path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" />
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+          <path d="M21 21l-6 -6"></path>
         </svg>
-      </button>
+        <input type="search" placeholder="Buscar recursos..." class="buscar" />
+      </form>
     </header>
     <!-- * ============================================================
   MAIN / INICIO

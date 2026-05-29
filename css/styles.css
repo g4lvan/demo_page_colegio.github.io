@@ -44,37 +44,29 @@ body {
 
 header {
   display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  gap: 3rem;
   padding: 1rem;
-  gap: 2rem;
+  align-items: center;
   border-bottom: 1px solid var(--text-secondary);
 }
 
-header .izquierda {
+.izquierda{
   display: flex;
+  gap: 8px;
   align-items: center;
-  gap: 3rem;
+  justify-content: center;
 }
 
 header nav {
   display: flex;
   align-items: center;
-  gap: 3rem;
   justify-content: center;
 }
 
 header .links_navegacion {
   display: flex;
-  gap: 2rem;
-  align-items: center;
-  list-style: none;
-}
-
-header .links_navegacion {
-  display: flex;
   gap: 2.5rem;
+  align-items: center;
   list-style: none;
   font-size: 1rem;
   list-style: none;
@@ -133,6 +125,7 @@ h1 {
   align-items: center;
   margin-right: 2rem;
   overflow: hidden;
+  margin-left: auto;
 }
 
 .busqueda:focus-within {
@@ -166,20 +159,6 @@ input[type="search"] {
   margin-right: 10px;
 }
 
-.menu {
-  border: none;
-  background: none;
-  display: none;
-}
-
-.menu-hb {
-  width: 30px;
-  height: 30px;
-  color: var(--text-color);
-  cursor: pointer;
-  filter: drop-shadow(0 0 2px var(--complementary-color));
-  cursor: pointer;
-}
 
 /* * ============================================================
    HERO INSTITUCIONAL
@@ -846,7 +825,6 @@ footer .principal_footer {
   header nav {
     width: 100%;
     justify-content: center;
-    display: none;
   }
 
   header .links_navegacion {
@@ -857,14 +835,6 @@ footer .principal_footer {
 
   header h1 {
     font-size: 1.4rem;
-  }
-
-  .busqueda {
-    display: none;
-  }
-
-  .menu {
-    display: block;
   }
 
   /* * — /HEADER PRINCIPAL */
