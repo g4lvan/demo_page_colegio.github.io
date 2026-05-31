@@ -23,60 +23,196 @@
   </head>
   <body>
     <!-- * ============================================================
-    HEADER
-    Barra superior fija: logo + nav principal + buscador.
-    Layout flex space-between: .izquierda agrupa logo y nav,
-    .botones_accion contiene el buscador al extremo derecho.
-    ============================================================ -->
-    <header class="header_principal">
-      <!-- ? Logo y navegación comparten .izquierda para sostener el agrupamiento visual del header. -->
-      <div class="izquierda">
-        <h1>
-          <img
-            src="../assets/logos/EMILIO.png"
-            alt="Logo de la institución"
-            class="logo"
-          />
-          I.E.M. Emilio <span class="titulo">Cifuentes</span>
-        </h1>
-        <nav>
+      HEADER
+      Barra superior compartida replicada desde index.html.
+      Rutas ajustadas un nivel arriba para las paginas dentro de /pages.
+      ============================================================ -->
+    <header>
+          <div class="izquierda">
+            <img src="../assets/logos/EMILIO.png" alt="emilio_logo" class="logo" />
+            <h1>I.E.M. Emilio <span class="titulo">Cifuentes</span></h1>
+          </div>
+          <nav>
+            <ul class="links_navegacion">
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="noticias.html">Noticias</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="recursos.html">Recursos</a></li>
+            </ul>
+          </nav>
+          <form class="busqueda">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="12"
+              height="12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon-search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+              <path d="M21 21l-6 -6"></path>
+            </svg>
+            <input type="search" placeholder="Buscar recursos..." class="buscar" />
+          </form>
+          <button class="menu_hb">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="menu_hb"
+            >
+              <path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" />
+              <path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" />
+              <path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" />
+            </svg>
+          </button>
+        </header>
+
+    <!-- ' NAVEGACION MOBILE
+         .overlay oscurece la pagina y .panel_lateral contiene el menu fuera de canvas.
+         Ambos bloques dependen de ../js/nav.js para abrir y cerrar el panel. -->
+    <div class="overlay"></div>
+    <nav class="panel_lateral">
+          <div class="izquierda">
+            <img src="../assets/logos/EMILIO.png" alt="emilio_logo" class="logo" />
+            <h1>I.E.M. Emilio Cifuentes</h1>
+            <button class="close_nav">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon_nav"
+              >
+                <path d="M18 6l-12 12" />
+                <path d="M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
           <ul class="links_navegacion">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="recursos.html">Recursos</a></li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon_nav"
+              >
+                <path
+                  d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105"
+                />
+                <path d="M16 15c-2.21 1.333 -5.792 1.333 -8 0" />
+              </svg>
+              <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon_nav"
+              >
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                <path d="M12 9h.01" />
+                <path d="M11 12h1v4h1" />
+              </svg>
+              <a href="nosotros.html">Nosotros</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon_nav"
+              >
+                <path
+                  d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"
+                />
+                <path d="M8 8h4" />
+                <path d="M8 12h4" />
+                <path d="M8 16h4" />
+              </svg>
+              <a href="noticias.html">Noticias</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon_nav"
+              >
+                <path
+                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                />
+                <path d="M3 7l9 6l9 -6" />
+              </svg>
+              <a href="contacto.html">Contacto</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon_nav"
+              >
+                <path
+                  d="M3 6a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                />
+                <path d="M7 8h10" />
+                <path d="M7 12h10" />
+                <path d="M7 16h10" />
+              </svg>
+              <a href="recursos.html">Recursos</a>
+            </li>
           </ul>
+          <form class="busqueda">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="12"
+              height="12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon-search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+              <path d="M21 21l-6 -6"></path>
+            </svg>
+            <input type="search" placeholder="Buscar recursos..." class="buscar" />
+          </form>
         </nav>
-      </div>
-      <!-- ! Buscador visual sin lógica JS conectada.
-           Mantener el formulario hasta integrar búsqueda real en v2.0. -->
-      <div class="botones_accion">
-        <form class="busqueda">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="12"
-            height="12"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon-search"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-            <path d="M21 21l-6 -6" />
-          </svg>
-          <input
-            type="search"
-            placeholder="Buscar recursos..."
-            class="buscar"
-          />
-        </form>
-      </div>
-    </header>
 
     <!-- * ============================================================
     Main
@@ -365,5 +501,6 @@
         </p>
       </div>
     </footer>
+    <script src="../js/nav.js"></script>
   </body>
 </html>
