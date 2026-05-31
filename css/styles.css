@@ -44,9 +44,12 @@ body {
 
 header {
   display: flex;
-  gap: 3rem;
+  width: 100%;
+  box-sizing: border-box;
+  gap: clamp(1.5rem, 3vw, 3rem);
   padding: 1rem;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--text-secondary);
 }
 
@@ -85,6 +88,7 @@ header {
 
 .izquierda {
   display: flex;
+  flex: 0 0 auto;
   gap: 8px;
   align-items: center;
   justify-content: center;
@@ -92,6 +96,7 @@ header {
 
 header nav {
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
   justify-content: center;
 }
@@ -153,12 +158,12 @@ h1 {
   font-family: var(--font-primary);
   background-color: var(--background-dark);
   display: flex;
+  flex: 0 0 auto;
   border-radius: 100px;
   position: relative;
   align-items: center;
   margin-right: 2rem;
   overflow: hidden;
-  margin-left: auto;
 }
 
 .busqueda:focus-within {
