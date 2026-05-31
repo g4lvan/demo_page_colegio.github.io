@@ -37,85 +37,6 @@ body {
   font-family: var(--font-primary);
 }
 
-/* * ============================================================
-   HEADER
-   Layout reutilizable de logo, navegación y buscador en páginas principales.
-   ============================================================ */
-
-header {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  gap: 2rem;
-  border-bottom: 1px solid var(--text-secondary);
-}
-
-header .izquierda {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-header nav {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  justify-content: center;
-}
-
-header .links_navegacion {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  align-items: center;
-}
-
-header .links_navegacion {
-  display: flex;
-  list-style: none;
-  gap: 2.5rem;
-  list-style: none;
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-header .links_navegacion a {
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--text-primary);
-}
-
-header .links_navegacion a:hover {
-  color: var(--primary-hover);
-}
-
-h1 {
-  font-size: 2rem;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  gap: 0.5rem;
-  letter-spacing: -1px;
-}
-
-.titulo {
-  display: flex;
-  color: var(--primary-color);
-}
-
-.logo {
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  margin: 0;
-  padding: 0;
-  margin-right: 0.5rem;
-  margin-left: 2rem;
-}
 
 /* ! El buscador es un componente visual sin comportamiento JS. Mantener estilos aislados para conectarlo después sin rehacer el header. */
 
@@ -373,16 +294,41 @@ main {
 }
 
 .type_noti {
-  font-weight: 900;
-  font-size: 0.5rem;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
   background: var(--primary-color);
   color: var(--background);
   padding: 4px 8px;
-  font-size: 12px;
-  font-weight: 600;
   border-radius: 6px;
-  margin-right: 0.5rem;
+}
+
+/* ? Noticias carga reglas responsive propias despues de styles.css.
+   Estas reglas sostienen el mismo header del resto del sitio:
+   nav completo en desktop y hamburguesa/panel en mobile. */
+@media (min-width: 1025px) {
+  body > header .menu_hb {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  body > header nav,
+  body > header > .busqueda {
+    display: none;
+  }
+
+  body > header {
+    justify-content: space-between;
+  }
+
+  body > header .menu_hb {
+    display: block;
+  }
 }
 
 /* ! Paginación visual sin lógica de navegación conectada. Reemplazar por paginación real cuando exista fuente dinámica. */
