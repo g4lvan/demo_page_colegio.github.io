@@ -37,7 +37,6 @@ body {
   font-family: var(--font-primary);
 }
 
-
 /* ! El buscador es un componente visual sin comportamiento JS. Mantener estilos aislados para conectarlo después sin rehacer el header. */
 
 .botones_accion {
@@ -56,7 +55,7 @@ body {
   overflow: hidden;
 }
 
-.busqueda:focus-within{
+.busqueda:focus-within {
   outline: 2px solid var(--primary-alt);
 }
 
@@ -200,7 +199,7 @@ main {
 
 /* ' CARD DE NOTICIA Patrón repetido: imagen con badge, fecha, título, resumen y CTA. */
 
-.card_noticias {
+.card_noticia_lista {
   display: flex;
   align-items: stretch;
   max-width: 700px;
@@ -215,21 +214,21 @@ main {
   margin-bottom: 2rem;
 }
 
-.card_img {
+.card_noticia_lista__img {
   max-width: 250px;
   height: auto;
   position: relative;
   object-fit: cover;
 }
 
-.card_img img {
+.card_noticia_lista__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 15px 0 0 15px;
 }
 
-.card_noticias h3 {
+.card_noticia_lista h3 {
   font-size: 1.5rem;
   margin: 15px;
   padding: 2px;
@@ -237,7 +236,7 @@ main {
   color: var(--text-primary);
 }
 
-.card_noticias p {
+.card_noticia_lista p {
   font-size: 1rem;
   color: var(--text-muted);
   margin: 15px;
@@ -274,7 +273,7 @@ main {
   padding: 0;
 }
 
-.card_content a {
+.card_noticia_lista__content a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,7 +288,7 @@ main {
   border-radius: 15px;
 }
 
-.card_noticias a:hover {
+.card_noticia_lista a:hover {
   background-color: var(--background-dark);
 }
 
@@ -696,7 +695,6 @@ footer .principal_footer {
    TABLET — hasta 1024px
    ============================================================ */
 @media (max-width: 1024px) {
-
   /* * — HEADER PRINCIPAL (componente reutilizable) */
   header {
     flex-wrap: wrap;
@@ -745,7 +743,7 @@ footer .principal_footer {
     max-width: 100%;
   }
 
-  .card_noticias {
+  .card_noticia_lista {
     max-width: 100%;
   }
   /* * — /CONTENIDO ÚNICO — noticias.css */
@@ -755,7 +753,6 @@ footer .principal_footer {
    MOBILE — hasta 768px
    ============================================================ */
 @media (max-width: 768px) {
-
   /* * — HEADER PRINCIPAL (componente reutilizable) */
   header {
     padding: 1rem;
@@ -858,25 +855,25 @@ footer .principal_footer {
     flex: 0 0 auto;
   }
 
-  .card_noticias {
+  .card_noticia_lista {
     flex-direction: column;
     min-height: auto;
   }
 
-  .card_img {
+  .card_noticia_lista__img {
     max-width: 100%;
     height: 180px;
   }
 
-  .card_img img {
+  .card_noticia_lista__img img {
     border-radius: 15px 15px 0 0;
   }
 
-  .card_content {
+  .card_noticia_lista__content {
     padding: 0.5rem 1rem 1rem 1rem;
   }
 
-  .card_content a {
+  .card_noticia_lista__content a {
     margin-top: 10px;
   }
 
@@ -912,17 +909,16 @@ footer .principal_footer {
    MOBILE PEQUEÑO — hasta 480px
    ============================================================ */
 @media (max-width: 480px) {
-
   /* * — CONTENIDO ÚNICO — noticias.css */
   .header_main h2 {
     font-size: 1.5rem;
   }
 
-  .card_noticias h3 {
+  .card_noticia_lista h3 {
     font-size: 1.2rem;
   }
 
-  .card_noticias p {
+  .card_noticia_lista p {
     font-size: 0.9rem;
   }
 

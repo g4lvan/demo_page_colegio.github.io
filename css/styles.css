@@ -170,7 +170,7 @@ h1 {
   outline: 2px solid var(--primary-alt);
 }
 
-input[type="search"] {
+.busqueda .buscar {
   flex: 1;
   font-family: var(--font-primary);
   justify-content: center;
@@ -181,7 +181,7 @@ input[type="search"] {
   color: var(--text-muted);
 }
 
-.busqueda input[type="search"]:focus {
+.busqueda .buscar:focus {
   border: none;
   outline: none;
 }
@@ -1055,7 +1055,7 @@ footer .principal_footer {
     margin-right: 0;
   }
 
-  input[type="search"] {
+  .busqueda .buscar {
     width: 120px;
     font-size: 0.9rem;
   }
