@@ -8,15 +8,15 @@ const fondo = document.querySelector(".overlay");
 //   Alterna el panel lateral y su overlay usando la misma clase de estado.
 //   ============================================================
 
-// ? Una sola funcion controla apertura y cierre.
-//    Mantiene sincronizadas las clases .activo del panel y del fondo.
-const menuOpenClose = () => {
-  menuH.classList.toggle("activo");
-  fondo.classList.toggle("activo");
-};
+if (botonH && closeH && menuH && fondo) {
+  // ? Una sola funcion controla apertura y cierre.
+  //Mantiene sincronizadas las clases .activo del panel y del fondo.
+  const menuOpenClose = () => {
+    menuH.classList.toggle("activo");
+    fondo.classList.toggle("activo");
+  };
 
-// ! Estos listeners asumen que cada pagina incluye los nodos del menu mobile.
-//    Si una pagina omite el header compartido, este script fallara al cargar.
-botonH.addEventListener("click", menuOpenClose);
-closeH.addEventListener("click", menuOpenClose);
-fondo.addEventListener("click", menuOpenClose);
+  botonH.addEventListener("click", menuOpenClose);
+  closeH.addEventListener("click", menuOpenClose);
+  fondo.addEventListener("click", menuOpenClose);
+}
