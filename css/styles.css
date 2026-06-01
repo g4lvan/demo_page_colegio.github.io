@@ -441,7 +441,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   width: 95%;
-  max-width: 800px;
+  max-width: 1000px;
   max-height: 90vh;
   overflow-y: auto;
   border-radius: 10px;
@@ -1236,6 +1236,7 @@ footer .principal_footer {
 
   .noticia_completa header h2 {
     font-size: 1.75rem;
+    margin-top: 4px;
   }
 
   .noticia_completa .main_modal {
