@@ -527,7 +527,7 @@
 
               <!-- ! href vacío — detalle de noticia pendiente.
                  Mantener el CTA visible hasta crear páginas individuales. -->
-              <a class="btn_card" href="">Leer Artículo</a>
+              <button class="btn_noti">Leer Articulo</button>
             </div>
           </article>
           <article class="card_noticias">
@@ -765,6 +765,122 @@
         </p>
       </div>
     </footer>
+    <!--?Modal noticia-->
+
+    <div class="overlay_noti"></div>
+    <div class="noticia_completa">
+      <header>
+        <button class="close_noti_btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="close_noti"
+          >
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+          </svg>
+        </button>
+
+        <span class="type_noti_complete">Logro Emilista</span>
+        <h2>
+          ¡Estudiante representará a Colombia en Olimpiada Matemática de los
+          Andes 2026!
+        </h2>
+      </header>
+      <div class="main_modal">
+        <div class="info_second">
+          <section class="time_noti_complete">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="noti_icon_complete"
+            >
+              <path
+                d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+              />
+              <path d="M16 3v4" />
+              <path d="M8 3v4" />
+              <path d="M4 11h16" />
+              <path d="M8 15h2v2h-2z" />
+            </svg>
+            <time datetime="2026-03-05">05 de marzo, 2026</time>
+          </section>
+          <section class="autor_noti_complete">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="user_icon_complete"
+            >
+              <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            </svg>
+            <p>Equipo de Comunicaciones I.E.M. Emilio Cifuentes</p>
+          </section>
+        </div>
+        <div class="contenido_noti_completo">
+          <p>
+            La comunidad educativa de la Institución Educativa Municipal Emilio
+            Cifuentes celebra con orgullo el destacado logro alcanzado por el
+            estudiante Gabriel Gualteros Torres, del grado 605, quien fue
+            seleccionado para representar a Colombia en la Olimpiada Matemática
+            de los Andes 2026, uno de los encuentros académicos más importantes
+            de la región.
+          </p>
+          <p>
+            Esta oportunidad llega como resultado de su excelente desempeño en
+            diferentes procesos de formación y competencias matemáticas, donde
+            ha demostrado disciplina, dedicación y un notable talento para la
+            resolución de problemas. Su selección representa no solo un
+            reconocimiento a su esfuerzo personal, sino también al trabajo
+            conjunto de su familia, docentes y comunidad educativa.
+          </p>
+          <blockquote>
+            "Este logro refleja el talento, la dedicación y el compromiso que
+            caracterizan a nuestros estudiantes Emilistas."
+            <span class="autor_cita">-Gabriel Gualteros Torres</span>
+          </blockquote>
+          <p>
+            La Olimpiada Matemática de los Andes reunirá a estudiantes de
+            diversos países latinoamericanos en un espacio diseñado para
+            fomentar el pensamiento lógico, el intercambio académico y el
+            desarrollo de habilidades científicas. Durante el evento, los
+            participantes enfrentarán distintos retos y pruebas que pondrán a
+            prueba sus conocimientos y capacidades analíticas.
+          </p>
+          <p>
+            Desde la institución felicitamos a Gabriel por este importante logro
+            que enaltece el nombre del colegio y motiva a nuestros estudiantes a
+            seguir fortaleciendo su pasión por el aprendizaje. Su participación
+            es un ejemplo de que la constancia, el compromiso y el amor por el
+            conocimiento pueden abrir puertas a grandes oportunidades.
+          </p>
+          <p>
+            Le deseamos muchos éxitos en esta experiencia internacional y
+            confiamos en que representará con orgullo a nuestra institución y a
+            nuestro país.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--?Fin modal-->
+
     <script src="js/nav.js"></script>
+    <script src="js/noti.js"></script>
   </body>
 </html>
