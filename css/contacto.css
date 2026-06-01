@@ -57,7 +57,7 @@ main {
    Título de página y controles visuales de búsqueda o filtro.
    ============================================================ */
 
-/**Titulo y subtitulo*/
+/* * — Título y subtítulo */
 
 .header_main {
   display: flex;

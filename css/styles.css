@@ -432,7 +432,7 @@ h1 {
   display: none;
 }
 
-/*?Modal Noticia*/
+/* * — Modal de noticia destacada */
 
 .noticia_completa.activo {
   display: block;
@@ -459,7 +459,7 @@ h1 {
   z-index: 10;
 }
 
-/*?Header*/
+/* * — Encabezado visual del modal */
 
 .noticia_completa header {
   position: relative;
@@ -537,7 +537,7 @@ h1 {
   margin: 0;
 }
 
-/*?Contenido*/
+/* * — Contenido del modal */
 
 .noticia_completa .main_modal {
   padding: 2rem 5rem;
@@ -565,7 +565,7 @@ h1 {
   width: 20px;
 }
 
-/*?Párrafos*/
+/* * — Texto largo del modal */
 
 .contenido_noti_completo p:first-child {
   font-size: 1.2rem;
@@ -593,7 +593,7 @@ h1 {
   border-bottom: 2px solid var(--background-dark);
 }
 
-/*?Scroll*/
+/* * — Scroll interno del modal */
 .noticia_completa.activo::-webkit-scrollbar {
   width: 10px;
 }
@@ -612,7 +612,7 @@ h1 {
   background-color: var(--primary-hover);
 }
 
-/*?Fin Modal*/
+/* * — Fin modal de noticia destacada */
 
 .noticias {
   display: flex;
