@@ -470,6 +470,9 @@ h1 {
   height: 400px;
   padding: 1rem 5rem;
   border-radius: 10px 10px 0 0;
+}
+
+#modal-olimpiadas header{
   background-image:
     linear-gradient(
       to top,
@@ -479,6 +482,36 @@ h1 {
       transparent
     ),
     url(../assets/images/pizarra_web.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#modal-graduacion header{
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.9) 40%,
+      transparent 100%,
+      transparent
+    ),
+    url(../assets/images/590406859_1405269001601102_3354321450507024463_n.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#modal-reencuentro header{
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.9) 40%,
+      transparent 100%,
+      transparent
+    ),
+    url(../assets/images/590553817_1405267334934602_5608521336583137333_n.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
