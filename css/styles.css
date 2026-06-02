@@ -512,11 +512,11 @@ h1 {
   height: 20px;
 }
 
-.close:hover {
+.close_noti_btn:hover {
   background-color: var(--background);
 }
 
-.close:hover .close_noti {
+.close_noti_btn:hover .close_noti {
   color: var(--primary-color);
 }
 
