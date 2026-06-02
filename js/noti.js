@@ -7,24 +7,26 @@ const fondoNoti = document.querySelector(".overlay_noti");
 //   Abre y cierra la noticia completa desde la primera card del index.
 //   ============================================================
 
-botonesAbrir.forEach((boton) => {
-  boton.addEventListener("click", () => {
-    const idModal = boton.dataset.modal;
-    const modal = document.querySelector(`#${idModal}`);
-    modal.classList.add("activo");
-    fondoNoti.classList.add("activo");
+if (botonesAbrir.length > 0 && botonesCerrar.length > 0 && fondoNoti) {
+  botonesAbrir.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      const idModal = boton.dataset.modal;
+      const modal = document.querySelector(`#${idModal}`);
+      modal.classList.add("activo");
+      fondoNoti.classList.add("activo");
+    });
   });
-});
 
-const cerrarTodo = () => {
-  document.querySelectorAll(".noticia_completa.activo").forEach((m) => {
-    m.classList.remove("activo");
+  const cerrarTodo = () => {
+    document.querySelectorAll(".noticia_completa.activo").forEach((m) => {
+      m.classList.remove("activo");
+    });
+    fondoNoti.classList.remove("activo");
+  };
+
+  botonesCerrar.forEach((boton) => {
+    boton.addEventListener("click", cerrarTodo);
   });
-  fondoNoti.classList.remove("activo");
-};
 
-botonesCerrar.forEach((boton) => {
-  boton.addEventListener("click", cerrarTodo);
-});
-
-fondoNoti.addEventListener("click", cerrarTodo);
+  fondoNoti.addEventListener("click", cerrarTodo);
+}
