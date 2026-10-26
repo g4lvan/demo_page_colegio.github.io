@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "imagen": "../assets/images/pizarra_web.jpg",
+    "titulo": "¡Estudiante representará a Colombia en Olimpiada Matemática de los Andes 2026!",
+    "tipo": "Logro Emilista",
+    "fecha": "2026-03-05",
+    "autor": "Equipo de Comunicaciones I.E.M. Emilio Cifuentes",
+    "resumen": "Gabriel Gualteros Torres, estudiante del grado 605 de la I.E.M. Emilio Cifuentes, fue seleccionado para representar a Colombia en la Olimpiada Matemática de los Andes 2026, gracias a su talento y destacado desempeño en matemáticas."
+  },
+
+  {
+    "id": 2,
+    "imagen": "../assets/images/590406859_1405269001601102_3354321450507024463_n.jpg",
+    "titulo": "¡Celebramos la graduación de grado 11!",
+    "tipo": "Evento Institucional",
+    "fecha": "2025-11-27",
+    "autor": "Equipo de Comunicaciones I.E.M. Emilio Cifuentes",
+    "resumen": "La I.E.M. Emilio Cifuentes celebró la graduación de los estudiantes de grado 11, reconociendo su esfuerzo y dedicación. La ceremonia reunió a familias, docentes y directivos para celebrar la culminación de su etapa escolar y desearles éxitos en sus futuros proyectos. ¡Felicitaciones, promoción 2025!"
+  },
+
+  {
+    "id": 3,
+    "imagen": "../assets/images/590553817_1405267334934602_5608521336583137333_n.jpg",
+    "titulo": "¡Reencuentro de la promoción 1965!",
+    "tipo": "Comunidad Emilista",
+    "fecha": "2025-11-25",
+    "autor": "Equipo de Comunicaciones I.E.M. Emilio Cifuentes",
+    "resumen": "La I.E.M. Emilio Cifuentes recibió a los egresados de la promoción de 1965 en un emotivo encuentro lleno de recuerdos y anécdotas. La jornada permitió fortalecer los lazos con la institución, reconocer el legado de sus exalumnos y celebrar su pertenencia a la familia Emilista."
+  }
+]
