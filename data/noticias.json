@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "slug": "olimpiadas",
     "imagen": "assets/images/pizarra_web.jpg",
     "alt": "Estudiante en actividad matemática",
     "titulo": "¡Estudiante representará a Colombia en Olimpiada Matemática de los Andes 2026!",
@@ -12,6 +13,7 @@
 
   {
     "id": 2,
+    "slug": "graduacion",
     "imagen": "assets/images/590406859_1405269001601102_3354321450507024463_n.jpg",
     "alt": "Graduación promoción 2025",
     "titulo": "¡Celebramos la graduación de grado 11!",
@@ -23,6 +25,7 @@
 
   {
     "id": 3,
+    "slug": "reencuentro",
     "imagen": "assets/images/590553817_1405267334934602_5608521336583137333_n.jpg",
     "alt": "Reencuentro promoción 1965",
     "titulo": "¡Reencuentro de la promoción 1965!",
