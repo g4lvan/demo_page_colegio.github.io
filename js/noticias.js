@@ -1,6 +1,16 @@
+// * ============================================================
+//   NOTICIAS RECIENTES (solo index)
+//   Pinta las cards del index desde data/noticias.json.
+//   ============================================================
+
 const contenedor = document.querySelector(".ult_noticias");
 
 if (contenedor) {
+  // ? data-modal une la card con su modal: js/noti.js lee este
+  //   atributo para abrir el elemento cuyo id sea "modal-<slug>".
+  // ? Migración a Astro: crearNoticia se convertirá en un
+  //   componente NewsCard y el JSON en una content collection.
+  //   El atributo data-modal sigue siendo el vinculo con la modal.
   function crearNoticia(noticia) {
     return `<article class="card_noticias">
             <div class="card_img">
@@ -28,7 +38,7 @@ if (contenedor) {
               <p>
                 ${noticia.resumen}
               </p>
-              <button class="btn_noti">
+              <button class="btn_noti" data-modal="modal-${noticia.slug}">
                 Leer Articulo
               </button>
             </div>

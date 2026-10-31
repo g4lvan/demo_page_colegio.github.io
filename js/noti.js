@@ -1,32 +1,49 @@
-const botonesAbrir = document.querySelectorAll(".btn_noti");
-const botonesCerrar = document.querySelectorAll(".close_noti_btn");
 const fondoNoti = document.querySelector(".overlay_noti");
 
 // * ============================================================
-//   MODAL DE NOTICIA DESTACADA
-//   Abre y cierra la noticia completa desde la primera card del index.
+//   MODAL DE NOTICIA
+//   Abre y cierra la noticia completa desde cualquier card.
 //   ============================================================
 
-if (botonesAbrir.length > 0 && botonesCerrar.length > 0 && fondoNoti) {
-  botonesAbrir.forEach((boton) => {
-    boton.addEventListener("click", () => {
-      const idModal = boton.dataset.modal;
-      const modal = document.querySelector(`#${idModal}`);
-      modal.classList.add("activo");
-      fondoNoti.classList.add("activo");
-    });
-  });
+// ? Delegación de eventos: el listener vive en document, no en
+//   cada boton. Así los .btn_noti creados después de la carga
+//   (cards dinámicas del index con data/noticias.json) también
+//   funcionan sin necesidad de re-vincular listeners.
+// ? data-modal es el único vinculo card-modal: el botón con
+//   data-modal="modal-olimpiadas" abre #modal-olimpiadas.
+//   En Astro este patrón se mantiene igual dentro del componente.
+// ? Sin prefijo .btn_noti en el selector: cualquier elemento con
+//   data-modal abre su modal. Las cerrar y el overlay cierran
+//   todas las modales activas a la vez.
 
+if (fondoNoti) {
   const cerrarTodo = () => {
-    document.querySelectorAll(".noticia_completa.activo").forEach((m) => {
-      m.classList.remove("activo");
+    document.querySelectorAll(".noticia_completa.activo").forEach((modal) => {
+      modal.classList.remove("activo");
     });
     fondoNoti.classList.remove("activo");
   };
 
-  botonesCerrar.forEach((boton) => {
-    boton.addEventListener("click", cerrarTodo);
-  });
+  document.addEventListener("click", (event) => {
+    const botonAbrir = event.target.closest("[data-modal]");
+    if (botonAbrir) {
+      const modal = document.querySelector(`#${botonAbrir.dataset.modal}`);
+      if (modal) {
+        modal.classList.add("activo");
+        fondoNoti.classList.add("activo");
+      } else {
+        console.warn(`Modal no encontrada: #${botonAbrir.dataset.modal}`);
+      }
+      return;
+    }
 
-  fondoNoti.addEventListener("click", cerrarTodo);
+    if (event.target.closest(".close_noti_btn")) {
+      cerrarTodo();
+      return;
+    }
+
+    if (event.target === fondoNoti) {
+      cerrarTodo();
+    }
+  });
 }
