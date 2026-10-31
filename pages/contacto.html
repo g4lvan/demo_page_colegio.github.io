@@ -42,7 +42,7 @@
           <li><a href="recursos.html">Recursos</a></li>
         </ul>
       </nav>
-      <form class="busqueda">
+      <form class="busqueda" onsubmit="return false">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -194,7 +194,7 @@
           <a href="recursos.html">Recursos</a>
         </li>
       </ul>
-      <form class="busqueda">
+      <form class="busqueda" onsubmit="return false">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -231,10 +231,10 @@
       </section>
       <!-- ' FORMULARIO DE CONTACTO
           Estructura: .contact > datos básicos + asunto + mensaje + botón.
-          El formulario conserva action local hasta conectar envío real. -->
+          Formulario visual: onsubmit=false evita el envío hasta conectar backend (v2.0). -->
       <section class="principal_cont">
         <section class="form_contact">
-          <form action="#" method="post" class="contact">
+          <form class="contact" onsubmit="return false">
             <h2>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -308,6 +308,9 @@
               </div>
             </div>
             <button type="button" class="bot_enviar">Enviar Mensaje</button>
+            <p class="aviso_envio">
+              El envío de mensajes estará disponible próximamente.
+            </p>
           </form>
         </section>
         <!-- * — Información de contacto -->

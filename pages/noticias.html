@@ -41,7 +41,7 @@
           <li><a href="recursos.html">Recursos</a></li>
         </ul>
       </nav>
-      <form class="busqueda">
+      <form class="busqueda" onsubmit="return false">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -193,7 +193,7 @@
           <a href="recursos.html">Recursos</a>
         </li>
       </ul>
-      <form class="busqueda">
+      <form class="busqueda" onsubmit="return false">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -229,7 +229,11 @@
           </p>
         </div>
         <div class="busqueda_notis">
-          <form action="busqueda" class="buscador_noticias">
+        <!-- ! El buscador de noticias es visual (sin lógica JS).
+             El action "busqueda" era un placeholder que llevaba a una
+             página inexistente; onsubmit=false neutraliza ese envío
+             hasta conectar búsqueda real (v2.0). -->
+          <form class="buscador_noticias" onsubmit="return false">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -483,20 +487,21 @@
             <a href="../404.html">Ver Calendario Completo</a>
           </div>
           <!-- ! Suscripción visual sin backend conectado.
-           Conectar almacenamiento o proveedor de email antes de producción. -->
+           Action "email" era un placeholder roto; onsubmit=false
+           neutraliza el envío hasta conectar proveedor de emails (v2.0). -->
           <section class="notif">
             <h4>Actualización Semanal</h4>
             <p>
               Recibe las últimas noticias escolares directamente en tu correo
               electrónico.
             </p>
-            <form action="email">
+            <form onsubmit="return false">
               <input
                 type="email"
                 class="email_notif"
                 placeholder="Correo Electrónico"
               />
-              <button class="but_notif">Suscribirse</button>
+              <button type="button" class="but_notif">Suscribirse</button>
             </form>
           </section>
         </section>
