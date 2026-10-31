@@ -13,11 +13,11 @@
     />
     <!-- * — Configuración visual base -->
     <title>Institución Educativa Municipal Emilio Cifuentes</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/404.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/404.css" />
     <link
       rel="shortcut icon"
-      href="../assets/logos/EMILIO.png"
+      href="assets/logos/EMILIO.png"
       type="image/x-icon"
     />
   </head>
@@ -25,20 +25,21 @@
     <!-- * ============================================================
       HEADER
       Barra superior compartida replicada desde index.html.
-      Rutas ajustadas un nivel arriba para las paginas dentro de /pages.
+      Este archivo vive en la raiz para que GitHub Pages lo use
+      como 404 personalizado; rutas sin prefijo ../.
       ============================================================ -->
     <header>
       <div class="izquierda">
-        <img src="../assets/logos/EMILIO.png" alt="emilio_logo" class="logo" />
+        <img src="assets/logos/EMILIO.png" alt="emilio_logo" class="logo" />
         <h1>I.E.M. Emilio <span class="titulo">Cifuentes</span></h1>
       </div>
       <nav>
         <ul class="links_navegacion">
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pages/nosotros.html">Nosotros</a></li>
+          <li><a href="pages/noticias.html">Noticias</a></li>
+          <li><a href="pages/contacto.html">Contacto</a></li>
+          <li><a href="pages/recursos.html">Recursos</a></li>
         </ul>
       </nav>
       <form class="busqueda">
@@ -76,11 +77,11 @@
 
     <!-- ' NAVEGACION MOBILE
          .overlay oscurece la pagina y .panel_lateral contiene el menu fuera de canvas.
-         Ambos bloques dependen de ../js/nav.js para abrir y cerrar el panel. -->
+         Ambos bloques dependen de js/nav.js para abrir y cerrar el panel. -->
     <div class="overlay"></div>
     <nav class="panel_lateral">
       <div class="izquierda">
-        <img src="../assets/logos/EMILIO.png" alt="emilio_logo" class="logo" />
+        <img src="assets/logos/EMILIO.png" alt="emilio_logo" class="logo" />
         <h1>I.E.M. Emilio Cifuentes</h1>
         <button class="close_nav">
           <svg
@@ -115,7 +116,7 @@
             />
             <path d="M16 15c-2.21 1.333 -5.792 1.333 -8 0" />
           </svg>
-          <a href="../index.html">Inicio</a>
+          <a href="index.html">Inicio</a>
         </li>
         <li>
           <svg
@@ -132,7 +133,7 @@
             <path d="M12 9h.01" />
             <path d="M11 12h1v4h1" />
           </svg>
-          <a href="nosotros.html">Nosotros</a>
+          <a href="pages/nosotros.html">Nosotros</a>
         </li>
         <li>
           <svg
@@ -152,7 +153,7 @@
             <path d="M8 12h4" />
             <path d="M8 16h4" />
           </svg>
-          <a href="noticias.html">Noticias</a>
+          <a href="pages/noticias.html">Noticias</a>
         </li>
         <li>
           <svg
@@ -170,7 +171,7 @@
             />
             <path d="M3 7l9 6l9 -6" />
           </svg>
-          <a href="contacto.html">Contacto</a>
+          <a href="pages/contacto.html">Contacto</a>
         </li>
         <li>
           <svg
@@ -190,7 +191,7 @@
             <path d="M7 12h10" />
             <path d="M7 16h10" />
           </svg>
-          <a href="recursos.html">Recursos</a>
+          <a href="pages/recursos.html">Recursos</a>
         </li>
       </ul>
       <form class="busqueda">
@@ -234,7 +235,7 @@
           Lo sentimos, esta página no está disponible o aún se encuentra en
           construcción.
         </p>
-        <a href="../index.html">
+        <a href="index.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -263,7 +264,7 @@
         <div class="info_footer">
           <header class="img_footer">
             <img
-              src="../assets/logos/EMILIO.png"
+              src="assets/logos/EMILIO.png"
               alt="Logo de la institución"
               class="logo_footer"
             />
@@ -280,20 +281,20 @@
             <h3>Recursos</h3>
             <ul>
               <li>
-                <a href="../assets/downloads/Circular-interna-01.pdf" download
+                <a href="assets/downloads/Circular-interna-01.pdf" download
                   >Manual del estudiante</a
                 >
               </li>
-              <li><a href="../pages/404.html">Calendario Académico</a></li>
-              <li><a href="../pages/404.html">Horarios de clase</a></li>
+              <li><a href="404.html">Calendario Académico</a></li>
+              <li><a href="404.html">Horarios de clase</a></li>
             </ul>
           </div>
           <div class="rapidos_footer">
             <h3>Accesos Rápidos</h3>
             <ul>
-              <li><a href="../pages/noticias.html">Noticias</a></li>
-              <li><a href="../pages/recursos.html">Formación</a></li>
-              <li><a href="../pages/contacto.html">Contacto</a></li>
+              <li><a href="pages/noticias.html">Noticias</a></li>
+              <li><a href="pages/recursos.html">Formación</a></li>
+              <li><a href="pages/contacto.html">Contacto</a></li>
             </ul>
           </div>
         </nav>
@@ -324,6 +325,6 @@
         </p>
       </div>
     </footer>
-    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
