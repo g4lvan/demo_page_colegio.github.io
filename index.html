@@ -474,7 +474,8 @@
       </section>
       <!-- * ============================================================
   NOTICIAS RECIENTES
-  Tres noticias destacadas hardcodeadas; el patrón anticipa una fuente dinámica futura.
+  Tres noticias destacadas renderizadas desde data/noticias.json por
+  js/noti.js (cards + modales con delegación de eventos).
   ============================================================ -->
       <section class="noticias">
         <header class="textos_noti">
@@ -485,122 +486,12 @@
         </header>
 
         <div class="ult_noticias">
-          <!-- ' CARD DE NOTICIA
+          <!-- ' CARD DE NOTICIA (generada por js/noti.js)
              Estructura: .card_noticias > .card_img (badge + img) > .card_content.
-             Badge posicionado sobre la imagen; solo documentar esta primera instancia. -->
-          <!--<article class="card_noticias">
-            <div class="card_img">
-              <span class="type_noti">Logro Emilista</span>
-              <img
-                src="assets/images/pizarra_web.jpg"
-                alt="Estudiante en actividad matemática"
-              />
-            </div>
-
-            <div class="card_content">
-              <div class="info">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="time_noti_icon"
-                >
-                  <path
-                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 8h-14v8.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16zm-9 4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1z"
-                  />
-                </svg>
-                <time datetime="2026-03-05">05 de marzo, 2026</time>
-              </div>
-
-              <h3>¡Estudiante va a las Olimpiadas Matemáticas!</h3>
-
-              <p>
-                El estudiante Gabriel Gualteros Torres, del grado 605, fue
-                seleccionado para representar a Colombia en la Olimpiada
-                Matemática de los Andes 2026, un importante evento académico
-                internacional que reunirá a jóvenes talentos de diferentes
-                países.
-              </p>
-              <button class="btn_noti" data-modal="modal-olimpiadas">
-                Leer Articulo
-              </button>
-            </div>
-          </article>
-          <article class="card_noticias">
-            <div class="card_img">
-              <span class="type_noti">Evento Institucional</span>
-              <img
-                src="assets/images/590406859_1405269001601102_3354321450507024463_n.jpg"
-                alt="Graduación promoción 2025"
-              />
-            </div>
-
-            <div class="card_content">
-              <div class="info">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="time_noti_icon"
-                >
-                  <path
-                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 8h-14v8.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16zm-9 4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1z"
-                  />
-                </svg>
-                <time datetime="2025-11-27">26 de noviembre, 2025</time>
-              </div>
-
-              <h3>¡Celebramos la graduación de grado 11!</h3>
-
-              <p>
-                La institución celebró con orgullo la ceremonia de graduación de
-                los estudiantes de grado 11, un momento lleno de emociones que
-                marca el cierre de una etapa y el inicio de nuevos caminos para
-                nuestros bachilleres.
-              </p>
-              <button class="btn_noti" data-modal="modal-graduacion">
-                Leer Artículo
-              </button>
-            </div>
-          </article>
-
-          <article class="card_noticias">
-            <div class="card_img">
-              <span class="type_noti">Comunidad Emilista</span>
-              <img
-                src="assets/images/590553817_1405267334934602_5608521336583137333_n.jpg"
-                alt="Reencuentro promoción 1965"
-              />
-            </div>
-
-            <div class="card_content">
-              <div class="info">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="time_noti_icon"
-                >
-                  <path
-                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 8h-14v8.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16zm-9 4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1z"
-                  />
-                </svg>
-                <time datetime="2025-11-27">25 de noviembre, 2025</time>
-              </div>
-
-              <h3>Reencuentro de la promoción 1965</h3>
-
-              <p>
-                Los exalumnos de la promoción 1965 regresaron a su institución
-                para compartir un emotivo reencuentro, recordar sus años de
-                estudio y fortalecer los lazos que los unen con la historia del
-                colegio.
-              </p>
-              <button class="btn_noti" data-modal="modal-reencuentro">
-                Leer Artículo
-              </button>
-            </div> 
-            </article> -->
+             No hay markup de cards aqui: el contenedor .ult_noticias lo
+             llena el script leyendo data/noticias.json; el HTML solo
+             define el punto de montaje. -->
+          
         </div>
       </section>
 
@@ -743,6 +634,7 @@
           <a
             href="https://www.facebook.com/profile.php?id=100063540460666"
             target="_blank"
+            rel="noopener noreferrer"
             class="boton_red_footer"
             aria-label="facebook"
             ><svg
