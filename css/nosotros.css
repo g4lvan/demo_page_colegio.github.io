@@ -46,9 +46,12 @@ body {
   font-family: var(--font-primary);
 }
 
+/* ? main sin padding: las secciones (.introduction/.history/.team)
+   son bandas full-bleed con su propio padding de 4rem, y el hero
+   .title es intencionalmente extra-main. El main solo aporta el
+   landmark semántico, no estilos. */
 main {
-  padding: 7rem;
-  padding-top: 0;
+  padding: 0;
 }
 
 /* * ============================================================

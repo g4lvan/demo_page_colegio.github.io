@@ -46,9 +46,15 @@ body {
   font-family: var(--font-primary);
 }
 
+/* ? --main-pad sincroniza el padding del main con el "sangrado"
+   full-bleed del mapa: .map anula el padding lateral con margen
+   negativo y reubica el hueco superior como margen propio.
+   padding-bottom en 0: el footer comienza justo tras el mapa. */
 main {
-  padding: 7rem;
+  --main-pad: 7rem;
+  padding: var(--main-pad);
   padding-top: 0;
+  padding-bottom: 0;
   background-color: var(--background-dark);
 }
 
@@ -322,8 +328,12 @@ select {
   height: 16px;
 }
 
+/* ? El mapa es full-bleed dentro del main: anula el padding lateral
+   con margen negativo equivalente a --main-pad y conserva el hueco
+   superior como margen (mismo color de fondo que tenia antes). */
 .map {
-  margin: 0;
+  margin-block: var(--main-pad) 0;
+  margin-inline: calc(-1 * var(--main-pad));
   padding: 0;
   position: relative;
 }
@@ -397,8 +407,10 @@ select {
 @media (max-width: 768px) {
   /* * — Main */
   main {
-    padding: 1.5rem;
+    --main-pad: 1.5rem;
+    padding: var(--main-pad);
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   /* * — Encabezado del main */

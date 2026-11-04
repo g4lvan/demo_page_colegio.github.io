@@ -505,7 +505,7 @@ button:hover .mas_descargas {
   z-index: 11;
 }
 
-.modal main {
+.modal .modal_body {
   padding: 0;
   margin: 0;
   background-color: var(--background);
@@ -596,7 +596,7 @@ button:hover .mas_descargas {
   border-radius: 5px;
 }
 
-.body-modal main h3 {
+.body-modal .modal_body h3 {
   font-size: 1rem;
   font-weight: 700;
   margin: 0;
@@ -999,7 +999,7 @@ footer .principal_footer {
     height: 24px;
   }
 
-  .body-modal main h3 {
+  .body-modal .modal_body h3 {
     font-size: 0.9rem;
   }
   /* * — /CONTENIDO ÚNICO — recursos.css */
