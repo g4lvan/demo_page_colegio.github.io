@@ -71,7 +71,7 @@ main {
   margin-top: 30px;
 }
 
-.info h2 {
+.info h1 {
   font-size: 10rem;
   margin: 0;
   padding: 0;
@@ -80,7 +80,7 @@ main {
   text-shadow: -18px -15px var(--placeholder);
 }
 
-.info h3 {
+.info h2 {
   padding: 10px;
   margin: 0;
   font-size: 2rem;
@@ -130,14 +130,14 @@ main {
     padding: 4rem 2rem;
   }
 
-  .info h2 {
+  .info h1 {
     font-size: 7rem;
     /* ? text-shadow reajustado proporcionalmente al font-size reducido
        para que el efecto de sombra no se vea desplazado. */
     text-shadow: -12px -10px var(--placeholder);
   }
 
-  .info h3 {
+  .info h2 {
     font-size: 1.5rem;
   }
 
@@ -157,12 +157,12 @@ main {
     height: 100px;
   }
 
-  .info h2 {
+  .info h1 {
     font-size: 5rem;
     text-shadow: -8px -7px var(--placeholder);
   }
 
-  .info h3 {
+  .info h2 {
     font-size: 1.2rem;
   }
 

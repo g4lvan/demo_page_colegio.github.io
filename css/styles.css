@@ -122,14 +122,18 @@ header .links_navegacion a:hover {
   color: var(--primary-hover);
 }
 
-h1 {
+/* ? La marca del header/panel es un <p> (no es h1): el h1 real vive
+   en el contenido de cada página. Reglas heredadas del antiguo h1. */
+.marca {
   font-size: 2rem;
+  font-weight: 700;
   display: flex;
   margin: 0;
   padding: 0;
   align-items: center;
   gap: 0.5rem;
   letter-spacing: -1px;
+  color: #000000;
 }
 
 .titulo {
@@ -244,7 +248,7 @@ h1 {
   color: #edc216;
 }
 
-.card_inicio h2 {
+.card_inicio h1 {
   color: var(--text-secondary);
   font-family: var(--font-primary);
   font-size: 5rem;
@@ -1198,7 +1202,7 @@ footer .principal_footer {
     border-bottom: 2px solid var(--primary-color);
   }
 
-  .panel_lateral .izquierda > h1 {
+  .panel_lateral .izquierda > .marca {
     font-size: 1.5rem;
     max-width: 60%;
   }
@@ -1236,7 +1240,7 @@ footer .principal_footer {
     padding: 3rem;
   }
 
-  .card_inicio h2 {
+  .card_inicio h1 {
     font-size: 3.5rem;
     line-height: 55px;
     color: var(--background);
@@ -1291,7 +1295,7 @@ footer .principal_footer {
     gap: 1rem;
   }
 
-  header h1 {
+  header .marca {
     font-size: 1.2rem;
     flex-wrap: wrap;
   }
@@ -1371,7 +1375,7 @@ footer .principal_footer {
     margin-bottom: 15px;
   }
 
-  .card_inicio h2 {
+  .card_inicio h1 {
     font-size: 2.3rem;
     line-height: 1.2;
   }

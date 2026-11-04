@@ -67,7 +67,7 @@ main {
   padding: 2rem;
 }
 
-.header_main h2 {
+.header_main h1 {
   font-size: 2.5rem;
   font-weight: 900;
   margin: 0;
@@ -850,7 +850,7 @@ footer .principal_footer {
     padding: 1rem 0;
   }
 
-  .header_main h2 {
+  .header_main h1 {
     font-size: 1.8rem;
   }
 
@@ -951,7 +951,7 @@ footer .principal_footer {
    ============================================================ */
 @media (max-width: 480px) {
   /* * — CONTENIDO ÚNICO — recursos.css */
-  .header_main h2 {
+  .header_main h1 {
     font-size: 1.5rem;
   }
 
