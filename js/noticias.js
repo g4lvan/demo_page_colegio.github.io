@@ -1,26 +1,39 @@
 // * ============================================================
-//   NOTICIAS RECIENTES (solo index)
-//   Pinta las cards del index desde data/noticias.json.
+//   NOTICIAS DESDE JSON
+//   Fuente única: data/noticias.json. Rende cards en el index
+//   (.ult_noticias) y en el listado de noticias.html
+//   (.lista_noticias) con el mismo contenido.
 //   ============================================================
 
-const contenedor = document.querySelector(".ult_noticias");
+// ? Ruta resuelta desde el propio módulo (no desde el HTML): un
+//   fetch relativo simple ("data/..." o "../data/...") dejaría de
+//   funcionar según la página que cargue el script. new URL(..)
+//   resuelve la raíz del proyecto desde js/, igual que un path
+//   sería gestionado por un bundler/Astro en el futuro.
+const URL_NOTICIAS = new URL("../data/noticias.json", import.meta.url);
 
-if (contenedor) {
-  // ? data-modal une la card con su modal: js/noti.js lee este
-  //   atributo para abrir el elemento cuyo id sea "modal-<slug>".
-  // ? Migración a Astro: crearNoticia se convertirá en un
-  //   componente NewsCard y el JSON en una content collection.
-  //   El atributo data-modal sigue siendo el vinculo con la modal.
-  function crearNoticia(noticia) {
-    return `<article class="card_noticias">
-            <div class="card_img">
+// ? data-modal une la card con su modal: js/noti.js lee este
+//   atributo para abrir el elemento cuyo id sea "modal-<slug>".
+function crearNoticia(noticia, variante) {
+  // ? El index y el listado de noticias comparten el contenido,
+  //   pero cada página tiene su propia clase de card ya estilada:
+  //   compacta = .card_noticias (index), lista = .card_noticia_lista.
+  const esLista = variante === "lista";
+  const claseCard = esLista ? "card_noticia_lista" : "card_noticias";
+  const claseImg = esLista ? "card_noticia_lista__img" : "card_img";
+  const claseContent = esLista
+    ? "card_noticia_lista__content"
+    : "card_content";
+
+  return `<article class="${claseCard}">
+            <div class="${claseImg}">
               <span class="type_noti">${noticia.tipo}</span>
               <img
                 src="${noticia.imagen}"
                 alt="${noticia.alt}"
               />
             </div>
-            <div class="card_content">
+            <div class="${claseContent}">
               <div class="info">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -43,31 +56,39 @@ if (contenedor) {
               </button>
             </div>
           </article>`;
-  }
-
-  function formatearFecha(texto) {
-    const fecha = new Date(texto).toLocaleDateString("es-CO", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      timeZone: "UTC",
-    });
-    return fecha;
-  }
-
-  async function pedirNoticias() {
-    try {
-      const response = await fetch("data/noticias.json");
-      if (!response.ok) {
-        throw new Error(response.status);
-      }
-      const noticias = await response.json();
-      const pintar = noticias.map(crearNoticia);
-      const card = pintar.join("");
-      contenedor.innerHTML = card;
-    } catch (error) {
-      console.error(error);
-    }
-  }
-  pedirNoticias();
 }
+
+function formatearFecha(texto) {
+  const fecha = new Date(texto).toLocaleDateString("es-CO", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  return fecha;
+}
+
+async function pedirNoticias() {
+  // ? Punto de montaje: el index y el listado de noticias usan
+  //   contenedores distintos; si la página no tiene ninguno, no
+  //   hay nada que renderizar (no falla en otras páginas).
+  const destino =
+    document.querySelector(".ult_noticias") ??
+    document.querySelector(".lista_noticias");
+  if (!destino) return;
+
+  try {
+    const response = await fetch(URL_NOTICIAS);
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    const noticias = await response.json();
+    const variante = destino.classList.contains("lista_noticias")
+      ? "lista"
+      : "compacta";
+    destino.innerHTML = noticias.map((n) => crearNoticia(n, variante)).join("");
+  } catch (error) {
+    console.error("No se pudieron cargar las noticias:", error);
+  }
+}
+pedirNoticias();

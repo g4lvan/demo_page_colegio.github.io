@@ -474,8 +474,8 @@
       </section>
       <!-- * ============================================================
   NOTICIAS RECIENTES
-  Tres noticias destacadas renderizadas desde data/noticias.json por
-  js/noti.js (cards + modales con delegación de eventos).
+  Tres noticias destacadas renderizadas desde data/noticias.json;
+  js/noticias.js pinta las cards y js/noti.js maneja las modales.
   ============================================================ -->
       <section class="noticias">
         <header class="textos_noti">
@@ -486,7 +486,7 @@
         </header>
 
         <div class="ult_noticias">
-          <!-- ' CARD DE NOTICIA (generada por js/noti.js)
+          <!-- ' CARD DE NOTICIA (generada por js/noticias.js)
              Estructura: .card_noticias > .card_img (badge + img) > .card_content.
              No hay markup de cards aqui: el contenedor .ult_noticias lo
              llena el script leyendo data/noticias.json; el HTML solo
