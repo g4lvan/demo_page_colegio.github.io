@@ -92,9 +92,15 @@ main {
   color: var(--primary-color);
 }
 
-/* ? Grid principal separa formulario y datos de contacto. En mobile se apila para preservar legibilidad. */
+/* ? Grid principal separa formulario y datos de contacto. Para que
+   el par de columnas sea legible en monitores anchos, el contenido
+   se acota a 1200px y se centra: hasta ese ancho el "después" que
+   se ve es idéntico al diseñado. En mobile se apila para preservar
+   legibilidad (ver breakpoints abajo). */
 
 .principal_cont {
+  max-width: 1200px;
+  margin-inline: auto;
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -205,8 +211,8 @@ select {
   margin-top: 30px;
 }
 
-.info_basica,
-.asunto,
+.info_basica label,
+.asunto label,
 .mensaje label {
   text-transform: uppercase;
   font-weight: 800;
@@ -403,6 +409,20 @@ select {
   Layout general: columna única, cards apiladas.
   Márgenes laterales reducidos para móvil.
   ============================================================ */
+
+/* * ============================================================
+   TABLET — hasta 1080px
+   El par de columnas necesita ~800px de ancho real para que los
+   inputs de .info_basica conserven mínimo ~300px con sus paddings.
+   Debajo de ese límite se apila a una columna ANTES del punto
+   mobile para evitar inputs enanos en el rango medio.
+   ============================================================ */
+@media (max-width: 1080px) {
+  .principal_cont {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
 
 @media (max-width: 768px) {
   /* * — Main */
