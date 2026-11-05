@@ -13,7 +13,8 @@
 const URL_NOTICIAS = new URL("../data/noticias.json", import.meta.url);
 
 // ? data-modal une la card con su modal: js/noti.js lee este
-//   atributo para abrir el elemento cuyo id sea "modal-<slug>".
+//   atributo para abrir el modal de plantilla "modal-noticia".
+import { formatearFecha } from "./fecha.js";
 function crearNoticia(noticia, variante) {
   // ? El index y el listado de noticias comparten el contenido,
   //   pero cada página tiene su propia clase de card ya estilada:
@@ -56,16 +57,6 @@ function crearNoticia(noticia, variante) {
               </button>
             </div>
           </article>`;
-}
-
-function formatearFecha(texto) {
-  const fecha = new Date(texto).toLocaleDateString("es-CO", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-  return fecha;
 }
 
 async function pedirNoticias() {

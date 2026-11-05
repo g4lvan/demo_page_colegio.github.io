@@ -475,7 +475,11 @@ header .links_navegacion a:hover {
   border-radius: 10px 10px 0 0;
 }
 
-#modal-olimpiadas header{
+/* ? Fondo de la modal de noticia: el gradiente (diseño) vive aqui;
+   la foto la inyecta js/noti.js como --imagen-noticia al poblar la
+   plantilla, porque depende de la noticia abierta (data/noticias.json).
+   Asi, para el futuro backend, bastara con llegar a esta variable. */
+#modal-noticia header {
   background-image:
     linear-gradient(
       to top,
@@ -484,37 +488,7 @@ header .links_navegacion a:hover {
       transparent 100%,
       transparent
     ),
-    url(../assets/images/pizarra_web.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-#modal-graduacion header{
-  background-image:
-    linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.9) 40%,
-      transparent 100%,
-      transparent
-    ),
-    url(../assets/images/590406859_1405269001601102_3354321450507024463_n.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-#modal-reencuentro header{
-  background-image:
-    linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.9) 40%,
-      transparent 100%,
-      transparent
-    ),
-    url(../assets/images/590553817_1405267334934602_5608521336583137333_n.jpg);
+    var(--imagen-noticia);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
