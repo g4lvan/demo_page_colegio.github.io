@@ -18,8 +18,9 @@ const fondoNoti = document.querySelector(".overlay_noti");
 //   resto del flujo no cambia.
 
 import { formatearFecha } from "./fecha.js";
+import { URL_DATOS, resolverRuta } from "./rutas.js";
 
-const URL_NOTICIAS = new URL("../data/noticias.json", import.meta.url);
+const URL_NOTICIAS = URL_DATOS;
 const ID_PLANTILLA = "modal-noticia";
 
 let cacheNoticias = null;
@@ -46,9 +47,13 @@ function poblarModal(noticia) {
   if (!modal) return null;
 
   // ? La foto del header llega por variable CSS (styles.css define el
-  //   gradiente y consume --imagen-noticia): la ruta del JSON es igual
-  //   a la que usan las cards, así ambas páginas la resuelven bien.
-  modal.style.setProperty("--imagen-noticia", `url("${noticia.imagen}")`);
+  //   gradiente y consume --imagen-noticia): la ruta del JSON se
+  //   resuelve igual que en las cards, con js/rutas.js, para que
+  //   cargue bien en index, en pages/ y en GitHub Pages.
+  modal.style.setProperty(
+    "--imagen-noticia",
+    `url("${resolverRuta(noticia.imagen)}")`
+  );
 
   modal.querySelector(".type_noti_complete").textContent = noticia.tipo;
   modal.querySelector("header h2").textContent = noticia.titulo;

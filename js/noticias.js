@@ -7,14 +7,15 @@
 
 // ? Ruta resuelta desde el propio módulo (no desde el HTML): un
 //   fetch relativo simple ("data/..." o "../data/...") dejaría de
-//   funcionar según la página que cargue el script. new URL(..)
-//   resuelve la raíz del proyecto desde js/, igual que un path
-//   sería gestionado por un bundler/Astro en el futuro.
-const URL_NOTICIAS = new URL("../data/noticias.json", import.meta.url);
-
+//   funcionar según la página que cargue el script. Ver js/rutas.js
+//   para el detalle (GitHub Pages sirve el sitio en subdirectorio).
 // ? data-modal une la card con su modal: js/noti.js lee este
 //   atributo para abrir el modal de plantilla "modal-noticia".
 import { formatearFecha } from "./fecha.js";
+import { URL_DATOS, resolverRuta } from "./rutas.js";
+
+const URL_NOTICIAS = URL_DATOS;
+
 function crearNoticia(noticia, variante) {
   // ? El index y el listado de noticias comparten el contenido,
   //   pero cada página tiene su propia clase de card ya estilada:
@@ -30,7 +31,7 @@ function crearNoticia(noticia, variante) {
             <div class="${claseImg}">
               <span class="type_noti">${noticia.tipo}</span>
               <img
-                src="${noticia.imagen}"
+                src="${resolverRuta(noticia.imagen)}"
                 alt="${noticia.alt}"
               />
             </div>

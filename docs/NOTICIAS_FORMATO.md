@@ -20,7 +20,7 @@ subconjunto con este esquema) mantendrá el sitio funcionando sin cambios.
 | `tipo` | string | ✔ | Etiqueta del badge de la card y de la modal. Valores hoy: `"Logro Emilista"`, `"Evento Institucional"`, `"Comunidad Emilista"`. |
 | `titulo` | string | ✔ | Título completo (usado en card y modal). |
 | `resumen` | string | ✔ | Texto corto de la card (1–3 frases). **No se repite dentro de `contenido`.** |
-| `imagen` | string | ✔ | Ruta relativa a la raíz del proyecto con prefijo `../` (funciona desde `index.html` y desde `pages/` por igual). Ej.: `"../assets/images/x.jpg"`. |
+| `imagen` | string | ✔ | Ruta **relativa al propio JSON** (que vive en `data/`): `js/rutas.js` la resuelve desde `data/noticias.json`, así funciona en `index.html`, en `pages/` y en GitHub Pages (sitio en subdirectorio). Ej.: `"../assets/images/x.jpg"`. También acepta URLs absolutas (ej. Supabase Storage) — se devuelven intactas. |
 | `alt` | string | ✔ | Texto alternativo de la imagen (accesibilidad). |
 | `fecha` | string | ✔ | ISO 8601 `YYYY-MM-DD`. Se muestra en español desde `js/noticias.js` (`es-CO`). |
 | `autor` | string | ✔ | Firma de la noticia (byline en la modal). |
@@ -62,7 +62,9 @@ siguen siendo párrafos, así nada se rompe.
 2. `slug` único y descriptivo (se usa en `data-modal` y en URLs futuras).
 3. `resumen` ≠ primer párrafo: el resumen es el gancho de la card; el
    `contenido` desarrolla la historia completa.
-4. La imagen debe existir en `../assets/images/` y reflejar el evento real.
+4. La imagen debe existir en `assets/images/` (la ruta se escribe
+   relativa a `data/`, ej. `"../assets/images/x.jpg"`) y reflejar
+   el evento real. `js/rutas.js` resuelve la ruta final.
 5. No reutilizar copys de otras noticias sin editar.
 
 ## NOTA sobre la migración a Astro
