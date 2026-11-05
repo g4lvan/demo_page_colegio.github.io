@@ -2,36 +2,71 @@
   {
     "id": 1,
     "slug": "olimpiadas",
+    "tipo": "Logro Emilista",
+    "titulo": "¡Estudiante representará a Colombia en Olimpiada Matemática de los Andes 2026!",
+    "resumen": "Gabriel Gualteros Torres, estudiante del grado 605 de la I.E.M. Emilio Cifuentes, fue seleccionado para representar a Colombia en la Olimpiada Matemática de los Andes 2026, gracias a su talento y destacado desempeño en matemáticas.",
     "imagen": "../assets/images/pizarra_web.jpg",
     "alt": "Estudiante en actividad matemática",
-    "titulo": "¡Estudiante representará a Colombia en Olimpiada Matemática de los Andes 2026!",
-    "tipo": "Logro Emilista",
     "fecha": "2026-03-05",
     "autor": "Equipo de Comunicaciones I.E.M. Emilio Cifuentes",
-    "resumen": "Gabriel Gualteros Torres, estudiante del grado 605 de la I.E.M. Emilio Cifuentes, fue seleccionado para representar a Colombia en la Olimpiada Matemática de los Andes 2026, gracias a su talento y destacado desempeño en matemáticas."
+    "contenido": [
+      "La comunidad educativa de la Institución Educativa Municipal Emilio Cifuentes celebra con orgullo el destacado logro alcanzado por el estudiante Gabriel Gualteros Torres, del grado 605, quien fue seleccionado para representar a Colombia en la Olimpiada Matemática de los Andes 2026, uno de los encuentros académicos más importantes de la región.",
+      "Esta oportunidad llega como resultado de su excelente desempeño en diferentes procesos de formación y competencias matemáticas, donde ha demostrado disciplina, dedicación y un notable talento para la resolución de problemas. Su selección representa no solo un reconocimiento a su esfuerzo personal, sino también al trabajo conjunto de su familia, docentes y comunidad educativa.",
+      {
+        "cita": "Este logro refleja el talento, la dedicación y el compromiso que caracterizan a nuestros estudiantes Emilistas.",
+        "autor_cita": "Rectoría, I.E.M. Emilio Cifuentes"
+      },
+      "La Olimpiada Matemática de los Andes reunirá a estudiantes de diversos países latinoamericanos en un espacio diseñado para fomentar el pensamiento lógico, el intercambio académico y el desarrollo de habilidades científicas. Durante el evento, los participantes enfrentarán distintos retos y pruebas que pondrán a prueba sus conocimientos y capacidades analíticas.",
+      "Desde la institución felicitamos a Gabriel por este importante logro que enaltece el nombre del colegio y motiva a nuestros estudiantes a seguir fortaleciendo su pasión por el aprendizaje. Su participación es un ejemplo de que la constancia, el compromiso y el amor por el conocimiento pueden abrir puertas a grandes oportunidades.",
+      "Le deseamos muchos éxitos en esta experiencia internacional y confiamos en que representará con orgullo a nuestra institución y a nuestro país."
+    ]
   },
 
   {
     "id": 2,
     "slug": "graduacion",
+    "tipo": "Evento Institucional",
+    "titulo": "¡Celebramos la graduación de grado 11!",
+    "resumen": "La I.E.M. Emilio Cifuentes celebró la graduación de los estudiantes de grado 11, reconociendo su esfuerzo y dedicación. La ceremonia reunió a familias, docentes y directivos para celebrar la culminación de su etapa escolar y desearles éxitos en sus futuros proyectos. ¡Felicitaciones, promoción 2025!",
     "imagen": "../assets/images/590406859_1405269001601102_3354321450507024463_n.jpg",
     "alt": "Graduación promoción 2025",
-    "titulo": "¡Celebramos la graduación de grado 11!",
-    "tipo": "Evento Institucional",
     "fecha": "2025-11-27",
     "autor": "Equipo de Comunicaciones I.E.M. Emilio Cifuentes",
-    "resumen": "La I.E.M. Emilio Cifuentes celebró la graduación de los estudiantes de grado 11, reconociendo su esfuerzo y dedicación. La ceremonia reunió a familias, docentes y directivos para celebrar la culminación de su etapa escolar y desearles éxitos en sus futuros proyectos. ¡Felicitaciones, promoción 2025!"
+    "contenido": [
+      "Con alegría y orgullo, la Institución Educativa Municipal Emilio Cifuentes llevó a cabo la ceremonia de graduación de los estudiantes de grado 11, un evento que marcó el cierre de una importante etapa académica y el inicio de nuevos proyectos para nuestros bachilleres.",
+      "La jornada reunió a estudiantes, familias, docentes y directivos en un espacio lleno de emociones, recuerdos y reconocimientos. Durante la ceremonia se destacó el esfuerzo, la dedicación y la perseverancia de los graduandos, quienes culminaron exitosamente su formación escolar después de años de aprendizaje y crecimiento personal.",
+      "A lo largo del evento, se compartieron mensajes de agradecimiento y reflexión que recordaron la importancia de los valores, la disciplina y el compromiso en la construcción de un futuro lleno de oportunidades. Asimismo, se realizaron reconocimientos a estudiantes destacados por su desempeño académico, liderazgo y participación en actividades institucionales.",
+      {
+        "cita": "Hoy celebramos no solo la culminación de una etapa académica, sino también el inicio de nuevos caminos llenos de oportunidades para nuestros estudiantes.",
+        "autor_cita": "Equipo Directivo, I.E.M. Emilio Cifuentes"
+      },
+      "Los nuevos bachilleres recibieron su diploma acompañados por los aplausos de sus seres queridos y de toda la comunidad educativa, que celebró este importante logro con entusiasmo y esperanza. El acto estuvo acompañado de momentos simbólicos y emotivos que quedarán en la memoria de quienes hicieron parte de esta promoción.",
+      "Desde la Institución Educativa Municipal Emilio Cifuentes felicitamos a cada uno de nuestros graduados y les deseamos éxitos en los caminos que decidan emprender. Estamos seguros de que llevarán con orgullo los valores y enseñanzas que hicieron parte de su formación como estudiantes Emilistas.",
+      "¡Felicitaciones promoción 2025!"
+    ]
   },
 
   {
     "id": 3,
     "slug": "reencuentro",
+    "tipo": "Comunidad Emilista",
+    "titulo": "¡Reencuentro de la promoción 1965!",
+    "resumen": "La I.E.M. Emilio Cifuentes recibió a los egresados de la promoción de 1965 en un emotivo encuentro lleno de recuerdos y anécdotas. La jornada permitió fortalecer los lazos con la institución, reconocer el legado de sus exalumnos y celebrar su pertenencia a la familia Emilista.",
     "imagen": "../assets/images/590553817_1405267334934602_5608521336583137333_n.jpg",
     "alt": "Reencuentro promoción 1965",
-    "titulo": "¡Reencuentro de la promoción 1965!",
-    "tipo": "Comunidad Emilista",
     "fecha": "2025-11-25",
     "autor": "Equipo de Comunicaciones I.E.M. Emilio Cifuentes",
-    "resumen": "La I.E.M. Emilio Cifuentes recibió a los egresados de la promoción de 1965 en un emotivo encuentro lleno de recuerdos y anécdotas. La jornada permitió fortalecer los lazos con la institución, reconocer el legado de sus exalumnos y celebrar su pertenencia a la familia Emilista."
+    "contenido": [
+      "La Institución Educativa Municipal Emilio Cifuentes abrió nuevamente sus puertas para recibir a los integrantes de la promoción de 1965 en un emotivo encuentro que permitió revivir recuerdos, compartir experiencias y fortalecer los lazos que los unen con su alma mater.",
+      "Durante la jornada, los exalumnos recorrieron espacios de la institución, recordaron anécdotas de su época estudiantil y compartieron historias sobre los caminos que emprendieron después de graduarse. El encuentro estuvo marcado por la alegría de volver a encontrarse después de varias décadas y por el orgullo de seguir formando parte de la historia del colegio.",
+      "Familiares, docentes invitados y miembros de la comunidad educativa acompañaron esta celebración, que se convirtió en una oportunidad para reconocer el legado de generaciones que contribuyeron al crecimiento y fortalecimiento de la institución a lo largo de los años.",
+      {
+        "cita": "Volver a estas aulas es reencontrarse con una parte fundamental de nuestras vidas y recordar los valores que nos acompañaron en nuestro camino.",
+        "autor_cita": "Representante de la promoción 1965"
+      },
+      "La actividad permitió reafirmar la importancia de mantener vivo el vínculo entre los egresados y la institución, promoviendo espacios de integración que conectan el pasado, el presente y el futuro de la comunidad Emilista.",
+      "Desde la Institución Educativa Municipal Emilio Cifuentes agradecemos a los integrantes de la promoción 1965 por su visita y por continuar siendo parte de la historia que, generación tras generación, sigue construyéndose en nuestras aulas.",
+      "¡Siempre serán parte de la familia Emilista!"
+    ]
   }
 ]
