@@ -112,16 +112,19 @@ El análisis del sitio original identificó los siguientes problemas:
 
 - JavaScript para interactividad (menú móvil, buscador).
 - CMS para gestión de contenido.
-- Integración de calendario institucional.
+- Conexión del calendario a datos dinámicos (la cuadrícula ya existe en `pages/calendario.html`).
 
 ## Estructura del repositorio
 
 ```
 demo_page_colegio.github.io/
 ├── index.html      # Página principal
-├── pages/          # Subpáginas
-├── css/            # Hojas de estilo
-├── js/             # Scripts (se incorporarán progresivamente)
+├── 404.html        # Página 404 personalizada para GitHub Pages
+├── pages/          # Subpáginas (nosotros, noticias, contacto, recursos, calendario)
+├── css/            # Hojas de estilo (una general + una por subpágina)
+├── js/             # Scripts cargados como módulos desde js/main.js
+├── data/           # Datos de noticias (JSON)
+├── docs/           # Estándares de commits y comentarios
 ├── assets/         # Imágenes, logos, íconos y fuentes
 ├── preview/        # Capturas y GIFs de demostración
 └── README.md
@@ -151,7 +154,7 @@ El repositorio sigue estándares documentados para mantener consistencia:
 |------|---------|--------|
 | **MVP** | Rediseño visual, layout responsive, organización de secciones | En curso |
 | **v1.0** | Optimización de rendimiento, mejoras visuales, animaciones más fluidas | Planeado |
-| **v2.0** | Noticias dinámicas, calendario institucional, sistema de documentos | Planeado |
+| **v2.0** | Noticias dinámicas, fuente de datos del calendario, sistema de documentos | Planeado |
 | **v3.0** | Panel de administración (CMS), gestión de contenido, posible sistema de usuarios | Planeado |
 
 ## Limitaciones conocidas
@@ -159,6 +162,7 @@ El repositorio sigue estándares documentados para mantener consistencia:
 Este es un demo en fase MVP. Aspectos pendientes:
 
 - El contenido es estático (noticias y textos escritos directamente en el HTML).
+- El calendario (`pages/calendario.html`) es estático: un evento real (ceremonia de grado 11) y tres ficticios que demuestran los tipos de etiqueta; la fuente de datos se conectará en v2.0.
 - El buscador es solo visual, sin lógica conectada.
 - Algunos enlaces de navegación están pendientes de sus páginas.
 - No se han realizado auditorías formales de rendimiento ni accesibilidad.
