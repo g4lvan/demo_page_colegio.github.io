@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ? preconnect declarado antes del stylesheet de Google Fonts.
+         Reduce el handshake con el servidor de fuentes antes de descargar el CSS. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- * — Metadatos SEO -->
+    <meta
+      name="description"
+      content="Consulta el calendario académico de la I.E.M. Emilio Cifuentes: fechas importantes, ceremonias y eventos escolares de la comunidad Emilista de Facatativá."
+    />
+    <link
+      rel="canonical"
+      href="https://g4lvan.github.io/demo_page_colegio.github.io/pages/calendario.html"
+    />
+    <title>Calendario | I.E.M. Emilio Cifuentes</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/calendario.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/logos/EMILIO.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- * ============================================================
+      HEADER
+      Barra superior compartida replicada desde noticias.html.
+      Rutas ajustadas un nivel arriba para las paginas dentro de /pages.
+      ============================================================ -->
+    <header>
+      <div class="izquierda">
+        <img src="../assets/logos/EMILIO.png" alt="emilio_logo" class="logo" />
+        <p class="marca">I.E.M. Emilio <span class="titulo">Cifuentes</span></p>
+      </div>
+      <nav>
+        <ul class="links_navegacion">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+        </ul>
+      </nav>
+      <form class="busqueda" onsubmit="return false">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="12"
+          height="12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon-search"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+          <path d="M21 21l-6 -6"></path>
+        </svg>
+        <input type="search" placeholder="Buscar recursos..." class="buscar" />
+      </form>
+      <button class="menu_hb">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="menu_hb"
+        >
+          <path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" />
+          <path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" />
+          <path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- ' NAVEGACION MOBILE
+         .overlay oscurece la pagina y .panel_lateral contiene el menu fuera de canvas.
+         Ambos bloques dependen de ../js/nav.js para abrir y cerrar el panel. -->
+    <div class="overlay"></div>
+    <nav class="panel_lateral">
+      <div class="izquierda">
+        <img src="../assets/logos/EMILIO.png" alt="emilio_logo" class="logo" />
+        <p class="marca">I.E.M. Emilio Cifuentes</p>
+        <button class="close_nav">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon_nav"
+          >
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <ul class="links_navegacion">
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon_nav"
+          >
+            <path
+              d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105"
+            />
+            <path d="M16 15c-2.21 1.333 -5.792 1.333 -8 0" />
+          </svg>
+          <a href="../index.html">Inicio</a>
+        </li>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon_nav"
+          >
+            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+            <path d="M12 9h.01" />
+            <path d="M11 12h1v4h1" />
+          </svg>
+          <a href="nosotros.html">Nosotros</a>
+        </li>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon_nav"
+          >
+            <path
+              d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"
+            />
+            <path d="M8 8h4" />
+            <path d="M8 12h4" />
+            <path d="M8 16h4" />
+          </svg>
+          <a href="noticias.html">Noticias</a>
+        </li>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon_nav"
+          >
+            <path
+              d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+            />
+            <path d="M3 7l9 6l9 -6" />
+          </svg>
+          <a href="contacto.html">Contacto</a>
+        </li>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon_nav"
+          >
+            <path
+              d="M3 6a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+            />
+            <path d="M7 8h10" />
+            <path d="M7 12h10" />
+            <path d="M7 16h10" />
+          </svg>
+          <a href="recursos.html">Recursos</a>
+        </li>
+      </ul>
+      <form class="busqueda" onsubmit="return false">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="12"
+          height="12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon-search"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+          <path d="M21 21l-6 -6"></path>
+        </svg>
+        <input type="search" placeholder="Buscar recursos..." class="buscar" />
+      </form>
+    </nav>
+
+    <!-- * ============================================================
+  MAIN / CALENDARIO
+  Cuadrícula estática del mes en curso y próximos eventos.
+  Un solo evento confirmado; el resto del mes queda vacío hasta
+  conectar una fuente de datos de calendario.
+  ============================================================ -->
+    <main>
+      <!-- * — Encabezado de la página -->
+      <section class="header_main">
+        <div class="text_header">
+          <h1>Calendario Académico</h1>
+          <p>
+            Consulta las fechas importantes del año lectivo: ceremonias,
+            evaluaciones y eventos de la comunidad Emilista.
+          </p>
+        </div>
+      </section>
+
+      <!-- ? Grid 2fr/1fr igual que en Noticias: prioriza la cuadrícula del
+           mes y deja los próximos eventos como soporte lateral. -->
+      <section class="calendario_contenido">
+        <section class="calendario_izquierda">
+          <!-- ? Cuadrícula en <table> (no <div>): una tabla expresa la
+               relación filas-semanas / celdas-días y los lectores de
+               pantalla la recorren como cuadrícula sin JS extra. -->
+          <!-- ! Datos de DEMOSTRACIÓN — único evento real: la ceremonia de
+               grado 11 del 27 de nov (etiqueta verde). Las otras tres
+               etiquetas (deportivo 11, social 18, festivo 24) usan fechas
+               y nombres ficticios solo para mostrar los 4 tipos de evento;
+               eliminarlas cuando exista una fuente de datos de calendario
+               (v2.0). -->
+          <div class="tarjeta_calendario">
+            <table class="calendario">
+              <caption>Noviembre 2026</caption>
+              <thead>
+                <tr>
+                  <th scope="col"><abbr title="Lunes">Lun</abbr></th>
+                  <th scope="col"><abbr title="Martes">Mar</abbr></th>
+                  <th scope="col"><abbr title="Miércoles">Mié</abbr></th>
+                  <th scope="col"><abbr title="Jueves">Jue</abbr></th>
+                  <th scope="col"><abbr title="Viernes">Vie</abbr></th>
+                  <th scope="col"><abbr title="Sábado">Sáb</abbr></th>
+                  <th scope="col"><abbr title="Domingo">Dom</abbr></th>
+                </tr>
+              </thead>
+              <!-- ? La semana empieza en LUNES: el 1 de noviembre de 2026 es
+                   domingo, así que abre la cuadrícula al final de la fila 1
+                   y su mes anterior queda representado con celdas vacías. -->
+              <!-- ' CELDA DE DÍA
+                   Estructura: <td> > <time datetime="AAAA-MM-DD">número</time>
+                   y, cuando hay evento, una etiqueta .cal_evento con el nombre
+                   y su modificador de tipo (.tipo_academico | _deportivo |
+                   _social | _festivo).
+                   .fuera_mes marca días de otro mes (celda vacía y tenue).
+                   Solo documentar esta primera instancia — las demás repiten
+                   el patrón. -->
+              <tbody>
+                <tr>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                  <td><time datetime="2026-11-01">1</time></td>
+                </tr>
+                <tr>
+                  <td><time datetime="2026-11-02">2</time></td>
+                  <td><time datetime="2026-11-03">3</time></td>
+                  <td><time datetime="2026-11-04">4</time></td>
+                  <td><time datetime="2026-11-05">5</time></td>
+                  <td><time datetime="2026-11-06">6</time></td>
+                  <td><time datetime="2026-11-07">7</time></td>
+                  <td><time datetime="2026-11-08">8</time></td>
+                </tr>
+                <tr>
+                  <td><time datetime="2026-11-09">9</time></td>
+                  <td><time datetime="2026-11-10">10</time></td>
+                  <td>
+                    <time datetime="2026-11-11">11</time>
+                    <!-- ! Evento ficticio de demostración — eliminar (v2.0). -->
+                    <span class="cal_evento tipo_deportivo"
+                      >Torneo Intercolegiado</span
+                    >
+                  </td>
+                  <td><time datetime="2026-11-12">12</time></td>
+                  <td><time datetime="2026-11-13">13</time></td>
+                  <td><time datetime="2026-11-14">14</time></td>
+                  <td><time datetime="2026-11-15">15</time></td>
+                </tr>
+                <tr>
+                  <td><time datetime="2026-11-16">16</time></td>
+                  <td><time datetime="2026-11-17">17</time></td>
+                  <td>
+                    <time datetime="2026-11-18">18</time>
+                    <!-- ! Evento ficticio de demostración — eliminar (v2.0). -->
+                    <span class="cal_evento tipo_social"
+                      >Festival de Talentos</span
+                    >
+                  </td>
+                  <td><time datetime="2026-11-19">19</time></td>
+                  <td><time datetime="2026-11-20">20</time></td>
+                  <td><time datetime="2026-11-21">21</time></td>
+                  <td><time datetime="2026-11-22">22</time></td>
+                </tr>
+                <tr>
+                  <td><time datetime="2026-11-23">23</time></td>
+                  <td>
+                    <time datetime="2026-11-24">24</time>
+                    <!-- ! Evento ficticio de demostración — eliminar (v2.0). -->
+                    <span class="cal_evento tipo_festivo"
+                      >Aniversario Institucional</span
+                    >
+                  </td>
+                  <td><time datetime="2026-11-25">25</time></td>
+                  <td><time datetime="2026-11-26">26</time></td>
+                  <td>
+                    <time datetime="2026-11-27">27</time>
+                    <span class="cal_evento tipo_academico"
+                      >Ceremonia de graduación - Grado 11</span
+                    >
+                  </td>
+                  <td><time datetime="2026-11-28">28</time></td>
+                  <td><time datetime="2026-11-29">29</time></td>
+                </tr>
+                <tr>
+                  <td><time datetime="2026-11-30">30</time></td>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                  <td class="fuera_mes"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ? Leyenda estática de tipos: solo informa los colores de cada
+               tipo de evento, no filtra (a diferencia de la barra de
+               "filter by category" de la imagen, que es un control). -->
+          <ul class="leyenda_calendario">
+            <li>
+              <span class="cal_evento tipo_academico"></span>Académico
+            </li>
+            <li>
+              <span class="cal_evento tipo_deportivo"></span>Deportivo
+            </li>
+            <li>
+              <span class="cal_evento tipo_social"></span>Social
+            </li>
+            <li>
+              <span class="cal_evento tipo_festivo"></span>Festivo
+            </li>
+          </ul>
+        </section>
+
+        <!-- * — Próximos eventos (barra lateral) -->
+        <!-- ' EVENTO PRÓXIMO
+             Estructura: .events_prox > fecha compacta + título + etiqueta
+             compacta de tipo + detalle.
+             Reutiliza el patrón de .events de Noticias.
+             Solo documentar esta primera instancia — las demás son homogéneas. -->
+        <section class="calendario_derecha">
+          <div class="events">
+            <header class="derecha_header">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="prox_noti_icon"
+              >
+                <path
+                  d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 8h-14v8.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16zm-9 4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1z"
+                />
+              </svg>
+              <h4>Próximos Eventos</h4>
+            </header>
+
+            <article class="events_prox">
+              <time datetime="2026-11-27">
+                <span class="text_span">Nov</span>
+                <span class="number_span">27</span></time
+              >
+              <div class="cont_event">
+                <h4>Ceremonia de graduación</h4>
+                <span class="cal_evento cal_evento_compacto tipo_academico"
+                  >Académico</span
+                >
+                <p>Grado 11 — Sede de la institución</p>
+              </div>
+            </article>
+
+            <!-- ! Los tres siguientes son eventos FICTICIOS de demostración
+                 para mostrar los 4 tipos de etiqueta. Eliminarlos cuando
+                 exista una fuente de datos de calendario (v2.0). -->
+            <article class="events_prox">
+              <time datetime="2026-11-11"
+                ><span class="text_span">Nov</span>
+                <span class="number_span">11</span></time
+              >
+              <div class="cont_event">
+                <h4>Torneo Intercolegiado</h4>
+                <span class="cal_evento cal_evento_compacto tipo_deportivo"
+                  >Deportivo</span
+                >
+                <p>Microfútbol — Delegaciones de grados 10 y 11</p>
+              </div>
+            </article>
+
+            <article class="events_prox">
+              <time datetime="2026-11-18"
+                ><span class="text_span">Nov</span>
+                <span class="number_span">18</span></time
+              >
+              <div class="cont_event">
+                <h4>Festival de Talentos</h4>
+                <span class="cal_evento cal_evento_compacto tipo_social"
+                  >Social</span
+                >
+                <p>Auditorio — Estudiantes y familias invitadas</p>
+              </div>
+            </article>
+
+            <article class="events_prox">
+              <time datetime="2026-11-24"
+                ><span class="text_span">Nov</span>
+                <span class="number_span">24</span></time
+              >
+              <div class="cont_event">
+                <h4>Aniversario de la Institución</h4>
+                <span class="cal_evento cal_evento_compacto tipo_festivo"
+                  >Festivo</span
+                >
+                <p>Acto comunitario — Desde 1941</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- * ============================================================
+  FOOTER
+  Cierre común del sitio con identidad institucional, accesos internos y redes sociales.
+  ============================================================ -->
+    <footer>
+      <div class="principal_footer">
+        <div class="info_footer">
+          <header class="img_footer">
+            <img
+              src="../assets/logos/EMILIO.png"
+              alt="Logo de la institución"
+              class="logo_footer"
+            />
+            <h2>Emilio Cifuentes</h2>
+          </header>
+          <p>
+            La Institución Educativa Municipal Emilio Cifuentes forma
+            estudiantes con excelencia académica, valores y preparándolos para
+            construir un proyecto.
+          </p>
+        </div>
+        <nav class="botones_footer">
+          <div class="recursos_footer">
+            <h3>Recursos</h3>
+            <ul>
+              <li>
+                <a href="../assets/downloads/Circular-interna-01.pdf" download
+                  >Manual del estudiante</a
+                >
+              </li>
+              <li><a href="../calendario.html">Calendario Académico</a></li>
+              <li><a href="../404.html">Horarios de clase</a></li>
+            </ul>
+          </div>
+          <div class="rapidos_footer">
+            <h3>Accesos Rápidos</h3>
+            <ul>
+              <li><a href="../pages/noticias.html">Noticias</a></li>
+              <li><a href="../pages/recursos.html">Formación</a></li>
+              <li><a href="../pages/contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="redes_footer">
+          <h3>Conectar</h3>
+          <a
+            href="https://www.facebook.com/profile.php?id=100063540460666"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="boton_red_footer"
+            aria-label="facebook"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="red_icon_footer"
+              fill="currentColor"
+            >
+              <path
+                d="M13.5 9H16V6h-2.5C11.57 6 10 7.57 10 9.5V12H8v3h2v7h3v-7h2.11L16 12h-3V9.5c0-.28.22-.5.5-.5z"
+              /></svg
+          ></a>
+        </div>
+      </div>
+      <div class="line_footer">
+        <hr />
+        <p>
+          © 2026 I.E.M. Emilio Cifuentes — SURSUM: Siempre arriba, siempre
+          adelante.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>
