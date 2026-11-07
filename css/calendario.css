@@ -1,0 +1,449 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* * ============================================================
+   TOKENS GLOBALES
+   Variables compartidas de color y tipografía para mantener consistencia visual.
+   ============================================================ */
+:root {
+  --primary-color: #029642;
+  --primary-alt: #1ba055;
+  --primary-soft-bg: #e5f4ec;
+  --primary-soft-border: #b8e2ca;
+  --primary-hover: #05bd55;
+  --primary-dark: #18583d;
+  --primary-light: #5c9d76;
+  --primary-light-transparent: #5c9d768f;
+  --placeholder: #a3d9bb;
+  --background: #ffffff;
+  --background-dark: #f5f6f7;
+  --background-secondary: #f1f5f9;
+  --complementary-color: #e2e8f0;
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
+  --text-secondary-dark: #3d4147;
+  --text-muted: #798290;
+
+  /* ! ÚNICOS hex nuevos del proyecto — añadidos a petición explícita para
+       demostrar los 4 tipos de etiqueta de la referencia (verde/ámbar/
+       púrpura/rojo). El ámbar deriva del #edc216 que ya existía en
+       styles.css (.calificacion); púrpura y rojo no tenían equivalente en
+       la paleta. El tinte de fondo es el mismo tono con alfa (rgba).
+       Si la demo no se usa, eliminar este bloque para restablecer la
+       regla de "solo tokens existentes". */
+  --tipo-academico: var(--primary-dark);
+  --tipo-academico-fondo: var(--primary-soft-bg);
+  --tipo-deportivo: #a87508;
+  --tipo-deportivo-fondo: rgba(237, 194, 22, 0.3);
+  --tipo-social: #7c4dbe;
+  --tipo-social-fondo: rgba(124, 77, 190, 0.16);
+  --tipo-festivo: #cc4a4a;
+  --tipo-festivo-fondo: rgba(204, 74, 74, 0.14);
+
+  /* ? Puntos de la leyenda: mismos tonos válidos de tipos pero en versión
+       saturada, para que la leyenda se lea a primera vista. El verde usa
+       un token existente (--primary-color) y el ámbar reutiliza #edc216
+       de styles.css; púrpura y rojo saturados son los únicos hex nuevos
+       restantes de esta demo. */
+  --tipo-academico-punto: var(--primary-color);
+  --tipo-deportivo-punto: #edc216;
+  --tipo-social-punto: #a855f7;
+  --tipo-festivo-punto: #e04444;
+
+  --font-primary: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+/* * ============================================================
+   MAIN
+   Contenedor principal de la página y fondo base.
+   ============================================================ */
+
+main {
+  background-color: var(--background-dark);
+  padding: 7rem;
+  padding-top: 0;
+}
+
+/* * ============================================================
+   ENCABEZADO DE PÁGINA
+   Título y subtítulo de entrada, igual que en las demás subpáginas.
+   ============================================================ */
+
+/* * — Título y subtítulo */
+
+.header_main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.header_main h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.header_main p {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 1rem;
+  color: var(--text-secondary-dark);
+}
+
+/* ? Grid 2fr/1fr prioriza la cuadrícula del mes y deja los próximos
+   eventos como soporte lateral — mismo reparto que Noticias.
+   El padding superior es menor que el lateral para que la cuadrícula
+   quede cerca del título de la página sin pegarse a él. */
+
+.calendario_contenido {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem 2rem 2rem;
+}
+
+.calendario_izquierda {
+  padding-right: 2rem;
+}
+
+/* * ============================================================
+   TARJETA DEL CALENDARIO
+   Envoltorio de la cuadrícula: superficie blanca con sombra suave.
+   ============================================================ */
+
+.tarjeta_calendario {
+  background-color: var(--background);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 5px var(--complementary-color);
+}
+
+/* * ============================================================
+   CUADRÍCULA DEL MES
+   Tabla semántica: una fila por semana, una celda por día.
+   ============================================================ */
+
+.calendario {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* ? El caption hace de título visible del mes: es el elemento que los
+   lectores de pantalla anuncian antes de la tabla, mejor que un h2 suelto. */
+
+.calendario caption {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  padding: 1.5rem 1rem 1rem;
+}
+
+.calendario th {
+  padding: 1rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--complementary-color);
+}
+
+.calendario td {
+  height: 7rem;
+  padding: 0.5rem;
+  vertical-align: top;
+  text-align: left;
+  border: 1px solid var(--complementary-color);
+}
+
+.calendario time {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ? .fuera_mes sin contenido: fondo apenas más oscuro para que el ojo
+   separe el mes anterior/siguiente sin inventar números ajenos. */
+
+.fuera_mes {
+  background-color: var(--background-dark);
+}
+
+/* ' ETIQUETA DE EVENTO
+   Píldora bajo el número del día con el nombre del evento.
+   La forma (tamaño, radio) vive en .cal_evento; el COLOR lo aporta
+   cada modificador de tipo: .tipo_academico | _deportivo | _social |
+   _festivo, conectados con las variables --tipo-* de :root. */
+
+.cal_evento {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: 0.4rem;
+  text-align: left;
+}
+
+.tipo_academico {
+  color: var(--tipo-academico);
+  background-color: var(--tipo-academico-fondo);
+}
+
+.tipo_deportivo {
+  color: var(--tipo-deportivo);
+  background-color: var(--tipo-deportivo-fondo);
+}
+
+.tipo_social {
+  color: var(--tipo-social);
+  background-color: var(--tipo-social-fondo);
+}
+
+.tipo_festivo {
+  color: var(--tipo-festivo);
+  background-color: var(--tipo-festivo-fondo);
+}
+
+/* ' ETIQUETA COMPACTA
+   Variante de .cal_evento para la barra lateral: píldora pequeña
+   junto al título con el nombre del tipo en vez de todo el evento. */
+
+.cal_evento_compacto {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 3px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.65rem;
+  border-radius: 1rem;
+}
+
+/* ? Leyenda solo informativa (no filtra nada, a diferencia de la barra de
+   categorías de la imagen). Los puntos usan currentColor: cada modificador
+   .tipo_* define el tono en `color`, y el punto lo toma como fondo para
+   leerse sin texto. */
+
+.leyenda_calendario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary-dark);
+}
+
+.leyenda_calendario li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.leyenda_calendario span {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 0.3rem;
+  padding: 0;
+  /* ? margin 0 obligatorio: la regla base .cal_evento (para la tabla) trae
+       margin-top de 0.5rem y empujaba el punto por debajo del texto;
+       sin este reset el flex no puede centrarlos. */
+  margin: 0;
+  background-color: currentColor;
+}
+
+/* ? En la leyenda el punto toma el tono saturado del tipo (variable
+   --tipo-*-punto), no el tinte suave que se usa dentro de la tabla. */
+
+.leyenda_calendario .tipo_academico {
+  color: var(--tipo-academico-punto);
+}
+
+.leyenda_calendario .tipo_deportivo {
+  color: var(--tipo-deportivo-punto);
+}
+
+.leyenda_calendario .tipo_social {
+  color: var(--tipo-social-punto);
+}
+
+.leyenda_calendario .tipo_festivo {
+  color: var(--tipo-festivo-punto);
+}
+
+/* * ============================================================
+   PRÓXIMOS EVENTOS
+   Patrón lateral reutilizado de Noticias (.events y .events_prox).
+   ============================================================ */
+
+.calendario_derecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.events {
+  padding: 2rem;
+  background-color: var(--background);
+  border-radius: 15px;
+  box-shadow: 0 0 5px var(--complementary-color);
+}
+
+.events_prox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.events_prox time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-soft-bg);
+  font-family: var(--font-primary);
+  border: 2px solid;
+  border-color: var(--primary-soft-border);
+  border-radius: 10px;
+  min-height: 3.5rem;
+  min-width: 3.5rem;
+  text-align: center;
+  margin-right: 10px;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.text_span {
+  margin-top: 5px;
+}
+
+.number_span {
+  display: flex;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  margin-top: -5px;
+}
+
+.cont_event p {
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.cont_event h4 {
+  margin: 0;
+  padding: 0;
+  margin-top: -1px;
+  font-weight: 700;
+}
+
+/* * — Título de bloque lateral */
+
+.derecha_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.derecha_header h4 {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+}
+
+.prox_noti_icon {
+  display: flex;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0;
+  padding: 0;
+  margin-top: -2px;
+  color: var(--primary-color);
+}
+
+/* * ============================================================
+   RESPONSIVE
+   Ajustes por breakpoint para mantener lectura y evitar desbordamientos.
+   ============================================================ */
+
+/* * ============================================================
+   TABLET — hasta 1024px
+   ============================================================ */
+@media (max-width: 1024px) {
+  /* * — CONTENIDO ÚNICO — calendario.css */
+  main {
+    padding: 2rem;
+  }
+
+  .calendario_contenido {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .calendario_izquierda {
+    padding-right: 0;
+  }
+
+  .calendario_derecha {
+    margin-top: 2rem;
+  }
+  /* * — /CONTENIDO ÚNICO — calendario.css */
+}
+
+/* * ============================================================
+   MOBILE — hasta 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  /* * — CONTENIDO ÚNICO — calendario.css */
+  main {
+    padding: 1rem;
+  }
+
+  .header_main {
+    padding: 1rem 0;
+  }
+
+  .header_main h1 {
+    font-size: 1.8rem;
+  }
+
+  .header_main p {
+    font-size: 1rem;
+  }
+
+  /* ? La cuadrícula se oculta en mobile: 7 columnas no caben legibles
+       en 768px; la lista de próximos eventos conserva la información
+       esencial sin scroll horizontal. */
+  .tarjeta_calendario {
+    display: none;
+  }
+  /* * — /CONTENIDO ÚNICO — calendario.css */
+}
