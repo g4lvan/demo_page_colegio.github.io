@@ -114,8 +114,12 @@ main {
   padding: 1rem 2rem 2rem;
 }
 
+/* ? min-width 0: los items de grid parten de min-width auto y no encogen
+   por su contenido; sin este reset la cuadrícula empuja su columna fuera
+   de la pantalla y la tarjeta quedaba desplazada e inalcanzable en mobile. */
 .calendario_izquierda {
   padding-right: 2rem;
+  min-width: 0;
 }
 
 /* * ============================================================
@@ -439,11 +443,65 @@ main {
     font-size: 1rem;
   }
 
-  /* ? La cuadrícula se oculta en mobile: 7 columnas no caben legibles
-       en 768px; la lista de próximos eventos conserva la información
-       esencial sin scroll horizontal. */
+  /* ? La cuadrícula cabe completa en la pantalla: las 7 columnas se
+       reparten el ancho real (sin min-width en la tabla) y cada evento
+       se convierte en un punto de color centrado. Los nombres completos
+       están en Próximos Eventos y la leyenda decodifica los colores. */
+  .calendario {
+    min-width: 0;
+  }
+
+  .calendario caption {
+    font-size: 1.4rem;
+    padding: 1rem 0.5rem 0.5rem;
+  }
+
+  .calendario th {
+    font-size: 0.65rem;
+    padding: 0.75rem 0;
+    letter-spacing: 0.02rem;
+  }
+
+  .calendario td {
+    height: 4.5rem;
+    padding: 0.35rem;
+  }
+
+  .calendario time {
+    font-size: 0.85rem;
+  }
+
+  /* ' PUNTO DE EVENTO (mobile)
+       Variante de .cal_evento: el nombre oculto (font-size 0) sigue en el
+       DOM y los lectores de pantalla lo anuncian; visualmente queda un
+       punto del color saturado del tipo, centrado bajo el número. */
+  .cal_evento {
+    font-size: 0;
+    margin: 0.4rem auto 0;
+    padding: 0;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+  }
+
+  .cal_evento.tipo_academico {
+    background-color: var(--tipo-academico-punto);
+  }
+
+  .cal_evento.tipo_deportivo {
+    background-color: var(--tipo-deportivo-punto);
+  }
+
+  .cal_evento.tipo_social {
+    background-color: var(--tipo-social-punto);
+  }
+
+  .cal_evento.tipo_festivo {
+    background-color: var(--tipo-festivo-punto);
+  }
+
   .tarjeta_calendario {
-    display: none;
+    padding: 0.75rem;
   }
   /* * — /CONTENIDO ÚNICO — calendario.css */
 }
