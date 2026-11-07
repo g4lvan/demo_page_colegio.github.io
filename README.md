@@ -7,215 +7,170 @@
 ![License](https://img.shields.io/badge/MIT-gray?style=for-the-badge&label=License&labelColor=black&color=gray)
 
 <a href="https://g4lvan.github.io/demo_page_colegio.github.io/" target="_blank" rel="noopener noreferrer">
-  <img width="300px" src="assets/logos/EMILIO.png" alt="Logo" width="800" />
+  <img width="300px" src="assets/logos/EMILIO.png" alt="Logo Institución Educativa Municipal Emilio Cifuentes" />
 </a>
 
-# 🎓 Rediseño Web – Institución Educativa Municipal Emilio Cifuentes
+# Rediseño Web — Institución Educativa Municipal Emilio Cifuentes
+
+Propuesta de rediseño del sitio web institucional, enfocada en usabilidad, diseño responsive y estructura de contenido.
+
+**[Ver demo en línea](https://g4lvan.github.io/demo_page_colegio.github.io/)**
 
 </div>
 
-Proyecto enfocado en el **rediseño y mejora de la experiencia digital** del sitio web institucional de la  
-**Institución Educativa Municipal Emilio Cifuentes**.
+---
 
-Este rediseño surge a partir de un análisis del sitio actual, donde se identificaron problemas de **usabilidad, rendimiento y adaptación a dispositivos móviles**.  
-El objetivo es proponer una solución **moderna, responsive y centrada en el usuario**, aplicando buenas prácticas de desarrollo web.
+## Tabla de contenidos
 
-Actualmente el proyecto se encuentra en fase **MVP (Minimum Viable Product)**.
+1. [Resumen](#resumen)
+2. [Contexto y problemática](#contexto-y-problemática)
+3. [Objetivos](#objetivos)
+4. [Solución propuesta](#solución-propuesta)
+5. [Vista previa](#vista-previa)
+6. [Stack tecnológico](#stack-tecnológico)
+7. [Estructura del repositorio](#estructura-del-repositorio)
+8. [Ejecución local](#ejecución-local)
+9. [Convenciones del proyecto](#convenciones-del-proyecto)
+10. [Estado y roadmap](#estado-y-roadmap)
+11. [Limitaciones conocidas](#limitaciones-conocidas)
+12. [Autor](#autor)
+13. [Licencia](#licencia)
 
 ---
 
-# 🌐 Vista previa del proyecto
+## Resumen
 
-Puedes ver la versión en línea del proyecto aquí:
+Este proyecto rediseña la presencia web de la **Institución Educativa Municipal Emilio Cifuentes** (Facatativá, Cundinamarca, Colombia). Parte de un análisis del sitio actual y propone una interfaz moderna, adaptable a distintos dispositivos y con una organización de contenido más clara.
 
-**🔗 Demo:**  
-https://g4lvan.github.io/demo_page_colegio.github.io/
+Actualmente se encuentra en fase **MVP**: HTML5 y CSS3 puros, sin frameworks, como base para evolucionar de forma incremental.
 
----
+## Contexto y problemática
 
-# 🆚 Comparación: Antes vs Después
+El análisis del sitio original identificó los siguientes problemas:
 
-### 🔴 Antes (sitio original)
+| Área | Problema detectado |
+|------|--------------------|
+| Diseño visual | Estética desactualizada, basada en plantillas tradicionales |
+| Jerarquía | Exceso de texto sin estructura; contenido difícil de escanear |
+| Navegación | Poco intuitiva |
+| Móvil | Adaptación limitada a dispositivos móviles |
+| Contenido | Secciones incompletas |
+| Rendimiento | Animaciones poco optimizadas y bajo rendimiento general |
 
-El sitio actual presenta varios problemas de experiencia de usuario:
+## Objetivos
 
-- Diseño basado en plantillas tradicionales
-- Baja jerarquía visual (difícil de escanear)
-- Exceso de texto sin estructura clara
-- Navegación poco intuitiva
-- Experiencia limitada en dispositivos móviles
+- Modernizar la interfaz del sitio institucional.
+- Mejorar la experiencia de usuario (UX).
+- Implementar un diseño completamente responsive.
+- Reorganizar la estructura de la información.
+- Aplicar HTML semántico y buenas prácticas de accesibilidad.
+- Optimizar rendimiento y tiempos de carga.
 
-![Antes](preview/antes.png)
+## Solución propuesta
 
----
+- Interfaz limpia con jerarquía visual clara.
+- Navegación simplificada.
+- Layout responsive construido con **Flexbox** y **Grid**.
+- Estructura HTML semántica y escalable.
+- Base preparada para incorporar contenido dinámico en versiones futuras.
 
-### 🟢 Después (rediseño propuesto)
+## Vista previa
 
-El rediseño propone una mejora integral enfocada en el usuario:
+### Comparación
 
-- Interfaz moderna y limpia
-- Diseño responsive
-- Mejor organización del contenido
-- Jerarquía visual clara
-- Navegación más intuitiva y accesible
+| Sitio original | Rediseño |
+|:--------------:|:--------:|
+| ![Sitio original](preview/antes.png) | ![Rediseño](preview/desktop.png) |
 
-![Después](preview/desktop.png)
+### Escritorio
 
----
+![Vista de escritorio](preview/desktop.png)
+![Vista de escritorio, sección adicional](preview/desktop-1.png)
 
-# 📸 Detalles del diseño
+### Tablet y móvil
 
-### Versión Desktop
+| Tablet | Móvil |
+|:------:|:-----:|
+| ![Vista tablet](preview/tablet.png) | ![Vista móvil](preview/mobile.png) |
 
-![Desktop Preview](preview/desktop.png)
-![](preview/desktop-1.png)
+### Comportamiento responsive
 
-### Versión Mobile
+![Demostración responsive](preview/responsive.gif)
 
-![Mobile Preview](preview/mobile.png)
+## Stack tecnológico
 
-### Versión Tablet
-
-![Tablet Preview](preview/tablet.png)
-
----
-
-# 📲 Responsive
-
-![Responsive Preview](preview/responsive.gif)
-
----
-
-# 🎯 Objetivos del proyecto
-
-- Modernizar la interfaz del sitio web
-- Mejorar la experiencia de usuario (UX)
-- Implementar un diseño completamente responsive
-- Reorganizar la estructura de la información
-- Optimizar rendimiento y tiempos de carga
-
----
-
-# 🔍 Problemas detectados en el sitio actual
-
-Durante el análisis del sitio web original se identificaron:
-
-- Diseño visual desactualizado
-- Falta de adaptabilidad en dispositivos móviles
-- Estructura de información poco clara
-- Secciones incompletas
-- Animaciones poco optimizadas
-- Bajo rendimiento general
-
-Este proyecto plantea una solución enfocada en resolver estos puntos de forma integral.
-
----
-
-# 🧩 Enfoque del rediseño
-
-El desarrollo del proyecto se basa en:
-
-- Análisis del sitio existente
-- Identificación de problemas de UX/UI
-- Priorización de mejoras
-- Uso de buenas prácticas en HTML y CSS
-
----
-
-# ✨ Características del rediseño
-
-- Diseño moderno y limpio
-- Navegación clara e intuitiva
-- Layout responsive
-- Mejor jerarquía visual
-- Estructura HTML optimizada
-- Base escalable para futuras mejoras
-
----
-
-# 🧰 Tecnologías utilizadas
+**Actual**
 
 ![HTML](https://img.shields.io/badge/Structure-gray?style=for-the-badge&logo=HTML5&logoColor=white&label=HTML5&labelColor=orange&color=gray)
 ![CSS](https://img.shields.io/badge/Styling-blue?style=for-the-badge&logo=CSS&logoColor=white&label=CSS3&labelColor=blue&color=gray)
 ![Responsive](https://img.shields.io/badge/Responsive-green?style=for-the-badge)
 
-Posibles tecnologías futuras:
+**Evaluado para versiones futuras**
 
 ![Astro](https://img.shields.io/badge/Astro-red?style=for-the-badge&logo=ASTRO&logoColor=red&labelColor=black)
 ![Static Badge](https://img.shields.io/badge/React-blue?style=for-the-badge&logo=REACT&logoColor=blue&labelColor=black)
 
-- CMS para gestión de contenido
-- Integración de calendario institucional
+- JavaScript para interactividad (menú móvil, buscador).
+- CMS para gestión de contenido.
+- Integración de calendario institucional.
 
----
+## Estructura del repositorio
 
-# 📱 Diseño Responsive
+```
+demo_page_colegio.github.io/
+├── index.html      # Página principal
+├── pages/          # Subpáginas
+├── css/            # Hojas de estilo
+├── js/             # Scripts (se incorporarán progresivamente)
+├── assets/         # Imágenes, logos, íconos y fuentes
+├── preview/        # Capturas y GIFs de demostración
+└── README.md
+```
 
-El sitio está optimizado para distintos tamaños de pantalla:
+## Ejecución local
 
-- 📱 Móviles
-- 📱 Tablets
-- 💻 Laptops
-- 🖥 Escritorio
+No requiere instalación ni dependencias.
 
-Se implementan técnicas modernas como **Flexbox y Grid**.
+```bash
+git clone https://github.com/g4lvan/demo_page_colegio.github.io.git
+cd demo_page_colegio.github.io
+```
 
----
+Abre `index.html` directamente en el navegador. Para un entorno más cercano a producción, usa un servidor local (por ejemplo, la extensión *Live Server* de VS Code).
 
-# 🚀 Roadmap del proyecto
+## Convenciones del proyecto
 
-## MVP
+El repositorio sigue estándares documentados para mantener consistencia:
 
-- Rediseño visual del sitio
-- Layout responsive
-- Organización de secciones
+- **Commits:** formato `<tipo>(<alcance>): <descripción>` en español, imperativo y minúsculas. Ver [`COMMIT_STANDARD.md`](COMMIT_STANDARD.md).
+- **Comentarios de código:** cinco tipos con la extensión *Better Comments*. Ver [`COMMENTING_STANDARD.md`](COMMENTING_STANDARD.md).
 
-## v1.0
+## Estado y roadmap
 
-- Optimización de rendimiento
-- Mejoras visuales
-- Animaciones más fluidas
+| Fase | Alcance | Estado |
+|------|---------|--------|
+| **MVP** | Rediseño visual, layout responsive, organización de secciones | En curso |
+| **v1.0** | Optimización de rendimiento, mejoras visuales, animaciones más fluidas | Planeado |
+| **v2.0** | Noticias dinámicas, calendario institucional, sistema de documentos | Planeado |
+| **v3.0** | Panel de administración (CMS), gestión de contenido, posible sistema de usuarios | Planeado |
 
-## v2.0
+## Limitaciones conocidas
 
-- Sistema de noticias dinámico
-- Calendario institucional
-- Sistema de documentos
+Este es un demo en fase MVP. Aspectos pendientes:
 
-## v3.0
+- El contenido es estático (noticias y textos escritos directamente en el HTML).
+- El buscador es solo visual, sin lógica conectada.
+- Algunos enlaces de navegación están pendientes de sus páginas.
+- No se han realizado auditorías formales de rendimiento ni accesibilidad.
 
-- Panel de administración (CMS)
-- Gestión de contenido institucional
-- Posible sistema de usuarios
-
----
-
-# 🧠 Aprendizajes del proyecto
-
-Este proyecto permitió reforzar:
-
-- Diseño web moderno
-- Arquitectura de sitios institucionales
-- Responsive design
-- Buenas prácticas en HTML y CSS
-- Pensamiento orientado a UX
-
----
-
-## 👨‍💻 Autor
-
-Proyecto desarrollado como iniciativa personal para mejorar la presencia digital de la institución.
+## Autor
 
 **Juan Andres Gallego Vanegas**
+Proyecto desarrollado como iniciativa personal para mejorar la presencia digital de la institución.
 
 [![GitHub](https://img.shields.io/badge/GitHub-g4lvan-181717?style=for-the-badge&logo=github)](https://github.com/g4lvan)
-
 [![Instagram](https://img.shields.io/badge/Instagram-@g4lvan__-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/g4lvan_)
 
----
+## Licencia
 
-# 📜 Licencia
-
-Este proyecto se distribuye bajo licencia **MIT**.
-
----
+Distribuido bajo licencia **MIT**.
