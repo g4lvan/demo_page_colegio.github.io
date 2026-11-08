@@ -37,6 +37,10 @@ body {
      el verde sube el contraste. */
   --verde-accion: #02883c;
   --verde-accion-hover: #027835;
+  /* ? #69717e: el gris más claro que sigue pasando 4.5:1 en los dos fondos
+     donde se usa —blanco de .card_rapido (4.92:1) y #f5f6f7 de .inicio
+     (4.55:1)—; #798290 falló con 3.88:1 y 3.59:1. */
+  --texto-secundario: #69717e;
   --font-primary: "Nunito", sans-serif;
 }
 
@@ -343,7 +347,7 @@ header .links_navegacion a:hover {
 
 .titulo_acc_rapido p {
   font-size: 1rem;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
   margin: 0;
   padding: 0;
 }
@@ -386,7 +390,7 @@ header .links_navegacion a:hover {
 
 .card_rapido p {
   font-size: 1rem;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
   margin: 0;
   padding: 0;
   margin-top: 15px;
@@ -401,14 +405,14 @@ header .links_navegacion a:hover {
   gap: 0.2rem;
   font-weight: bold;
   font-family: var(--font-primary);
-  color: var(--primary-color);
+  color: var(--verde-accion);
   border: none;
   text-decoration: none;
   margin-top: 0;
 }
 
 .card_rapido a:hover {
-  color: var(--primary-hover);
+  color: var(--verde-accion-hover);
 }
 
 .icon_acc_rapido {
@@ -426,12 +430,12 @@ header .links_navegacion a:hover {
   justify-content: center;
   width: 14px;
   height: 14px;
-  color: var(--primary-color);
+  color: var(--verde-accion);
   justify-content: center;
 }
 
 .chev_acc_rapido:hover {
-  color: var(--primary-hover);
+  color: var(--verde-accion-hover);
 }
 
 /* ' CARD DE NOTICIA Patrón repetido: imagen con badge, metadatos, resumen y CTA. */
