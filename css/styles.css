@@ -29,6 +29,14 @@ body {
   --text-secondary: #ffffff;
   --text-secondary-dark: #3d4147;
   --text-muted: #798290;
+  /* ? #02883c: punto exacto donde el verde institucional aún rinde 4.5:1
+     contra blanco en ambos usos —fondo del .boton-primario (texto blanco) y
+     texto de los enlaces de .card_rapido—; #029642 falló en Lighthouse con
+     3.86:1 y WCAG AA exige 4.5:1 en texto normal. El hover baja más porque
+     #05bd55 (más claro que el propio botón) rendía 2.5:1: solo oscureciendo
+     el verde sube el contraste. */
+  --verde-accion: #02883c;
+  --verde-accion-hover: #027835;
   --font-primary: "Nunito", sans-serif;
 }
 
@@ -285,7 +293,7 @@ header .links_navegacion a:hover {
   font-weight: bolder;
   justify-content: center;
   font-family: var(--font-primary);
-  background-color: var(--primary-color);
+  background-color: var(--verde-accion);
   color: var(--text-secondary);
   border: none;
   padding: 15px 30px;
@@ -293,7 +301,7 @@ header .links_navegacion a:hover {
 }
 
 .boton-primario:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--verde-accion-hover);
 }
 
 .boton-secundario {
