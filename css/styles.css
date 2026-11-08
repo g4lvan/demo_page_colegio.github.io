@@ -644,8 +644,11 @@ header .links_navegacion a:hover {
   border-radius: 15px;
   box-shadow: 0 0 2px var(--text-muted);
   max-width: 400px;
+  /* ? min-height base para uniformar cards cortas: la grilla estira
+     a la card más alta de cada fila, así ningún contenido (título
+     largo en la primera card) desborda ni desplaza el botón.
+     Sin max-height: la card crece con su contenido y nunca recorta. */
   min-height: 500px;
-  max-height: 500px;
   margin: 0;
   padding: 0;
   border-radius: 15px;
@@ -674,6 +677,14 @@ header .links_navegacion a:hover {
   padding: 2px;
   margin-top: 10px;
   color: var(--text-primary);
+  /* ? Mismo patrón de clamp que el párrafo: titulos largos (ej. la
+     noticia de Olimpiadas) se cortan a 3 líneas con ellipsis en la
+     card; el título completo vive en la modal. */
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .card_noticias p {
   font-size: 1rem;
