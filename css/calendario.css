@@ -393,6 +393,16 @@ main {
   color: var(--primary-color);
 }
 
+/* ? Aviso al pie de la barra lateral: la lista mezcla un evento real con
+   ficticios de demostración. Replica .aviso_envio de contacto.css —
+   texto pequeño y muted para no competir con los eventos de la lista. */
+.aviso_eventos {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
 /* * ============================================================
    RESPONSIVE
    Ajustes por breakpoint para mantener lectura y evitar desbordamientos.
